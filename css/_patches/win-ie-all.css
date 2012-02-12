@@ -1,0 +1,14 @@
+/*-  SELF-CLEARING FLOATS
+----------------------------------------------------------------------*/
+.mod {zoom: 1;}
+
+
+
+/*-  TELL IE7+ TO SCALE IMAGES USING A MORE ATTRACTIVE METHOD
+----------------------------------------------------------------------*/
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
+
+ul.worklist li img { border: 2px solid #000;  }

@@ -1,0 +1,32 @@
+; $Id: pj.info $
+name = My Name is PJ
+description = My name is PJ Theme.
+package = Core
+version = VERSION
+core = 7.x
+
+stylesheets[screen][] = css/core.css
+
+settings[shortcut_module_link] = 1
+
+regions[content] = Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[worklist] = Work List
+regions[page_bottom] = Page bottom
+regions[sidebar_first] = First sidebar
+regions[more_work] = More Work
+regions_hidden[] = sidebar_first
+
+scripts[] = scripts/address.js
+scripts[] = scripts/masonry.js
+scripts[] = scripts/jquerybbq.js
+scripts[] = scripts/scrollto.js
+scripts[] = scripts/functions.js
+scripts[] = scripts/modernizr-1.6.min.js
+
+; Information added by drupal.org packaging script on 2011-01-05
+version = "7.0"
+project = "drupal"
+datestamp = "1294208756"
+

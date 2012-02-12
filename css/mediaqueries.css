@@ -1,0 +1,55 @@
+/*- Media Queries
+----------------------------------------------------------------------*/
+/* NEW RULES */
+@media screen and (min-width: 240px) and (max-width: 768px) {
+  ul.worklist li {
+    width: 70%;
+  }
+  nav {
+    float: none;
+  }
+  header h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
+  nav ul {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  nav ul li {
+    float: none;
+    position: relative;
+    display: inline;
+  }
+  nav ul li a {
+    display: inline;
+    float: none;
+  }
+  nav ul li a.active {
+    top: 5px;
+  }
+  nav ul li a:hover {
+    top: 12px;
+  }
+}
+@media screen and (min-width: 240px) and (max-width: 320px) {
+  ul.worklist li {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  ul.worklist li {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  ul.worklist li {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+}
