@@ -25,14 +25,15 @@
 </header>
 <div id="loading"></div>
 <article class="clearfix">
-	<div id="body">
-		<div id="lead">
-			<div class="intro"></div>
-			
+	<div id="bodyWrap">
+		<div id="body">
+			<div id="lead">
+				<div class="intro"></div>
+				
+			</div>
+			<div id="words"></div>
 		</div>
-		<div id="words"></div>
 	</div>
-
 	<h2 class="element-invisible">Some of the design projects I've worked on.</h2>
 	<?php print render($page['worklist']); ?>
 	<div id="content" class="clearfix">

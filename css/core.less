@@ -199,6 +199,7 @@ header {
 	float: none; 
 	margin: 0 auto; 
 	}
+		
 
 #body ul { 
 	font-size: 0.8em; 
@@ -588,10 +589,19 @@ ul.worklist {
 		width: 25%; 
 		margin: 0 -3px 0 -2px; 
 		&.open {
-			width: 100%; 
-			position: absolute; 
-			.image {
-				display: none; 
+			#bodyWrap {
+				position: absolute; 
+				width: 100%; 
+				left: 0;
+				a {
+					background: transparent; 
+					width: auto; 
+					border: none; 
+					float: none; 
+				} 
+			}
+			img {
+				opacity: 1 !important;
 			}
 		}
 		h2 {

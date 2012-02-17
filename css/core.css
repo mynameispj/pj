@@ -891,12 +891,19 @@ ul.worklist li {
   width: 25%;
   margin: 0 -3px 0 -2px;
 }
-ul.worklist li.open {
-  width: 100%;
+ul.worklist li.open #bodyWrap {
   position: absolute;
+  width: 100%;
+  left: 0;
 }
-ul.worklist li.open .image {
-  display: none;
+ul.worklist li.open #bodyWrap a {
+  background: transparent;
+  width: auto;
+  border: none;
+  float: none;
+}
+ul.worklist li.open img {
+  opacity: 1 !important;
 }
 ul.worklist li h2 {
   font-size: 14px;
