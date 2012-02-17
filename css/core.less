@@ -587,7 +587,13 @@ ul.worklist {
 		vertical-align: top; 
 		width: 25%; 
 		margin: 0 -3px 0 -2px; 
-		
+		&.open {
+			width: 100%; 
+			position: absolute; 
+			.image {
+				display: none; 
+			}
+		}
 		h2 {
 			font-size: 14px; 
 			text-align: left; 

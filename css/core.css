@@ -891,6 +891,13 @@ ul.worklist li {
   width: 25%;
   margin: 0 -3px 0 -2px;
 }
+ul.worklist li.open {
+  width: 100%;
+  position: absolute;
+}
+ul.worklist li.open .image {
+  display: none;
+}
 ul.worklist li h2 {
   font-size: 14px;
   text-align: left;

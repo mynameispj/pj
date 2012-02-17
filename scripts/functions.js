@@ -57,7 +57,6 @@ var Site = window.Site || {};
 			$('#body .intro').html(''); 
 			$('#words').html(''); 
 			$('#body').find('img').remove();
-			//$('#body').find('#lead').text(''); 
 			ajaxURL = jsonBase + nid; 
 			$.ajax({ 
 				type:'post', 
@@ -67,7 +66,6 @@ var Site = window.Site || {};
 					$('.front #loading').fadeIn(); 
 				},
 				success: function(work){
-					$.scrollTo('#top', 800,{offset:{top:-100, left:0}});
 					$('header').find('h1').html('My name is PJ. Here&rsquo;s something I made.'); 
 					var project = work.nodes[0].node;
 					
@@ -88,6 +86,20 @@ var Site = window.Site || {};
 					$('#words').append(project.Body); 
 					$('#body').append(project.OtherImages); 
 					$('#body #lead img').load(function() {
+						var siblingHeight; 
+						var totalHeight; 
+						var projectHeight = $('li.open').height(); 
+						
+						if ($('li.open').hasClass('odd')) {
+							siblingHeight = $('li.open').next('li').height(); 
+						} else {
+							siblingHeight = $('li.open').prev('li').height(); 						
+						}
+						totalHeight = siblingHeight + projectHeight; 
+						
+						$.scrollTo('li.open #lead', 800,{offset:{top:siblingHeight, left:0}});
+						$('li.open').next('li').height(totalHeight); 
+						$('li.open').css('margin-top',siblingHeight+'px'); 
 					    $('.front #loading').fadeOut(); 
 					});
 				}
@@ -97,6 +109,10 @@ var Site = window.Site || {};
 
 		$('body.front').find('ul.worklist').find('li').find('a').click(function(){
 			thisNID = $.trim($(this).parent().parent().find('.nid').text()); 
+			$('ul.worklist li').removeAttr('style'); 
+			$('li.open').removeClass('open'); 
+			$(this).parent().parent().addClass('open'); 
+			$('#body').prependTo('li.open'); 
 			loadProjectAjax(thisNID); 
 			return false; 
 		}); 
