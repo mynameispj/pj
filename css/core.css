@@ -648,14 +648,14 @@ header {
   float: right;
   clear: right;
 }
-#body img.half, #body img.full {
-  width: 30%;
-  margin-right: 2%;
-  margin-bottom: 2%;
+#body #otherImages {
   float: left;
-}
-#body img.full {
   width: 62%;
+  margin-right: 2%;
+}
+#body #otherImages img {
+  width: 100%;
+  margin-bottom: 2%;
 }
 /*See more stuff sidebar */
 #block-views-work-list-block-1 {
@@ -990,6 +990,30 @@ ul.worklist li img {
 @media screen and (min-width: 240px) and (max-width: 320px) {
   ul.worklist li {
     width: 100%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 930px) {
+  .front #body #lead .intro {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .front #body #lead img {
+    width: 120%;
+    max-width: 120%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+  .front #body #otherImages {
+    width: 100%;
+  }
+  .node-type-work #body #words, .front #body #words {
+    width: 80%;
+    float: left;
+    clear: left;
+    padding-left: 10%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {

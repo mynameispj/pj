@@ -304,18 +304,19 @@ header {
 	clear: right;  
 	}
 	
- #body img.half, 
- #body img.full { 
-	width: 30%; 
-	margin-right: 2%; 
-	margin-bottom: 2%; 
-	float: left; 
-	} 
+	#body {
+		#otherImages {
+			float: left; 
+			width: 62%; 
+			margin-right: 2%; 
+			img {
+				width: 100%; 
+				margin-bottom: 2%; 
+			}
+		}
 	
- #body img.full { 
-	width: 62%;  
-	} 
-
+	}	
+	
 /*See more stuff sidebar */
 #block-views-work-list-block-1 { 
 	.relativefloat(left); 

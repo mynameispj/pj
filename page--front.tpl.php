@@ -31,6 +31,7 @@
 				<div class="intro"></div>
 				
 			</div>
+			<div id="otherImages"></div>
 			<div id="words"></div>
 		</div>
 	</div>
