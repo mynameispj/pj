@@ -72,9 +72,6 @@ var Site = window.Site || {};
 					var leadImage = project.LeadImage; 
 					leadImage = leadImage.replace(/,/g,'');
 					
-					//var otherImages = project.OtherImagesUpload; 
-					//otherImages = otherImages.replace(/,/g,'');
-					
 					var projectTitle = project.Title;					 
 					projectTitle = String(projectTitle); 
 					projectTitle = projectTitle.toLowerCase(); 
@@ -88,8 +85,13 @@ var Site = window.Site || {};
 					$('#body #lead').append(leadImage);
 					$('#body .intro').append(project.LeadParagraph);
 					$('#body .intro').prepend('<h1>'+project.Title+'</h1>'); 
-					$('#otherImages').append(project.OtherImages);
-					//$('#otherImages').append(otherImages);
+					//$('#otherImages').append(project.OtherImages);
+					if (project.OtherImagesUpload != null) {
+						var otherImages = project.OtherImagesUpload; 
+						otherImages = otherImages.replace(/,/g,'');
+						$('#otherImages').append(otherImages);
+					}
+
 					$('#words').append(project.Body); 
 					 
 					$('#body img').load(function() {
