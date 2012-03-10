@@ -400,6 +400,9 @@ body {
 body.front {
   border-top: none;
 }
+body.projectOpen {
+  background: #F4F4F4;
+}
 abbr {
   cursor: help;
 }
@@ -518,7 +521,10 @@ footer,
 header {
   font-weight: 200;
 }
-.front header, .not-front.node-type-article header {
+.front.projectOpen header {
+  background: transparent;
+}
+.front header, .front .not-front.node-type-article header {
   width: 100%;
   height: 45px;
   position: relative;
@@ -565,6 +571,9 @@ header {
 .front #body {
   float: none;
   margin: 0 auto;
+}
+#body #words ul li {
+  width: 100%;
 }
 #body ul {
   font-size: 0.8em;
@@ -775,6 +784,12 @@ footer a:hover {
   color: #999;
   border-bottom: 1px solid #999;
 }
+.projectOpen footer {
+  color: #000;
+}
+.projectOpen footer a {
+  color: #000;
+}
 .front footer .content {
   margin: 0px auto;
   text-align: center;
@@ -892,10 +907,19 @@ ul.worklist li {
   width: 25%;
   margin: 0 -3px 0 -2px;
 }
+ul.worklist li.open {
+  background: #fff;
+}
 ul.worklist li.open #bodyWrap {
+  background: #fff;
+  padding: 20px 0 40px;
   position: absolute;
   width: 100%;
   left: 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px 0;
+  -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px 0;
 }
 ul.worklist li.open #bodyWrap a {
   background: transparent;
@@ -923,6 +947,13 @@ ul.worklist li .blurb {
 ul.worklist li .blurb p {
   line-height: 1.5em;
   color: #6e6e6e;
+  font-size: 13px;
+}
+ul.worklist li .blurb p strong {
+  color: #000;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 ul.worklist li .image {
   margin-bottom: 40px;

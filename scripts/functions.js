@@ -97,7 +97,7 @@ var Site = window.Site || {};
 					$('#body img').load(function() {
 						var thumbHeight = $('li.open .image').height(); 
 						var projectHeight = $('#bodyWrap').height(); 
-						$('li.open').height(projectHeight+thumbHeight+50); 
+						$('li.open').height(projectHeight+thumbHeight+100); 
 						
 						$.scrollTo('li.open #lead', 100,{offset:{top:-30, left:0}});
 						
@@ -112,6 +112,7 @@ var Site = window.Site || {};
 		
 
 		$('body.front').find('ul.worklist').find('li').find('a').click(function(){
+			$('body').addClass('projectOpen'); 
 			thisNID = $.trim($(this).parent().parent().find('.nid').text()); 
 			$('ul.worklist li').removeAttr('style'); 
 			$('li.open').removeClass('open'); 

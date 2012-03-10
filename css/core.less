@@ -21,6 +21,9 @@ body {
 	&.front {
 	border-top: none; 
 	}
+	&.projectOpen {
+		background: #F4F4F4; 
+	}
 }
 
 abbr { cursor: help; }
@@ -144,14 +147,21 @@ header {
 	font-weight: 200; 
 	}
 	
-.front header, 
+.front{ 
+	&.projectOpen {
+		header {
+			background: transparent; 
+		}
+	}
+
+	header, 
 .not-front.node-type-article header { 
 	.wxh(100%,45px); 
 	position: relative; 
 	background: rgba(255, 255, 255, 0.95); 
 	border-top: 6px solid #000;
 	}
-	
+}	
 .front header #headerContent, 
 .not-front.node-type-article header { 
 	position: relative; 
@@ -201,20 +211,29 @@ header {
 	}
 		
 
-#body ul { 
-	font-size: 0.8em; 
-	color: #9A9885; 
-	margin-bottom: 1em;
-	padding-left: 15px;  
-	li {
-		margin-bottom: 0.5em; 
+#body { 
+	#words {
+		ul{
+			li{
+				width: 100%;
+			}
+		}
 	}
-	li, li a {
+	ul { 
+		font-size: 0.8em; 
 		color: #9A9885; 
-	}
-	li a:hover {
-		color: #616054;
-	}
+		margin-bottom: 1em;
+		padding-left: 15px;  
+		li {
+			margin-bottom: 0.5em; 
+		}
+		li, li a {
+			color: #9A9885; 
+		}
+		li a:hover {
+			color: #616054;
+		}
+	}		
 }
 
 #block-views-frontpage-work-front-block {
@@ -449,6 +468,13 @@ footer {
 		border-bottom: 1px solid #999; 
 	}
 }
+
+.projectOpen footer {
+	color: #000; 
+	a {
+		color: #000; 
+	}
+}
 		 
 .front footer .content {
 	margin: 0px auto;
@@ -591,10 +617,14 @@ ul.worklist {
 		width: 25%; 
 		margin: 0 -3px 0 -2px; 
 		&.open {
+			background: #fff;
 			#bodyWrap {
+				background: #fff; 
+				padding: 20px 0 40px; 
 				position: absolute; 
 				width: 100%; 
 				left: 0;
+				.boxshadow(rgba(0,0,0,0.5),0,0,6px,0);
 				a {
 					background: transparent; 
 					width: auto; 
@@ -623,6 +653,13 @@ ul.worklist {
 			p {
 				line-height: 1.5em; 
 				color: lighten(@gray,10%); 
+				font-size: 13px;
+				strong {
+					color: #000; 
+					font-weight: normal; 
+					text-transform: uppercase; 
+					letter-spacing: 1px;
+				}
 			}
 		}
 		
