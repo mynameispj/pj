@@ -98,6 +98,8 @@
 	
 	<meta name="readability-verification" content="RXcZffYXSqCSyFZTgvtpv3ugzCN9npsQndVBMLjm"/>
 	
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	
 </head>
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
