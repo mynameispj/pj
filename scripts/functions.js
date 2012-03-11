@@ -95,18 +95,24 @@ var Site = window.Site || {};
 					$('#words').append(project.Body); 
 					 
 					$('#body img').load(function() {
-						var thumbHeight = $('li.open .image').height(); 
-						var projectHeight = $('#bodyWrap').height(); 
-						$('li.open').height(projectHeight+thumbHeight+100); 
-						
+						sizeProjectCanvas(); 
 						$.scrollTo('li.open #lead', 100,{offset:{top:-30, left:0}});
-						
 					    $('.front #loading').fadeOut(); 
 					});
 				}
 			});	
 
 		}
+		
+		function sizeProjectCanvas() {
+			var thumbHeight = $('li.open .image').height(); 
+			var projectHeight = $('#bodyWrap').height(); 
+			$('li.open').height(projectHeight+thumbHeight+100);
+		}
+		
+		$(window).resize(function() {
+			sizeProjectCanvas(); 
+		});
 		
 		$('body.front').find('ul.worklist').find('li:last-child').addClass('last'); 
 		
