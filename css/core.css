@@ -1021,7 +1021,7 @@ ul.worklist li img {
 }
 @media screen and (min-width: 240px) and (max-width: 320px) {
   ul.worklist li {
-    width: 100%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 930px) {
@@ -1052,9 +1052,12 @@ ul.worklist li img {
     padding-left: 10%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 240px) and (max-width: 480px) {
   ul.worklist li {
-    width: 100%;
+    width: 50%;
+  }
+  ul.worklist li h2, ul.worklist li .blurb {
+    padding-left: 10px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
