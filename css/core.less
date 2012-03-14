@@ -451,7 +451,7 @@ header {
 footer { 
 	padding: 30px 0; 
 	font-size: 0.7em; 
-	color: #ccc; 
+	color: darken(@gray, 20%); 
 	overflow: hidden; 
 	width: 100%; 
 	max-width: 1000px;	
@@ -459,13 +459,14 @@ footer {
 		width: 300px; 
 		float: left;
 	}
+	
 	a {
-		color: #ccc; 
-		border-bottom: 1px solid #ccc; 	
+		color: darken(@gray, 40%); 
+		border-bottom: 1px solid darken(@gray, 40%); 	
 	}
 	a:hover {
-		color: #999; 
-		border-bottom: 1px solid #999; 
+		color: darken(@gray, 60%);  
+		border-bottom: 1px solid darken(@gray, 60%); 
 	}
 }
 
@@ -637,23 +638,25 @@ ul.worklist {
 			}
 		}
 		h2 {
-			font-size: 14px; 
+			font-size: 15px; 
 			text-align: left; 
 			padding-top: 5px; 
 			clear: left; 
-			color: @gray; 
+			color: darken(@gray, 40%); 
 			border-left: 1px solid @gray; 
-			padding-left: 25px; 
+			padding-left: 14px; 
+			margin-bottom: 5px; 
 		}
 		
 		.blurb {
 			font-size: 13px; 
-			padding-left: 25px;
-			width: 70%; 
+			padding-left: 15px;
+			width: 80%; 
 			p {
 				line-height: 1.5em; 
 				color: lighten(@gray,10%); 
-				font-size: 13px;
+				font-size: 14px;
+				font-weight: 400;
 				strong {
 					color: #000; 
 					font-weight: normal; 

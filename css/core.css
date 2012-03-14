@@ -767,7 +767,7 @@ header {
 footer {
   padding: 30px 0;
   font-size: 0.7em;
-  color: #ccc;
+  color: #212121;
   overflow: hidden;
   width: 100%;
   max-width: 1000px;
@@ -777,12 +777,12 @@ footer .content {
   float: left;
 }
 footer a {
-  color: #ccc;
-  border-bottom: 1px solid #ccc;
+  color: #000000;
+  border-bottom: 1px solid #000000;
 }
 footer a:hover {
-  color: #999;
-  border-bottom: 1px solid #999;
+  color: #000000;
+  border-bottom: 1px solid #000000;
 }
 .projectOpen footer {
   color: #000;
@@ -931,23 +931,25 @@ ul.worklist li.open img {
   opacity: 1 !important;
 }
 ul.worklist li h2 {
-  font-size: 14px;
+  font-size: 15px;
   text-align: left;
   padding-top: 5px;
   clear: left;
-  color: #545454;
+  color: #000000;
   border-left: 1px solid #545454;
-  padding-left: 25px;
+  padding-left: 14px;
+  margin-bottom: 5px;
 }
 ul.worklist li .blurb {
   font-size: 13px;
-  padding-left: 25px;
-  width: 70%;
+  padding-left: 15px;
+  width: 80%;
 }
 ul.worklist li .blurb p {
   line-height: 1.5em;
   color: #6e6e6e;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 400;
 }
 ul.worklist li .blurb p strong {
   color: #000;
@@ -1055,9 +1057,6 @@ ul.worklist li img {
 @media screen and (min-width: 240px) and (max-width: 480px) {
   ul.worklist li {
     width: 50%;
-  }
-  ul.worklist li h2, ul.worklist li .blurb {
-    padding-left: 10px;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {

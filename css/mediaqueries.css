@@ -72,9 +72,6 @@
   ul.worklist li {
     width: 50%;
   }
-  ul.worklist li h2, ul.worklist li .blurb {
-    padding-left: 10px;
-  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   ul.worklist li {
