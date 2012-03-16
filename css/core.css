@@ -507,13 +507,11 @@ footer,
   border-radius: 5px;
   border: 1px solid #e4e4e4;
   z-index: 9999;
+  display: none;
 }
 .front article {
   width: 98%;
   margin: 100px auto 0;
-}
-.front article, .front footer {
-  display: none;
 }
 .not-front article {
   padding-top: 50px;

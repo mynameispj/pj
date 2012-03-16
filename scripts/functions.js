@@ -148,10 +148,10 @@ var Site = window.Site || {};
 
 	$(window).bind("load", function() {
 	
-			$('.front #loading').fadeOut('slow', function() {
-			    $('.front article').fadeIn(500);			
-				$('.front footer').fadeIn(500);
-			});
+			//$('.front #loading').fadeOut('slow', function() {
+			//    $('.front article').fadeIn(500);			
+			//	$('.front footer').fadeIn(500);
+			//});
 			
 	});
 	
