@@ -84,42 +84,42 @@
   // We hide the comments and links now so that we can render them later.
   hide($content['comments']);
   hide($content['links']);
+  hide($content['field_tags']);
+  hide($content['field_image']);
   hide($content['field_article_first_paragraph']);
   
-  drupal_add_js('misc/ui/jquery.ui.core.min.js');
-  drupal_add_css('misc/ui/jquery.ui.core.css');
-  drupal_add_js('misc/ui/jquery.ui.widget.min.js');
-  drupal_add_js('misc/ui/jquery.ui.mouse.min.js');
-  drupal_add_js('misc/ui/jquery.ui.slider.min.js');
-  drupal_add_css('misc/ui/jquery.ui.slider.css');
+  
+  
 ?>
    
-<div id="node-<?php print $node->nid; ?>" class="article <?php print $classes; ?> <?php print $content_attributes; ?> clearfix"<?php print $attributes; ?>>
-	
 
-	<?php print render($title_prefix); ?>
-		<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
-	<?php print render($title_suffix); ?>
-	<div class="firstParagraph">
-		<?php print render($content['field_article_first_paragraph']['#items'][0]['value']); ?>
-		<div id='rdbWrapper'></div>
-		<script type='text/javascript'>
-			(function() {
-			    var s     = document.getElementsByTagName('script')[0],
-			        rdb   = document.createElement('script');
-			    rdb.type  = 'text/javascript';
-			    rdb.async = true;
-			    rdb.src   = document.location.protocol + '//www.readability.com/embed.js';
-			    s.parentNode.insertBefore(rdb, s);
-			})();
-		</script>
-	</div>
-	<div class="body">
-	  <?php print render($content); ?>
+<article class="post-<?php print $nid;?>"> 
+	<header>
+		<?php if ($nid != 24): //the title of the testicular cancer post is in the body of the post ?>
+			<?php print render($title_prefix); ?>
+				<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+			<?php print render($title_suffix); ?>
+		<?php endif; ?>
 
-    </div>
-</div>	
-	</article>
+	</header>
+	<aside>
+		<?php if ($nid != 24): //the date of the TC post is in the body of the post ?>
+			<?php //print $date;?>
+			<?php //print $tags; ?>
+			<?php print format_date($created, 'custom', 'F j Y'); ?>
+			<span class="tags"><?php print render($content['field_tags']); ?></span>
+		<?php endif; ?>
+		
+	</aside>
+
+	<p class="firstParagraph"><?php print render($content['field_article_first_paragraph']['#items'][0]['value']); ?></p>
+	<?php print render($content); 
+	?>
+	<?php //print $post; ?>
+
+</article>
+
+
 
 <!--<div id="slider"></div>-->
 

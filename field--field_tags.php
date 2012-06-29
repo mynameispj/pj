@@ -41,16 +41,10 @@
  *
  * @see template_preprocess_field()
  * @see theme_field()
- 
- <!--
-THIS FILE IS NOT USED AND IS HERE AS A STARTING POINT FOR CUSTOMIZATION ONLY.
-See http://api.drupal.org/api/function/theme_field/7 for details.
-After copying this file to your theme's folder and customizing it, remove this
-HTML comment.
--->
  */
 ?>
 
+
     <?php foreach ($items as $delta => $item) : ?>
-    	<?php print render($item); ?>
+      <span class="tags"><?php print render($item); ?></span>
     <?php endforeach; ?>

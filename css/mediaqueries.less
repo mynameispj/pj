@@ -1,27 +1,43 @@
-/*- Media Queries
-----------------------------------------------------------------------*/
-
 
 /* NEW RULES */
+
+@media screen and (min-width: 240px) and (max-width: 1000px) {
+
+	article {
+		article {
+			width: 90%; 
+			margin-left: 5%; 
+			
+		}
+		
+	}
+
+}
+
 
 @media screen and (min-width: 240px) and (max-width: 768px) {
 
 	ul.worklist li {
 		width: 70%; 	
 	}
-	
-	.front header {
-	}
-	
+		
 	nav {
 		float: none; 
 	}
 	
-	header h1 {
+	header h1, 
+	header h2 {
 		position: absolute;
 		width: 100%;
 		text-align: center;	
 		margin-top: 40px;
+	}
+	
+
+	article header h1, 
+	article header h2 {
+		position: relative; 
+		margin-top: 0; 
 	}
 	
 	nav ul {
@@ -59,7 +75,9 @@
 
 @media screen and (min-width: 320px) and (max-width: 930px) {
 
-	.front {
+	.front, 
+	.node-type-work, 
+	.page-node-23 {
 		#body {
 			#lead {
 				.intro {
@@ -82,7 +100,9 @@
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
 
-	.front {
+	.front, 
+	.node-type-work, 
+	.page-node-23 {
 		#body {
 			#otherImages {
 				width: 100%; 
@@ -95,7 +115,9 @@
 		}
 	}
 	
-	.node-type-work #body #words, .front #body #words {
+	.node-type-work #body #words, 
+	.front #body #words,
+	.page-node-23 #body #words {
 		width: 80%;
 		float: left;
 		clear: left;
@@ -130,6 +152,34 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
+	.body {
+		p {
+			margin-right: 30%;
+			margin-left: 20px;
+			
+		}
+		
+		h3 {
+			margin-left: 20px;
+			
+		}		
+	}
+	
+	
+	
+	.node-type-article {
+		h1 {
+			margin-left: 20px;
+			
+		}
+		
+		.firstParagraph {
+			padding-right: 0; 
+			margin-right: 20%;
+			margin-left: 20px;
+			
+		}
+	}
 }
 
 @media screen and (min-width: 1145px) and (max-width: 1700px) {
@@ -139,7 +189,7 @@
 	}
 }
 
-@media screen and (min-width: 1700px) and (max-width: 2100px) {
+@media screen and (min-width: 1700px) {
 
 	ul.worklist li {
 		width: 10%; 	

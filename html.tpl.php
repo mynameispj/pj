@@ -60,8 +60,7 @@
   <?php endif ;?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-  
-  
+    
 	<!--[if IE]>
 		<?php print pj_get_ie_styles(); ?>
 	<![endif]-->
@@ -75,21 +74,21 @@
 
 	<script type="text/javascript">
 	
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-6152473-4']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-31428765-1']);
+		_gaq.push(['_setDomainName', 'pjmccormick.com']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
 	
 	</script>
-
 	
-	<meta name="google-site-verification" content="fXlZTFuMIlm09ocwEnYDXJd3Oc9nK3EpE0Z3D_SkOao" />
-	<META name="y_key" content="664ea37a19465f6d" />
+	<meta name="google-site-verification" content="CaJrlEs8DAKp19J2n7pD_Qd9Gs-KFJCrAZstoGVa7Qc" />
+	<meta name="y_key" content="664ea37a19465f6d" />
 	<meta name="msvalidate.01" content="245E420BBF46223DB09CDC8499509EEA" />
 	
 	<!--Typekit-->

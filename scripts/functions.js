@@ -1,3 +1,5 @@
+
+
 /* Declare a namespace for the site */
 var Site = window.Site || {};
 
@@ -51,7 +53,7 @@ var Site = window.Site || {};
 		var ajaxURL; 
 		var url; 
 
-		function loadProjectAjax(nid) {
+		function loadProjectAjax(nid,onLoad) {
 			$('li.open').find('img').animate({opacity: "1"}, 200);
 			$('#body .intro').html(''); 
 			$('#words').html(''); 
@@ -63,20 +65,19 @@ var Site = window.Site || {};
 				url: ajaxURL, 
 				dataType: 'json', 
 				beforeSend: function() {
-					$('.front #loading').fadeIn(); 
+					if (onLoad != 1) $('.front #loading').fadeIn(); 
 				},
 				success: function(work){
 					$('header').find('h1').html('My name is PJ. Here&rsquo;s something I made.'); 
 					var project = work.nodes[0].node;
 					
-					var leadImage = project.LeadImage; 
+					var leadImage = '<img src="'+project.LeadImage+'" />'; 
 					leadImage = leadImage.replace(/,/g,'');
 					
 					var projectTitle = project.Title;					 
 					projectTitle = String(projectTitle); 
 					projectTitle = projectTitle.toLowerCase(); 
 					projectTitle = projectTitle.replace(/\s/g,'');
-					
 					
 					$('#body').attr('class',projectTitle); 
 
@@ -85,19 +86,27 @@ var Site = window.Site || {};
 					$('#body #lead').append(leadImage);
 					$('#body .intro').append(project.LeadParagraph);
 					$('#body .intro').prepend('<h1>'+project.Title+'</h1>'); 
-					//$('#otherImages').append(project.OtherImages);
+					$('#bodyWrap .header .title').html(project.Title); 
 					if (project.OtherImagesUpload != null) {
-						var otherImages = project.OtherImagesUpload; 
-						otherImages = otherImages.replace(/,/g,'');
-						$('#otherImages').append(otherImages);
+						
+						//JSON data for other images comes back as a string; 
+						//split it into an array based on commas as a separator
+						var otherImages = project.OtherImagesUpload.split(','); 
+
+						for(i=0;i<otherImages.length;i++){
+							var thisImg = '<img src="'+otherImages[i]+'" />'; 
+							$('#otherImages').append(thisImg);
+						}
 					}
 
 					$('#words').append(project.Body); 
 					 
 					$('#body img').load(function() {
+						$('#bodyWrap').show();
 						sizeProjectCanvas(); 
-						$.scrollTo('li.open #lead', 100,{offset:{top:-30, left:0}});
+						if (onLoad != 1) $.scrollTo('li.open #lead', 100,{offset:{top:-100, left:0}});
 					    $('.front #loading').fadeOut(); 
+					    
 					});
 				}
 			});	
@@ -105,19 +114,19 @@ var Site = window.Site || {};
 		}
 		
 		function sizeProjectCanvas() {
+			 
 			var thumbHeight = $('li.open .image').height(); 
 			var projectHeight = $('#bodyWrap').height(); 
-			$('li.open').height(projectHeight+thumbHeight+100);
+			$('li.open').height(projectHeight+thumbHeight+140);
 		}
 		
 		$(window).resize(function() {
 			sizeProjectCanvas(); 
 		});
 		
-		$('body.front').find('ul.worklist').find('li:last-child').addClass('last'); 
-		
+		$('ul.worklist').find('li:last-child').addClass('last'); 
 
-		$('body.front').find('ul.worklist').find('li').find('a').click(function(){
+		$('ul.worklist').find('li').find('a').click(function(){
 			$('body').addClass('projectOpen'); 
 			thisNID = $.trim($(this).parent().parent().find('.nid').text()); 
 			$('ul.worklist li').removeAttr('style'); 
@@ -134,16 +143,63 @@ var Site = window.Site || {};
 
 		$(window).bind('onFirstLoad', function(e) {
 		    if (url.nid !== undefined) {
-		    	loadProjectAjax(url.nid); 
+		    	loadProjectAjax(url.nid,1); 
 		    }
 		})
-
 
 		$(window).trigger('hashchange');
 		$(window).trigger('onFirstLoad');
 
+		//Props to Chris Coyier: http://css-tricks.com/persistent-headers/
+		function UpdateTableHeaders() {
+		   $("#bodyWrap").each(function() {
+		
+		       var el             = $(this),
+		           offset         = el.offset(),
+		           scrollTop      = $(window).scrollTop(),
+		           floatingHeader = $(".floatingHeader", this)
+		
+		       if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+		           floatingHeader.css({
+		            "visibility": "visible"
+		           });
+		       } else {
+		           floatingHeader.css({
+		            "visibility": "hidden"
+		           });
+		       };
+		   });
+		}
+		
+		var clonedHeaderRow;
+		
+		$("#bodyWrap").each(function() {
+			clonedHeaderRow = $(".header", this);
+			clonedHeaderRow
+			 .before(clonedHeaderRow.clone())
+			 //.css("width", clonedHeaderRow.width())
+			 .addClass("floatingHeader");
+			
+		});
+		
+		$(window)
+		.scroll(UpdateTableHeaders)
+		.trigger("scroll");
+		
+		
+		$('.closeProject').click(function(){
+			$.scrollTo('li.open', 100,{offset:{top:-100, left:0}});
+			$('li.open').removeAttr('style');
+			$('li.open').removeClass('open');
+			$('#bodyWrap').hide(); 
+			$('body').removeClass('projectOpen');
+			return false; 
+		}); 
 
+	
 	});
+		
+		
 
 
 	$(window).bind("load", function() {

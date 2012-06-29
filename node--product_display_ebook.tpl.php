@@ -1,9 +1,9 @@
 <?php
-// $Id: node.tpl.php,v 1.2 2010/12/01 00:18:15 webchick Exp $
+// $Id: node.tpl.php,v 1.34 2010/12/01 00:18:15 webchick Exp $
 
 /**
  * @file
- * Bartik's theme implementation to display a node.
+ * Default theme implementation to display a node.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.
@@ -79,62 +79,25 @@
  * @see template_process()
  */
 ?>
-<?php
-  // We hide the comments and links now so that we can render them later.
-  hide($content['comments']);
-  hide($content['links']);
-  hide($content['field_work_images']);
-  hide($content['field_work_preview']);
-  hide($content['field_work_blurb']);
-  hide($content['field_work_blurb']);
-  hide($content['field_work_type']);
-  hide($content['field_work_lead_paragraph']);
-  hide($content['field_work_other_images']);
-  hide($content['field_images_other_images']);
-  hide($content['field_work_other_images_upload']); 
-  hide($content['field_work_link']);
-  hide($content['body']);
-  print render($content);
-?>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <div id="body" class="<?php print strtolower(str_replace(" ", "",check_plain($node->title)))  ?>">
-  
-  
-		<!--<div class="header">
-			<div class="title"></div>
-			<div class="controls">
-				<a href="">Previous project</a>
-				<a href="">Next project</a>
-				<a class="closeProject" href="">&times;</a>
-			</div>
-		</div>-->
-  
-  
-	<div id="lead">
-		<div class="intro">
-			<?php print render($title_prefix); ?>
-			    <h1><?php print check_plain($node->title) ?></h1>
-		    <?php print render($title_suffix); ?>
-			<?php print render($content['field_work_lead_paragraph'] ); ?>
-		</div>
-		<?php print render($content['field_work_images'] ); ?>
+  <?php print render($title_prefix); ?>
+	  <?php if (!$page): ?>
+	    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+	  <?php endif; ?>
+  <?php print render($title_suffix); ?>
 
-		
-	    
-	    
-    </div>
-	<div id="otherImages">
-		<?php print render($content['field_work_other_images_upload'] ); ?>
-	</div>
-    
-    <div id="words">
-    	<?php print render($content['body'] ); ?>
-    </div>
-		
-    	
-    
-    
-    
-  </div> 
-    
 
+  <div class="content"<?php print $content_attributes; ?>>
+    <?php
+      // We hide the comments and links now so that we can render them later.
+      hide($content['comments']);
+      hide($content['links']);
+      print render($content);
+    ?>
+  </div>
+  <?php print render($content['links']); ?>
+
+  <?php print render($content['comments']); ?>
+
+</div>

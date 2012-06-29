@@ -478,6 +478,10 @@ body {
   padding: 0 0 0px 0;
   /*overflow-x: hidden;*/
 
+  border-top: 6px solid #000;
+}
+body.front {
+  border-top: none;
 }
 body.projectOpen {
   background: #F4F4F4;
@@ -489,16 +493,12 @@ a {
   color: #000;
   text-decoration: none;
 }
-a:hover {
-  color: #000;
-}
 p {
-  font-size: 18px;
   margin-bottom: 1.2em;
   color: #545454;
+  font-size: 0.9em;
   font-weight: 200;
   line-height: 1.4em;
-  font-family: "chaparral-pro-1", "chaparral-pro-2", Georgia, Times New Roman, Times, serif;
 }
 p a {
   border-bottom: 1px solid #ccc;
@@ -516,14 +516,11 @@ p a:active {
 }
 /*- Nav
 ----------------------------------------------------------------------*/
-/* LESS functions */
-/* END LESS functions */
 nav {
   position: relative;
   float: right;
   zoom: 1;
   *zoom: 1;
-  height: 100px;
 }
 nav:before,
 nav:after {
@@ -548,14 +545,10 @@ nav ul li {
 nav ul li a {
   border-top: 3px solid #000000;
   color: #999999;
-  padding: 7px 15px 0 15px;
+  padding: 7px 10px 0 10px;
   display: block;
   position: relative;
   float: left;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 13px;
 }
 nav ul li a:hover,
 nav ul li a.active:hover {
@@ -565,17 +558,13 @@ nav ul li a.active:hover {
 nav ul li a.active {
   border-top: 6px solid #000000;
   color: #000000;
-  padding: 4px 15px 0 15px;
+  padding: 4px 10px 0 10px;
 }
-.node-type-work nav li.work a:hover,
-.node-type-article nav li.words a:hover,
-.page-taxonomy-term nav li.words a:hover {
+.node-type-work nav li.work a:hover {
   border-top: 10px solid #000;
   color: #000;
 }
-.node-type-work nav li.work a,
-.node-type-article nav li.words a,
-.page-taxonomy-term nav li.words a {
+.node-type-work nav li.work a {
   border-top: 6px solid #000;
   padding: 4px 10px 0 10px;
   color: #000;
@@ -591,36 +580,63 @@ footer,
   margin-left: auto;
   margin-right: auto;
 }
-.not-front article,
-.not-front header,
-.not-front footer {
-  max-width: 1000px;
+#loading {
+  background: #ffffff url(i/ajax-loader.gif) no-repeat center;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  margin: -50px 0 0 -50px;
+  border-radius: 5px;
+  border: 1px solid #e4e4e4;
+  z-index: 9999;
+  display: none;
 }
-.not-front article article,
-.not-front header article,
-.not-front footer article {
-  max-width: 600px;
+.front article {
+  width: 98%;
+  margin: 100px auto 0;
 }
-/*Work page - Make it fluid width*/
-.not-front.page-node-23 article,
-.not-front.page-node-23 header,
-.not-front.page-node-23 footer {
-  max-width: none;
+.not-front article {
+  padding-top: 50px;
 }
-.front.projectOpen header,
-.page-node-23.projectOpen header {
+header {
+  font-weight: 200;
+}
+.front.projectOpen header {
   background: transparent;
 }
+.front header,
+.front .not-front.node-type-article header {
+  width: 100%;
+  height: 45px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 6px solid #000;
+}
 .front header #headerContent,
-.page-node-23 header #headerContent,
 .not-front.node-type-article header {
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 0;
+  padding: 0 0 10px;
   width: 100%;
   max-width: 960px;
+}
+.not-front.node-type-article header {
+  top: 0px;
+}
+.node-type-work header,
+.node-type-page header {
+  padding: 0 0 10px 0;
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  margin-left: -500px;
+}
+.not-front.node-type-article header {
+  padding-left: 0px;
 }
 .node-type-article footer {
   position: relative;
@@ -628,17 +644,18 @@ footer,
   z-index: 100;
   width: 960px;
 }
-.front #body,
-.page-node-23 #body {
-  margin: 0 auto;
-}
 #body {
   position: relative;
+  float: right;
   width: 100%;
   max-width: 1000px;
-  padding: 0;
+  padding: 0 0 0 0;
   z-index: 2;
-  margin: 0;
+  margin: 0 0 0 0;
+}
+.front #body {
+  float: none;
+  margin: 0 auto;
 }
 #body #words ul li {
   width: 100%;
@@ -677,27 +694,12 @@ footer,
   margin-bottom: 2%;
 }
 .node-type-work #body #lead .intro,
-.front #body #lead .intro,
-.page-node-23 #body #lead .intro {
+.front #body #lead .intro {
   position: absolute;
   top: 50px;
   width: 200px;
   left: 750px;
   z-index: 100;
-}
-.node-type-work #body #lead .intro h1,
-.front #body #lead .intro h1,
-.page-node-23 #body #lead .intro h1 {
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-.node-type-work #body #lead .intro p,
-.front #body #lead .intro p,
-.page-node-23 #body #lead .intro p {
-  line-height: 22px;
-  font-size: 16px;
 }
 /*White backgrounds on the lead paragraphs for pieces 
 	that have a dark background */
@@ -746,17 +748,10 @@ footer,
   line-height: 1.5em;
 }
 .node-type-work #body #words,
-.front #body #words,
-.page-node-23 #body #words {
+.front #body #words {
   width: 35%;
   float: right;
   clear: right;
-}
-.node-type-work #body #words p,
-.front #body #words p,
-.page-node-23 #body #words p {
-  line-height: 22px;
-  font-size: 16px;
 }
 #body #otherImages {
   float: left;
@@ -768,11 +763,76 @@ footer,
   margin-bottom: 2%;
   display: block;
 }
+/*See more stuff sidebar */
+#block-views-work-list-block-1 {
+  position: relative;
+  float: left;
+  background: #F6F6F2;
+  font-size: 0.8em;
+  padding: 12px;
+  border-top: 3px solid #E8E6CA;
+  width: 976px;
+  margin: 40px 0 0 0;
+  z-index: 100;
+}
+#block-views-work-list-block-1 ul {
+  list-style: none;
+}
+#block-views-work-list-block-1 ul li {
+  width: 200px;
+  float: left;
+}
+#block-views-work-list-block-1 h2,
+#block-views-work-list-block-1 h3 {
+  font-weight: normal;
+}
+#block-views-work-list-block-1 h2 {
+  color: #CECCB2;
+  font-size: 1.4em;
+  padding-bottom: 5px;
+}
+#block-views-work-list-block-1 h3 a {
+  color: #9A9885;
+  font-size: 0.9em;
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  display: block;
+  position: relative;
+  float: left;
+}
+#block-views-work-list-block-1 h3 a.active {
+  color: #616054;
+  text-decoration: underline;
+}
+#block-views-work-list-block-1 h3 a:hover {
+  color: #616054;
+}
+#block-views-work-list-block-1 h3 a:active {
+  top: 1px;
+}
 /*- ARTICLE CONTENT
 ----------------------------------------------------------------------*/
+.node-type-article article {
+  padding-top: 100px;
+}
 .node-type-article #block-system-main,
 .node-type-article #block-system-main .article {
   height: 100%;
+}
+.node-type-article .firstParagraph {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin-bottom: 1em;
+  padding-right: 300px;
+  position: relative;
+}
+#rdbWrapper {
+  position: absolute;
+  top: 10px;
+  right: -82px;
+  z-index: 10;
 }
 .body {
   position: relative;
@@ -787,6 +847,11 @@ footer,
 }
 .body strong {
   color: #000;
+}
+.node-type-article h1 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 19px;
 }
 .node-type-article footer .content {
   width: 1000px;
@@ -823,8 +888,7 @@ footer a:hover {
 .projectOpen footer a {
   color: #000;
 }
-.front footer .content,
-.page-node-23 footer .content {
+.front footer .content {
   margin: 0px auto;
   text-align: center;
   width: 300px;
@@ -836,6 +900,10 @@ img.aboutPJ {
   position: absolute;
   z-index: 0;
   top: -50px;
+}
+#about p {
+  position: relative;
+  z-index: 10;
 }
 .aboutcontent {
   background: rgba(0, 0, 0, 0.8);
@@ -867,10 +935,6 @@ img.aboutPJ {
 .page-node-6 header h1 {
   display: none;
 }
-#about p {
-  position: relative;
-  z-index: 10;
-}
 #about h2,
 #about h3,
 #about h4 {
@@ -878,7 +942,7 @@ img.aboutPJ {
   z-index: 10;
 }
 #about h2 {
-  font-size: 42px;
+  font-size: 72px;
   line-height: 1em;
   font-weight: 600;
   top: -56px;
@@ -892,16 +956,14 @@ img.aboutPJ {
   color: #fff;
   color: #ffffff;
   text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.8);
-  top: -47px;
+  top: -74px;
   left: 29px;
-  line-height: 150px;
-  padding-top: 0;
 }
 #about h4 {
   font-size: 24px;
   width: 430px;
   line-height: 1.3em;
-  top: -116px;
+  top: -76px;
   left: 40px;
   color: rgba(0, 0, 0, 0.9);
   text-shadow: -1px 1px 1px rgba(255, 255, 255, 0.5);
@@ -912,13 +974,25 @@ ul.tabs {
   position: relative;
   z-index: 100;
 }
+/*- Work Notice Bars
+----------------------------------------------------------------------*/
+#body .notice {
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.6) url(i/icon_weblink.png) 10px 10px no-repeat;
+  color: #ffffff;
+  padding: 10px 10px 10px 32px;
+  font-weight: normal;
+  font-size: 0.9em;
+}
 /*- New Portfolio Design
 ----------------------------------------------------------------------*/
-body.front article,
-body.page-node-23 article {
-  overflow: hidden;
+body.front article {
   width: 100%;
-  margin: 0 auto;
+  overflow: hidden;
 }
 #bodyWrap .header {
   display: none;
@@ -1022,6 +1096,7 @@ ul.worklist li.open img {
   opacity: 1 !important;
 }
 ul.worklist li h2 {
+  font-size: 15px;
   text-align: left;
   padding-top: 5px;
   clear: left;
@@ -1029,10 +1104,6 @@ ul.worklist li h2 {
   border-left: 1px solid #545454;
   padding-left: 14px;
   margin-bottom: 5px;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
 }
 ul.worklist li .blurb {
   font-size: 13px;
@@ -1050,14 +1121,6 @@ ul.worklist li .blurb p strong {
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
-}
-ul.worklist li .blurb p a {
-  display: inline;
-  background: transparent;
-  border-top: none;
-  max-height: none;
-  float: none;
 }
 ul.worklist li .image {
   padding-bottom: 40px;
@@ -1072,172 +1135,6 @@ ul.worklist li a {
 }
 ul.worklist li img {
   width: 100%;
-}
-/*- Blog
-----------------------------------------------------------------------*/
-.not-front article#blogRoll {
-  max-width: none;
-}
-.not-front article#blogRoll li.post {
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-}
-article blockquote {
-  background: #ECECEC;
-  padding: 15px 15px 2px 15px;
-}
-article blockquote:after {
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-article blockquote:after {
-  border-top-color: #ececec;
-  border-width: 10px;
-  left: 50%;
-  margin-left: -10px;
-}
-article p.cite {
-  padding-top: 15px;
-  text-align: center;
-  font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
-  font-size: 12px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-/*- Testicular Cancer
-----------------------------------------------------------------------*/
-body.front article,
-article.post-24,
-li.post article.post-24 {
-  width: 1000px;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding-top: 370px;
-  background: transparent url(i/tc.png) center top no-repeat;
-}
-body.front article p,
-article.post-24 p,
-li.post article.post-24 p {
-  color: #434343;
-}
-body.front article p.date,
-article.post-24 p.date,
-li.post article.post-24 p.date {
-  font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
-  text-align: center;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 50px;
-}
-body.front article h1,
-article.post-24 h1,
-li.post article.post-24 h1,
-body.front article h2,
-article.post-24 h2,
-li.post article.post-24 h2,
-body.front article h3,
-article.post-24 h3,
-li.post article.post-24 h3 {
-  text-align: center;
-}
-body.front article h3,
-article.post-24 h3,
-li.post article.post-24 h3 {
-  padding: 30px 0;
-  font-size: 24px;
-}
-body.front article h1,
-article.post-24 h1,
-li.post article.post-24 h1 {
-  font-size: 80px;
-  line-height: 90px;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-}
-body.front article #help,
-article.post-24 #help,
-li.post article.post-24 #help {
-  overflow: hidden;
-  display: block;
-  margin-bottom: 40px;
-}
-body.front article #help li,
-article.post-24 #help li,
-li.post article.post-24 #help li {
-  display: inline;
-  width: 50%;
-  float: left;
-}
-body.front article #help li h2,
-article.post-24 #help li h2,
-li.post article.post-24 #help li h2 {
-  margin: 20px auto;
-  background: transparent url(i/ball.png) top center no-repeat;
-  height: 60px;
-  padding-top: 40px;
-}
-body.front article #help li p,
-article.post-24 #help li p,
-li.post article.post-24 #help li p {
-  padding: 0 50px;
-  clear: both;
-}
-body.front article a.donate,
-article.post-24 a.donate,
-li.post article.post-24 a.donate {
-  width: 100%;
-  display: block;
-  float: left;
-  text-align: center;
-  border-bottom: none;
-  background: #ffc13c;
-  border: 1px solid #db9c13;
-  padding: 10px 0;
-  border-radius: 5px;
-  font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
-  font-weight: bold;
-}
-body.front article a.donate:hover,
-article.post-24 a.donate:hover,
-li.post article.post-24 a.donate:hover {
-  background: #dda326;
-  border: 1px solid #b98a23;
-  color: #FFF;
-}
-#block-views-cancer-updates-block {
-  width: 500px;
-  margin: 50px auto 60px;
-  float: none;
-}
-#block-views-cancer-updates-block h2 {
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #a1a1a1;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  border-bottom: 3px solid #a1a1a1;
-}
-#block-views-cancer-updates-block ul li {
-  list-style: none;
-  border-bottom: 1px solid #f0f0f0;
-  padding: 15px 10px 20px;
-}
-#block-views-cancer-updates-block ul li .title a:hover {
-  text-decoration: underline;
-}
-#block-views-cancer-updates-block ul li .date {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #545454;
 }
 /*- Store
 ----------------------------------------------------------------------*/

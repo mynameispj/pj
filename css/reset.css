@@ -96,7 +96,9 @@ section {
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites.
    If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
-img, object, embed {
+img,
+object,
+embed {
   max-width: 100%;
 }
 /* force a vertical scrollbar to prevent a jumpy page */
@@ -108,7 +110,8 @@ html {
 ul {
   list-style: none;
 }
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 blockquote:before,
@@ -128,7 +131,8 @@ a {
 del {
   text-decoration: line-through;
 }
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted #000;
   cursor: help;
 }
@@ -153,7 +157,8 @@ hr {
   margin: 1em 0;
   padding: 0;
 }
-input, select {
+input,
+select {
   vertical-align: middle;
 }
 pre {
@@ -180,7 +185,9 @@ input[type="checkbox"] {
 .ie6 input {
   vertical-align: text-bottom;
 }
-select, input, textarea {
+select,
+input,
+textarea {
   font: 99% sans-serif;
 }
 table {
@@ -189,21 +196,25 @@ table {
 }
 /* Accessible focus treatment
 	people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active {
+a:hover,
+a:active {
   outline: none;
 }
 small {
   font-size: 85%;
 }
-strong, th {
+strong,
+th {
   font-weight: bold;
 }
-td, td img {
+td,
+td img {
   vertical-align: top;
 }
 /* Make sure sup and sub don't screw with your line-heights
 	gist.github.com/413930 */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -246,7 +257,8 @@ button {
   -ms-interpolation-mode: bicubic;
 }
 /* let's clear some floats */
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -316,15 +328,19 @@ mark {
   visibility: hidden;
 }
 /*- fluid images and objects ----------*/
-.not-front img, object, embed {
+.not-front img,
+object,
+embed {
   max-width: 100%;
 }
 /*- optional vanity styles ----------*/
 ::selection {
   background: #E8E6CA;
+  color: #000;
 }
 ::-moz-selection {
   background: #E8E6CA;
+  color: #000;
 }
 img::selection {
   background: transparent;
