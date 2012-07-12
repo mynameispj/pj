@@ -14,6 +14,14 @@
 	box-shadow: @color @horizontal @vertical @blur @spread; 
 	}
 
+.box-shadow(@details) {
+	-webkit-box-box-shadow: @details; 
+	-moz-box-box-shadow: @details; 
+	-o-box-box-shadow: @details; 
+	box-shadow: @details; 
+}
+
+
 .scale(@value) {
 	-webkit-transform: scale(@value);
 	-moz-transform: scale(@value);

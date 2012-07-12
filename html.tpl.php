@@ -51,12 +51,12 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <?php if ($is_front) { ?>
-  	<title>My name is PJ. I design web sites, brands, logos, and other useful things.</title>
+  	<title>PJ McCormick | Design, development, cancer, and, y'know, other stuff.</title>
   <?php } else { ?>	
   	<title><?php print $head_title; ?></title>
   <?php } ?>	  
   <?php if ($is_front): ?>
-	  <meta name="description" content="I design powerful, well thought-out things that produce meaningful results." />
+	  <meta name="description" content="I'm PJ McCormick, UX Designer, web developer, writer, Pixar lover, cancer hater. And other stuff." />
   <?php endif ;?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
@@ -88,6 +88,7 @@
 	</script>
 	
 	<meta name="google-site-verification" content="CaJrlEs8DAKp19J2n7pD_Qd9Gs-KFJCrAZstoGVa7Qc" />
+	<meta name="google-site-verification" content="CaJrlEs8DAKp19J2n7pD_Qd9Gs-KFJCrAZstoGVa7Qc" />
 	<meta name="y_key" content="664ea37a19465f6d" />
 	<meta name="msvalidate.01" content="245E420BBF46223DB09CDC8499509EEA" />
 	
@@ -102,11 +103,16 @@
 </head>
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <div id="skip-link">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
-  </div>
-  <?php print $page_top; ?>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?>
+	<div id="skip-link">
+		<a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+	</div>
+	<?php print $page_top; ?>
+	<?php print $page; ?>
+	<?php print $page_bottom; ?>
+	<footer>
+		<div class="content">
+			This site and the stuff on it was made by PJ McCormick. The words are &copy; PJ McCormick, 2010&mdash;<?php print date("Y"); ?>, the design work belongs to the various clients and project owners. Like every other web designer on the face of the earth, you can <a href="http://dribbble.com/mynameispj" title="Dribbble">find him</a> at a <a href="http://www.twitter.com/mynameispj" title="Twitter">number</a> of <a href="http://www.flickr.com/photos/pjmccormick/" title="Flickr">online</a> <a href="http://www.facebook.com/pjmccormick" title="Facebook">hangouts</a>.  
+		</div>
+	</footer>
 </body>
 </html>

@@ -1,17 +1,30 @@
 
 /* NEW RULES */
 
-@media screen and (min-width: 240px) and (max-width: 1000px) {
+@media screen and (min-width: 240px) and (max-width: 600px) {
 
 	article {
+		.articleWrap {
+			.pager {
+				width: 90%; 
+				margin-left: 5%; 
+			}
+			
+		}
+	
 		article {
 			width: 90%; 
 			margin-left: 5%; 
-			
 		}
 		
 	}
-
+	
+	.node-type-article footer .content,
+	.not-front article#blogRoll .articleWrap article {
+		width: 90%; 
+		margin-left: 5%; 		
+	}
+	
 }
 
 
@@ -21,46 +34,12 @@
 		width: 70%; 	
 	}
 		
-	nav {
-		float: none; 
-	}
-	
-	header h1, 
-	header h2 {
-		position: absolute;
-		width: 100%;
-		text-align: center;	
-		margin-top: 40px;
-	}
-	
-
 	article header h1, 
 	article header h2 {
 		position: relative; 
 		margin-top: 0; 
 	}
 	
-	nav ul {
-		display: block; 
-		text-align: center; 
-		width: 100%; 
-		li {
-			float: none; 
-			position: relative; 
-			display: inline; 	
-			a {
-				display: inline; 
-				float: none; 
-			}	
-			a.active {
-				top: 5px; 
-			}
-			a:hover {
-				top: 12px; 
-			}
-		}
-	}
-
 }
 
 
@@ -139,7 +118,59 @@
 		}
 	}
 	
+	
+	article .articleWrap article.post header h1, 
+	article .articleWrap article.post header h2 {
+		font-size: 30px; 
+		line-height: 36px;
+		
+	}
+	
+	article .articleWrap article.post .firstParagraph p {
+		
+		font-size: 18px; 
+		line-height: 24px;
+	}
+	
+	article.post p, 
+	article.post ul li {
+		font-size: 16px;
+	}
+	
+	.showMenu {
+		display: block; 
+	}
+	
+	nav { 
+		float: left; 
+		display: none; 
+		ul {
+			text-align: left; 
+			li {
+				direction: block; 
+				a {
+					display: block;
+					float: none; 
 
+				}
+				
+				a,
+				a.active {
+				
+				}
+				
+				a:hover, 
+				a.active:hover, 
+				a.active  {
+				
+				}
+			}
+			
+		}
+		
+	}
+	
+	
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -151,6 +182,13 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+	header.clearfix {
+		h1 {
+			width: 50%; 
+		}
+		
+	}
 
 	.body {
 		p {
@@ -167,19 +205,6 @@
 	
 	
 	
-	.node-type-article {
-		h1 {
-			margin-left: 20px;
-			
-		}
-		
-		.firstParagraph {
-			padding-right: 0; 
-			margin-right: 20%;
-			margin-left: 20px;
-			
-		}
-	}
 }
 
 @media screen and (min-width: 1145px) and (max-width: 1700px) {
@@ -190,8 +215,29 @@
 }
 
 @media screen and (min-width: 1700px) {
-
 	ul.worklist li {
 		width: 10%; 	
 	}
+}
+
+@media screen and (min-width: 1024px) {
+	article {
+		.articleWrap {
+			.pager {
+				width: 100%; 
+				position: absolute; 
+				top: 40px; 
+				
+				.next, 
+				.prev {
+					width: 150px;
+					padding: 20px;
+				}
+				
+			}
+			
+		}
+		
+	}
+
 }

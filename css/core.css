@@ -369,91 +369,6 @@ h2,
 h3 {
   font-weight: normal;
 }
-header h1,
-header h2 {
-  float: left;
-  padding-top: 10px;
-  font-weight: 200;
-}
-article header h1,
-article header h2 {
-  text-align: center;
-  float: none;
-  display: block;
-  font-size: 42px;
-  font-weight: 600;
-  color: #000;
-  line-height: 48px;
-}
-article header h1 a,
-article header h2 a {
-  float: none;
-  display: block;
-}
-article header h1 a:hover,
-article header h2 a:hover {
-  border-bottom: none;
-}
-article ul {
-  list-style: outside;
-  margin-bottom: 1.2em;
-}
-article ul li {
-  margin-bottom: 5px;
-}
-article aside {
-  text-align: center;
-  padding: 10px 0 30px;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #545454;
-}
-article aside .tags {
-  padding-left: 5px;
-  margin-left: 5px;
-  border-left: 1px solid #e6e6e6;
-}
-article aside .tags div {
-  display: inline;
-}
-article aside .tags a {
-  background: #d3d3d3;
-  padding: 3px 5px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-article aside .tags a:hover {
-  background: #545454;
-  color: #fff;
-}
-article p.firstParagraph {
-  font-size: 24px;
-  line-height: 32px;
-  color: #000;
-}
-header h2 {
-  color: #999;
-}
-header h2 a {
-  /*-webkit-transition: border-bottom 0.3s linear;
-		-moz-transition: border-bottom 0.3s linear;
-		-o-transition: border-bottom 0.3s linear;
-		transition: border-bottom 0.3s linear;
-		display: block;
-		border-bottom: 1px solid #fff; 
-		position: relative;
-		float: left;*/
-
-}
-header h2 a:hover {
-  /*border-bottom: 1px solid #000;*/
-}
-header h2 a:active {
-  top: 2px;
-}
 #body h3 {
   padding-top: 0.75em;
   padding-bottom: 0.5em;
@@ -518,12 +433,28 @@ p a:active {
 ----------------------------------------------------------------------*/
 /* LESS functions */
 /* END LESS functions */
+header#page {
+  background: #000;
+  margin-bottom: 50px;
+  padding-top: 7px;
+}
+header#page h1,
+header#page h2 {
+  color: #CCC;
+  padding: 0 15px 7px;
+  float: left;
+  font-size: 15px;
+  font-weight: 400;
+}
+header#page h1 a,
+header#page h2 a {
+  color: #fff;
+}
 nav {
   position: relative;
   float: right;
   zoom: 1;
   *zoom: 1;
-  height: 100px;
 }
 nav:before,
 nav:after {
@@ -546,9 +477,7 @@ nav ul li {
   display: inline;
 }
 nav ul li a {
-  border-top: 3px solid #000000;
-  color: #999999;
-  padding: 7px 15px 0 15px;
+  padding: 0 15px 7px;
   display: block;
   position: relative;
   float: left;
@@ -556,29 +485,60 @@ nav ul li a {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 13px;
+  color: #999;
 }
 nav ul li a:hover,
 nav ul li a.active:hover {
-  border-top: 10px solid #000000;
-  color: #000000;
+  color: #fff;
 }
 nav ul li a.active {
-  border-top: 6px solid #000000;
-  color: #000000;
-  padding: 4px 15px 0 15px;
+  color: #fff;
 }
 .node-type-work nav li.work a:hover,
 .node-type-article nav li.words a:hover,
 .page-taxonomy-term nav li.words a:hover {
-  border-top: 10px solid #000;
-  color: #000;
+  color: #fff;
 }
 .node-type-work nav li.work a,
 .node-type-article nav li.words a,
 .page-taxonomy-term nav li.words a {
-  border-top: 6px solid #000;
-  padding: 4px 10px 0 10px;
-  color: #000;
+  color: #fff;
+}
+.showMenu {
+  color: #999;
+  display: block;
+  clear: left;
+  text-align: center;
+  cursor: pointer;
+  height: 44px;
+  line-height: 44px;
+  display: none;
+}
+.showMenu .arrow-down {
+  position: absolute;
+  margin: 20px 0 0 5px;
+  border-top: 5px solid #999;
+}
+.showMenu.open .arrow-down {
+  border-bottom: 5px solid #999;
+  border-top: none;
+}
+.showMenu:hover {
+  color: #fff;
+}
+.showMenu:hover .arrow-down {
+  border-top: 5px solid #FFF;
+}
+.showMenu:hover.open .arrow-down {
+  border-bottom: 5px solid #FFF;
+  border-top: none;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFF;
 }
 /*- CONTENT
 ----------------------------------------------------------------------*/
@@ -590,19 +550,13 @@ footer,
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-.not-front article,
-.not-front header,
-.not-front footer {
   max-width: 1000px;
 }
-.not-front article article,
-.not-front header article,
-.not-front footer article {
-  max-width: 600px;
+article,
+header {
+  max-width: none;
 }
 /*Work page - Make it fluid width*/
-.not-front.page-node-23 article,
 .not-front.page-node-23 header,
 .not-front.page-node-23 footer {
   max-width: none;
@@ -611,9 +565,7 @@ footer,
 .page-node-23.projectOpen header {
   background: transparent;
 }
-.front header #headerContent,
-.page-node-23 header #headerContent,
-.not-front.node-type-article header {
+.page-node-23 header #headerContent {
   position: relative;
   display: block;
   margin-left: auto;
@@ -621,12 +573,6 @@ footer,
   padding: 0;
   width: 100%;
   max-width: 960px;
-}
-.node-type-article footer {
-  position: relative;
-  padding: 30px 30px 10px 0px;
-  z-index: 100;
-  width: 960px;
 }
 .front #body,
 .page-node-23 #body {
@@ -788,9 +734,6 @@ footer,
 .body strong {
   color: #000;
 }
-.node-type-article footer .content {
-  width: 1000px;
-}
 .body h3 {
   margin: 30px 0px 15px;
   font-size: 1.2em;
@@ -861,11 +804,12 @@ img.aboutPJ {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
+.page-node-6 h1 {
+  display: none;
+}
 .page-node-6 #body {
   min-height: 1000px;
-}
-.page-node-6 header h1 {
-  display: none;
+  margin: 0 auto;
 }
 #about p {
   position: relative;
@@ -914,7 +858,6 @@ ul.tabs {
 }
 /*- New Portfolio Design
 ----------------------------------------------------------------------*/
-body.front article,
 body.page-node-23 article {
   overflow: hidden;
   width: 100%;
@@ -1075,19 +1018,107 @@ ul.worklist li img {
 }
 /*- Blog
 ----------------------------------------------------------------------*/
-.not-front article#blogRoll {
+.node-type-article footer .content {
+  width: 1000px;
+}
+.post {
+  position: relative;
+}
+article#blogRoll {
   max-width: none;
 }
-.not-front article#blogRoll li.post {
+article .articleWrap {
   border-bottom: 1px solid #f0f0f0;
   padding-bottom: 40px;
   margin-bottom: 40px;
 }
-article blockquote {
+article .articleWrap.fillpost {
+  margin-top: -40px;
+}
+article .articleWrap.post-35 {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+article .articleWrap .fill img {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  min-width: 1000px;
+  top: 0;
+}
+article .articleWrap article.post {
+  max-width: 600px;
+}
+article .articleWrap article.post img {
+  -webkit-box-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  -o-box-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+article .articleWrap article.post header h1,
+article .articleWrap article.post header h2 {
+  text-align: center;
+  float: none;
+  display: block;
+  font-size: 42px;
+  font-weight: 600;
+  color: #000;
+  line-height: 48px;
+}
+article .articleWrap article.post header h1 a,
+article .articleWrap article.post header h2 a {
+  float: none;
+  display: block;
+}
+article .articleWrap article.post header h1 a:hover,
+article .articleWrap article.post header h2 a:hover {
+  border-bottom: none;
+}
+article .articleWrap article.post ul {
+  list-style: outside;
+  margin-bottom: 1.2em;
+}
+article .articleWrap article.post ul li {
+  margin-bottom: 5px;
+}
+article .articleWrap article.post aside {
+  text-align: center;
+  padding: 10px 0 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #545454;
+}
+article .articleWrap article.post aside .tags {
+  padding-left: 5px;
+  margin-left: 5px;
+  border-left: 1px solid #e6e6e6;
+}
+article .articleWrap article.post aside .tags div {
+  display: inline;
+}
+article .articleWrap article.post aside .tags a {
+  background: #d3d3d3;
+  padding: 3px 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+article .articleWrap article.post aside .tags a:hover {
+  background: #545454;
+  color: #fff;
+}
+article .articleWrap article.post .firstParagraph p {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000;
+}
+article .articleWrap article.post blockquote {
   background: #ECECEC;
   padding: 15px 15px 2px 15px;
 }
-article blockquote:after {
+article .articleWrap article.post blockquote:after {
   border: solid transparent;
   content: " ";
   height: 0;
@@ -1095,13 +1126,13 @@ article blockquote:after {
   position: absolute;
   pointer-events: none;
 }
-article blockquote:after {
+article .articleWrap article.post blockquote:after {
   border-top-color: #ececec;
   border-width: 10px;
   left: 50%;
   margin-left: -10px;
 }
-article p.cite {
+article .articleWrap article.post p.cite {
   padding-top: 15px;
   text-align: center;
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
@@ -1110,9 +1141,76 @@ article p.cite {
   text-transform: uppercase;
   font-weight: 600;
 }
+article .articleWrap .pager {
+  width: 600px;
+  margin: 0 auto;
+  zoom: 1;
+  *zoom: 1;
+}
+article .articleWrap .pager:before,
+article .articleWrap .pager:after {
+  display: table;
+  content: "";
+}
+article .articleWrap .pager:after {
+  clear: both;
+}
+article .articleWrap .pager.sticky {
+  position: fixed;
+}
+article .articleWrap .pager .next,
+article .articleWrap .pager .prev {
+  width: 50%;
+  position: relative;
+}
+article .articleWrap .pager .next a,
+article .articleWrap .pager .prev a {
+  color: #999;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  border-bottom: 1px solid #FFF;
+  font-size: 15px;
+  line-height: 18px;
+}
+article .articleWrap .pager .next a:hover,
+article .articleWrap .pager .prev a:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+article .articleWrap .pager .next {
+  float: left;
+}
+article .articleWrap .pager .prev {
+  float: right;
+  text-align: right;
+}
+article .articleWrap .pager .label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+}
+.gist pre {
+  white-space: pre;
+}
+span.code {
+  font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+  font-size: 15px;
+  color: #000;
+}
+/* Custom post styles */
+/*4th of July, Disney World pic */
+article.post.post-35,
+.fillpost article {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #fff;
+  padding: 20px;
+  top: 200px;
+}
 /*- Testicular Cancer
 ----------------------------------------------------------------------*/
-body.front article,
 article.post-24,
 li.post article.post-24 {
   width: 1000px;
@@ -1121,12 +1219,10 @@ li.post article.post-24 {
   padding-top: 370px;
   background: transparent url(i/tc.png) center top no-repeat;
 }
-body.front article p,
 article.post-24 p,
 li.post article.post-24 p {
   color: #434343;
 }
-body.front article p.date,
 article.post-24 p.date,
 li.post article.post-24 p.date {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
@@ -1136,24 +1232,19 @@ li.post article.post-24 p.date {
   letter-spacing: 2px;
   margin-bottom: 50px;
 }
-body.front article h1,
 article.post-24 h1,
 li.post article.post-24 h1,
-body.front article h2,
 article.post-24 h2,
 li.post article.post-24 h2,
-body.front article h3,
 article.post-24 h3,
 li.post article.post-24 h3 {
   text-align: center;
 }
-body.front article h3,
 article.post-24 h3,
 li.post article.post-24 h3 {
   padding: 30px 0;
   font-size: 24px;
 }
-body.front article h1,
 article.post-24 h1,
 li.post article.post-24 h1 {
   font-size: 80px;
@@ -1161,21 +1252,18 @@ li.post article.post-24 h1 {
   text-transform: uppercase;
   letter-spacing: 7px;
 }
-body.front article #help,
 article.post-24 #help,
 li.post article.post-24 #help {
   overflow: hidden;
   display: block;
   margin-bottom: 40px;
 }
-body.front article #help li,
 article.post-24 #help li,
 li.post article.post-24 #help li {
   display: inline;
   width: 50%;
   float: left;
 }
-body.front article #help li h2,
 article.post-24 #help li h2,
 li.post article.post-24 #help li h2 {
   margin: 20px auto;
@@ -1183,13 +1271,11 @@ li.post article.post-24 #help li h2 {
   height: 60px;
   padding-top: 40px;
 }
-body.front article #help li p,
 article.post-24 #help li p,
 li.post article.post-24 #help li p {
   padding: 0 50px;
   clear: both;
 }
-body.front article a.donate,
 article.post-24 a.donate,
 li.post article.post-24 a.donate {
   width: 100%;
@@ -1204,7 +1290,6 @@ li.post article.post-24 a.donate {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
   font-weight: bold;
 }
-body.front article a.donate:hover,
 article.post-24 a.donate:hover,
 li.post article.post-24 a.donate:hover {
   background: #dda326;
@@ -1326,8 +1411,17 @@ li.post article.post-24 a.donate:hover {
 /*- Media Queries
 ----------------------------------------------------------------------*/
 /* NEW RULES */
-@media screen and (min-width: 240px) and (max-width: 1000px) {
+@media screen and (min-width: 240px) and (max-width: 600px) {
+  article .articleWrap .pager {
+    width: 90%;
+    margin-left: 5%;
+  }
   article article {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .node-type-article footer .content,
+  .not-front article#blogRoll .articleWrap article {
     width: 90%;
     margin-left: 5%;
   }
@@ -1336,40 +1430,10 @@ li.post article.post-24 a.donate:hover {
   ul.worklist li {
     width: 70%;
   }
-  nav {
-    float: none;
-  }
-  header h1,
-  header h2 {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-  }
   article header h1,
   article header h2 {
     position: relative;
     margin-top: 0;
-  }
-  nav ul {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-  nav ul li {
-    float: none;
-    position: relative;
-    display: inline;
-  }
-  nav ul li a {
-    display: inline;
-    float: none;
-  }
-  nav ul li a.active {
-    top: 5px;
-  }
-  nav ul li a:hover {
-    top: 12px;
   }
 }
 @media screen and (min-width: 240px) and (max-width: 320px) {
@@ -1419,6 +1483,36 @@ li.post article.post-24 a.donate:hover {
   ul.worklist li {
     width: 50%;
   }
+  article .articleWrap article.post header h1,
+  article .articleWrap article.post header h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  article .articleWrap article.post .firstParagraph p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  article.post p,
+  article.post ul li {
+    font-size: 16px;
+  }
+  .showMenu {
+    display: block;
+  }
+  nav {
+    float: left;
+    display: none;
+  }
+  nav ul {
+    text-align: left;
+  }
+  nav ul li {
+    direction: block;
+  }
+  nav ul li a {
+    display: block;
+    float: none;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   ul.worklist li {
@@ -1426,19 +1520,14 @@ li.post article.post-24 a.donate:hover {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  header.clearfix h1 {
+    width: 50%;
+  }
   .body p {
     margin-right: 30%;
     margin-left: 20px;
   }
   .body h3 {
-    margin-left: 20px;
-  }
-  .node-type-article h1 {
-    margin-left: 20px;
-  }
-  .node-type-article .firstParagraph {
-    padding-right: 0;
-    margin-right: 20%;
     margin-left: 20px;
   }
 }
@@ -1450,5 +1539,17 @@ li.post article.post-24 a.donate:hover {
 @media screen and (min-width: 1700px) {
   ul.worklist li {
     width: 10%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  article .articleWrap .pager {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+  }
+  article .articleWrap .pager .next,
+  article .articleWrap .pager .prev {
+    width: 150px;
+    padding: 20px;
   }
 }

@@ -1,27 +1,23 @@
-<?php
-// $Id: page.tpl.php,v 1.15 2010/11/20 04:03:51 webchick Exp $
-?>
 <a id="top"></a>
-<header class="clearfix">
-	<div id="headerContent">
-		<?php print render($primary_local_tasks); ?>
-		<h1>My name is PJ. I design web sites, brands, apps, logos, and other useful things.</h1>
-		<nav>
-			<?php print theme('links__system_main_menu', array(
-		      'links' => $main_menu,
-		      'attributes' => array(
-		        'id' => 'main-menu-links',
-		        'class' => array('links', 'clearfix'),
-		      ),
-		      'heading' => array(
-		        'text' => t('Main menu'),
-		        'level' => 'h2',
-		        'class' => array('element-invisible'),
-		      ),
-		    )); ?>
-	
-		</nav>
-	</div>
+<header id="page" class="clearfix">
+	<?php print render($primary_local_tasks); ?>
+	<h1><a href="/">I design and build web sites, brands, apps, logos, and other useful things.</a></h1>
+	<a class="showMenu">Menu <span class="arrow-down"></span> </a>
+	<nav>
+		<?php print theme('links__system_main_menu', array(
+	      'links' => $main_menu,
+	      'attributes' => array(
+	        'id' => 'main-menu-links',
+	        'class' => array('links', 'clearfix'),
+	      ),
+	      'heading' => array(
+	        'text' => t('Main menu'),
+	        'level' => 'h2',
+	        'class' => array('element-invisible'),
+	      ),
+	    )); ?>
+
+	</nav>
 </header>
 <div id="loading"></div>
 <article class="clearfix">
@@ -60,14 +56,3 @@
 		<?php endif; ?>
 	</div>
 </article>
-
-
-
-<footer>
-	<div class="content">
-		This site and the stuff on it was made by PJ McCormick. The words are &copy; PJ McCormick, 2010&mdash;<?php print date("Y"); ?>, the design work belongs to the various clients and project owners. Like every other web designer on the face of the earth, you can <a href="http://dribbble.com/mynameispj" title="Dribbble">find him</a> at a <a href="http://www.twitter.com/mynameispj" title="Twitter">number</a> of <a href="http://www.flickr.com/photos/pjmccormick/" title="Flickr">online</a> <a href="http://www.facebook.com/pjmccormick" title="Facebook">hangouts</a>.  
-	</div>
-</footer>
-
-  
-

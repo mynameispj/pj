@@ -81,51 +81,67 @@
 ?>
 
 <?php
-  // We hide the comments and links now so that we can render them later.
-  hide($content['comments']);
-  hide($content['links']);
-  hide($content['field_tags']);
-  hide($content['field_image']);
-  hide($content['field_article_first_paragraph']);
+	// We hide the comments and links now so that we can render them later.
+	hide($content['comments']);
+	hide($content['links']);
+	hide($content['field_tags']);
+	hide($content['field_image']);
+	hide($content['field_article_first_paragraph']);
+	hide($content['field_background_image']); 
   
+	if (array_key_exists('#items', $content['field_background_image'])) {
+		$fillImageExists = 1; 
+	} else {
+		$fillImageExists = 0; 		
+	}
   
+	$nextPost = pn_node($node, 'n'); 	
+	$prevPost = pn_node($node, 'p'); 	
   
 ?>
-   
 
-<article class="post-<?php print $nid;?>"> 
-	<header>
-		<?php if ($nid != 24): //the title of the testicular cancer post is in the body of the post ?>
-			<?php print render($title_prefix); ?>
-				<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
-			<?php print render($title_suffix); ?>
-		<?php endif; ?>
-
-	</header>
-	<aside>
-		<?php if ($nid != 24): //the date of the TC post is in the body of the post ?>
-			<?php //print $date;?>
-			<?php //print $tags; ?>
-			<?php print format_date($created, 'custom', 'F j Y'); ?>
-			<span class="tags"><?php print render($content['field_tags']); ?></span>
-		<?php endif; ?>
-		
-	</aside>
-
-	<p class="firstParagraph"><?php print render($content['field_article_first_paragraph']['#items'][0]['value']); ?></p>
-	<?php print render($content); 
-	?>
-	<?php //print $post; ?>
-
-</article>
-
-
-
-<!--<div id="slider"></div>-->
-
-  <?php // print render($content['links']); ?>
-
-	<?php //print render($content['comments']); ?>
-  
-
-
+<div class="articleWrap post-<?php print $nid; if ($fillImageExists == 1) print ' fillpost';  ?>">   
+	<?php 
+	//krumo($content['field_background_image']); 
+	if ($fillImageExists == 1) {
+		print '<div class="fill">' . render($content['field_background_image']) . '</div>'; 
+	} ?> 
+	
+	<article class="post post-<?php print $nid;?>"> 
+		<header>
+			<?php if ($nid != 24): //the title of the testicular cancer post is in the body of the post ?>
+				<?php print render($title_prefix); ?>
+					<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+				<?php print render($title_suffix); ?>
+			<?php endif; ?>
+	
+		</header>
+		<aside>
+			<?php if ($nid != 24): //the date of the TC post is in the body of the post ?>
+				<?php print format_date($created, 'custom', 'F j Y'); ?>
+				<span class="tags"><?php print render($content['field_tags']); ?></span>
+			<?php endif; ?>
+			
+		</aside>
+	
+		<div class="firstParagraph"><?php print render($content['field_article_first_paragraph']['#items'][0]['value']); ?></div>
+		<?php print render($content); ?>
+	
+	</article>
+	<?php if ($page) { ?>
+		<div class="pager">
+			<?php if ($nextPost != NULL) { ?>
+				<div class="next">
+					<div class="label">&larr; Next</div>
+					<?php print $nextPost; ?>
+				</div>
+			<?php } ?>
+			<?php if ($prevPost != NULL) { ?>
+				<div class="prev">
+					<div class="label">Previously &rarr; </div>
+					<?php print $prevPost; ?>
+				</div>
+			<?php } ?>
+		</div>
+	<?php } ?>
+</div>

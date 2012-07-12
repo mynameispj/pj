@@ -46,5 +46,5 @@
 
 
     <?php foreach ($items as $delta => $item) : ?>
-      <div class="firstParagraph"><?php print render($item); ?></div>
+      <?php print render($item); ?>
     <?php endforeach; ?>

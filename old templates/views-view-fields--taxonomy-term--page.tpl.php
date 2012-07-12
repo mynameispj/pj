@@ -29,25 +29,35 @@ $date = $fields['created']->content;
 $tags = $fields['term_node_tid']->content;
 $firstParagraph = $fields['field_article_first_paragraph']->content;
 $post = $fields['body']->content; 
-
+$fillImage = $fields['field_background_image']->content;
 ?>
-
-<article class="post-<?php print $nid;?>"> 
-	<header>
-		<?php //krumo($fields); ?>
-		<?php if ($nid != 24): //the title of the testicular cancer post is in the body of the post ?>
-			<h2><?php print $title; ?></h2>
-		<?php endif; ?>
-	</header>
-	<aside>
-		<?php if ($nid != 24): //the date of the TC post is in the body of the post ?>
-			<?php print $date;?>
-			<?php print $tags; ?>
-		<?php endif; ?>
+<div class="articleWrap post-<?php print $nid;?>">
+	
+	<?php //krumo($fields['field_background_image']); 
+		if ($fillImage != "") {
+			print '<div class="fill">' . $fillImage . '</div>'; 
+		}
 		
-	</aside>
+	?>
 
-	<?php print $firstParagraph;?>
-	<?php print $post; ?>
 
-</article>
+	<article class="post-<?php print $nid;?>"> 
+		<header>
+			<?php //krumo($fields); ?>
+			<?php if ($nid != 24): //the title of the testicular cancer post is in the body of the post ?>
+				<h2><?php print $title; ?></h2>
+			<?php endif; ?>
+		</header>
+		<aside>
+			<?php if ($nid != 24): //the date of the TC post is in the body of the post ?>
+				<?php print $date;?>
+				<?php print $tags; ?>
+			<?php endif; ?>
+			
+		</aside>
+	
+		<div class="firstParagraph"><?php print $firstParagraph;?></div>
+		<?php print $post; ?>
+	
+	</article>
+</div>

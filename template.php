@@ -132,3 +132,34 @@ function pj_image($variables) {
 
   return '<img' . drupal_attributes($attributes) . ' />';
 }
+
+function pn_node($node, $mode = 'n') {
+	if (!function_exists('prev_next_nid')) {
+		return NULL;
+	}
+
+	switch($mode) {
+		case 'p':
+			$n_nid = prev_next_nid($node->nid, 'prev');
+			$link_text = 'previous';
+		break;
+		
+		case 'n':
+			$n_nid = prev_next_nid($node->nid, 'next');
+			$link_text = 'next';
+		break;
+		
+		default:
+		return NULL;
+	}
+
+	if ($n_nid) {
+		$n_node = node_load($n_nid);
+		
+		switch($n_node->type) {	
+			case 'article': 
+				$html = l('"'.$n_node->title .'"', 'node/'.$n_node->nid); 
+			return $html; 
+		}
+	}
+}

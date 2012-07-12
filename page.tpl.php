@@ -1,9 +1,7 @@
-<?php
-// $Id: page.tpl.php,v 1.15 2010/11/20 04:03:51 webchick Exp $
-?>
-<header class="clearfix">
+<header id="page" class="clearfix">
 	<?php print render($primary_local_tasks); ?>
-	<h2><a href="/">My name is PJ.</a> This is something I made.</h2>
+	<h2><a href="/">PJMcCormick.com</a>  Design, development, cancer, and, y'know, other stuff.</h2>
+	<a class="showMenu">Menu <span class="arrow-down"></span> </a>
 	<nav>
 	<?php print theme('links__system_main_menu', array(
       'links' => $main_menu,
@@ -21,8 +19,6 @@
 	</nav>
 </header>
 
-
-
 <article class="clearfix">
 	<?php if ($tabs): ?>
 		<div class="tabs">
@@ -30,27 +26,16 @@
 		</div>
 	<?php endif; ?>
 	<?php print render($secondary_local_tasks); ?>
-		<div class="element-invisible"><a id="main-content"></a></div>
-		<?php if ($messages): ?>
-			<div id="console" class="clearfix"><?php print $messages; ?></div>
-		<?php endif; ?>
-		<?php if ($page['help']): ?>
-			<div id="help">
-			  <?php print render($page['help']); ?>
-			</div>
-		<?php endif; ?>
-		<?php if ($action_links): ?>
-			<ul class="action-links"><?php print render($action_links); ?></ul>
-		<?php endif; ?>
-		<?php print render($page['content']); ?>
-		<?php //print render($page['more_work']); ?>
+	<?php if ($messages): ?>
+		<div id="console" class="clearfix"><?php print $messages; ?></div>
+	<?php endif; ?>
+	<?php if ($page['help']): ?>
+		<div id="help">
+		  <?php print render($page['help']); ?>
+		</div>
+	<?php endif; ?>
+	<?php if ($action_links): ?>
+		<ul class="action-links"><?php print render($action_links); ?></ul>
+	<?php endif; ?>
+	<?php print render($page['content']); ?>
 </article>
-
-<footer>
-	<div class="content">
-		This site and the stuff on it was made by PJ McCormick. The words are &copy; PJ McCormick, 2010&mdash;<?php print date("Y"); ?>, the design work belongs to the various clients and project owners. Like every other web designer on the face of the earth, you can <a href="http://dribbble.com/mynameispj" title="Dribbble">find him</a> at a <a href="http://www.twitter.com/mynameispj" title="Twitter">number</a> of <a href="http://www.flickr.com/photos/pjmccormick/" title="Flickr">online</a> <a href="http://www.facebook.com/pjmccormick" title="Facebook">hangouts</a>.  
-	</div>
-
-</footer>
-
-  
