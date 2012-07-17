@@ -88,19 +88,27 @@
 	hide($content['field_image']);
 	hide($content['field_article_first_paragraph']);
 	hide($content['field_background_image']); 
-  
-	if (array_key_exists('#items', $content['field_background_image'])) {
+	hide($content['field_custom_layout']); 
+	
+	if (array_key_exists('#items', $content['field_background_image'])) { 
 		$fillImageExists = 1; 
 	} else {
 		$fillImageExists = 0; 		
-	}
+	} 
+
+	if (array_key_exists('#items', $content['field_custom_layout'])) { 
+		$customLayout = 1;  
+	} else {
+		$customLayout = 0;  		
+	} 
   
 	$nextPost = pn_node($node, 'n'); 	
 	$prevPost = pn_node($node, 'p'); 	
   
 ?>
 
-<div class="articleWrap post-<?php print $nid; if ($fillImageExists == 1) print ' fillpost';  ?>">   
+<div class="articleWrap post-<?php print $nid; if ($fillImageExists == 1) print ' fillpost';
+if ($customLayout == 1) print ' '. $content['field_custom_layout']['#items'][0]['value'];  ?>">   
 	<?php 
 	//krumo($content['field_background_image']); 
 	if ($fillImageExists == 1) {

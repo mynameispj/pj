@@ -6,13 +6,27 @@
 	position: relative; 
 }
 
+
+.node-type-article article .articleWrap.fillpost {
+	margin-top: -50px; 	
+}
+
 article {
+
+	.post.first {
+		.articleWrap {
+			&.fillpost {
+				margin-top: -50px; 
+			}
+		}
+	}
+
 	&#blogRoll {
 		max-width: none; 
 	}	
 	
 	.articleWrap {
-		border-bottom: 1px solid #f0f0f0; 
+		border-bottom: 1px solid #ccc; 
 		padding-bottom: 40px; 
 		margin-bottom: 40px; 
 		
@@ -63,9 +77,7 @@ article {
 						border-bottom: none; 
 						
 					}
-					
 				}
-				
 			}
 			
 			ul {
@@ -75,7 +87,6 @@ article {
 				li {
 					margin-bottom: 5px; 
 				}
-				
 			}
 			
 			aside {
@@ -116,6 +127,13 @@ article {
 					line-height: 32px; 
 					color: #000; 	
 				}
+				
+				span.code {
+					font-size: 18px; 
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+				
 			}
 		
 		
@@ -166,7 +184,8 @@ article {
 			.prev {
 				width: 50%; 
 				position: relative; 
-				
+				background: rgba(255,255,255,0.85);
+
 				a {
 					color: #999; 
 					.transition(all, 0.2s, linear);
@@ -195,36 +214,91 @@ article {
 				letter-spacing: 2px; 
 				color: #999; 
 			}
-			
 		}
 	
 	} // end .articleWrap
 } //end article
-
-.gist {
-	pre {
-		white-space: pre; 
+article {
+	.gist {
+		font-size: 14px; 
 		
+		pre {
+			white-space: pre; 
+		}
+		
+		.gist-file {
+			.gist-meta {
+				font-size: 11px; 
+			}
+		}
 	}
-	
 }
 
 span.code {
 	.mono(); 
 	font-size: 15px; 
 	color: #000; 
+	font-weight: bold; 
 }
 
 
 /* Custom post styles */
 
-/*4th of July, Disney World pic */
+/*
+Posts with big background images, ie "Fillposts"
+4th of July, Disney World pic */
 
 article.post.post-35, 
 .fillpost article {
 	background: rgba(255,255,255,0.7);
 	border: 1px solid #fff; 
 	padding: 20px; 
-	top: 200px;
+	margin-top: 200px;	
 }
+
+article {
+	.articleWrap.fillpost {
+		p {
+			color: #000; 
+		}
+		
+		.pager {
+			clear: both; 
+			background: rgba(255,255,255,0.7);
+			padding: 20px; 			
+		}
+
+	}
+}
+
+/*Posts that float the article left and the pagers right */
+
+article {
+	.articleWrap.left {
+		.clearfix(); 
+		
+		article.post {
+			margin-left: 100px; 
+			float: left; 
+		}
+		
+		.pager {
+			border: 1px solid #fff; 
+			border-top: none; 
+		}
+	}
+}
+
+
+/*Pathology report excerpt post */
+
+article {
+	.articleWrap.post-44 {
+		background: url('i/tan-noise-fill.jpg'); 
+		article.post {
+			background: rgba(255,255,255,0.85);			
+		}				
+	}
+}
+
 

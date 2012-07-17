@@ -18,10 +18,12 @@ if(typeof(CKEDITOR) !== 'undefined') {
             /*
             { name : 'Paragraph'		, element : 'p' },
             { name : 'Heading 1'		, element : 'h1' },*/
-            { name : 'Paragraph'		, element : 'p' }
+            { name : 'Paragraph'		, element : 'p' }, 
             { name : 'Heading 2'		, element : 'h2' },
             { name : 'Heading 3'		, element : 'h3' },
             { name : 'Blockquote Cite'		, element : 'p', attributes : { 'class' : 'cite' } },
+            { name : 'Code'		, element : 'span', attributes : { 'class' : 'code' } },
+
             /*
             { name : 'Heading 4'		, element : 'h4' },
             { name : 'Heading 5'		, element : 'h5' },
@@ -29,10 +31,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Preformatted Text', element : 'pre' },
             { name : 'Address'			, element : 'address' },
             */
-
-            { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
-            { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
-
             /* Inline Styles */
 
             // These are core styles available as toolbar buttons. You may opt enabling
@@ -44,7 +42,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Strikethrough'	, element : 'strike' },
             { name : 'Subscript'		, element : 'sub' },
             { name : 'Superscript'		, element : 'sup' },
-            */
+            
 
             { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
             { name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
