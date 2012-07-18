@@ -435,6 +435,7 @@ p a:active {
 /* END LESS functions */
 header#page {
   background: #000;
+  margin-bottom: 50px;
   padding-top: 7px;
 }
 header#page h1,
@@ -492,6 +493,17 @@ nav ul li a.active:hover {
 }
 nav ul li a.active {
   color: #fff;
+}
+nav ul li.rss a {
+  text-indent: -9999px;
+  width: 10px;
+  height: 10px;
+  background: transparent url('i/rss.png');
+  padding: 0;
+  margin: 5px 10px 0 -8px;
+}
+nav ul li.rss a:hover {
+  background-position: left -10px;
 }
 .node-type-work nav li.work a:hover,
 .node-type-article nav li.words a:hover,
@@ -554,10 +566,6 @@ footer,
 article,
 header {
   max-width: none;
-}
-article.clearfix {
-  overflow-x: hidden;
-  padding-top: 50px;
 }
 /*Work page - Make it fluid width*/
 .not-front.page-node-23 header,
@@ -1121,11 +1129,6 @@ article .articleWrap article.post .firstParagraph p {
   line-height: 32px;
   color: #000;
 }
-article .articleWrap article.post .firstParagraph span.code {
-  font-size: 18px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
 article .articleWrap article.post blockquote {
   background: #ECECEC;
   padding: 15px 15px 2px 15px;
@@ -1221,9 +1224,7 @@ span.code {
   font-weight: bold;
 }
 /* Custom post styles */
-/*
-Posts with big background images, ie "Fillposts"
-4th of July, Disney World pic */
+/*4th of July, Disney World pic */
 article.post.post-35,
 .fillpost article {
   background: rgba(255, 255, 255, 0.7);
@@ -1231,41 +1232,35 @@ article.post.post-35,
   padding: 20px;
   margin-top: 200px;
 }
-article .articleWrap.fillpost p {
-  color: #000;
-}
 article .articleWrap.fillpost .pager {
   clear: both;
   background: rgba(255, 255, 255, 0.7);
   padding: 20px;
 }
-/*Posts that float the article left and the pagers right */
-article .articleWrap.left {
+/*Pathology report excerpt post */
+article.post.post-44 {
+  background: rgba(255, 255, 255, 0.85);
+  float: left;
+  margin-left: 100px;
+}
+article .articleWrap.post-44 {
+  background: url('i/tan-noise-fill.jpg');
   zoom: 1;
   *zoom: 1;
 }
-article .articleWrap.left:before,
-article .articleWrap.left:after {
+article .articleWrap.post-44:before,
+article .articleWrap.post-44:after {
   display: table;
   content: "";
 }
-article .articleWrap.left:after {
+article .articleWrap.post-44:after {
   clear: both;
 }
-article .articleWrap.left article.post {
-  margin-left: 100px;
+article .articleWrap.post-44 .pager {
   float: left;
-}
-article .articleWrap.left .pager {
+  margin-left: 100px;
   border: 1px solid #fff;
   border-top: none;
-}
-/*Pathology report excerpt post */
-article .articleWrap.post-44 {
-  background: url('i/tan-noise-fill.jpg');
-}
-article .articleWrap.post-44 article.post {
-  background: rgba(255, 255, 255, 0.85);
 }
 /*- Testicular Cancer
 ----------------------------------------------------------------------*/
@@ -1571,6 +1566,14 @@ li.post article.post-24 a.donate:hover {
     display: block;
     float: none;
   }
+  nav ul li.rss a {
+    margin-left: 0;
+    padding: 0 15px 7px;
+    background: transparent;
+    text-indent: 0;
+    height: auto;
+    width: auto;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   ul.worklist li {
@@ -1599,13 +1602,6 @@ li.post article.post-24 a.donate:hover {
     width: 10%;
   }
 }
-@media screen and (max-width: 1024px) {
-  article .articleWrap.left article.post {
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-  }
-}
 @media screen and (min-width: 1024px) {
   article .articleWrap .pager {
     width: 100%;
@@ -1617,18 +1613,18 @@ li.post article.post-24 a.donate:hover {
     width: 150px;
     padding: 20px;
   }
-  /* custom layout: left articles */
-  article .articleWrap.left .pager {
+  /*Excerpts from pathology report */
+  article .articleWrap.post-44 .pager {
     background: transparent;
     padding: 0;
     border: none;
     margin-left: 0;
   }
-  article .articleWrap.left .pager .next {
+  article .articleWrap.post-44 .pager .next {
     float: right;
     border-bottom: 1px solid #ccc;
   }
-  article .articleWrap.left .pager .prev {
+  article .articleWrap.post-44 .pager .prev {
     clear: right;
   }
 }

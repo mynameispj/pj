@@ -72,6 +72,7 @@ p {
 
 header#page {
 	background: #000; 
+	margin-bottom: 50px; 
 	padding-top: 7px;
 	h1, 
 	h2 {
@@ -116,9 +117,27 @@ nav {
 			a.active:hover {
 				color: #fff; 
 			}
+			
 			a.active {
 				color: #fff; 
-			}		
+			}
+			
+			&.rss {
+				a {
+					text-indent: -9999px; 	
+					.w-h(10px, 10px);
+					background: transparent url('i/rss.png');  
+					padding: 0; 
+					margin: 5px 10px 0 -8px;  
+				}
+				
+				a:hover {
+					background-position: left -10px; 
+				}	
+			
+			
+			}
+					
 		}	
 	}
 }
@@ -199,11 +218,6 @@ footer,
 article, 
 header {
 	max-width: none; 
-}
-
-article.clearfix {
-	overflow-x: hidden;
-	padding-top: 50px; 
 }
 
 /*Work page - Make it fluid width*/
