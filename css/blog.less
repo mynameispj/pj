@@ -127,6 +127,13 @@ article {
 					line-height: 32px; 
 					color: #000; 	
 				}
+				
+				span.code {
+					font-size: 18px; 
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+				
 			}
 		
 		
@@ -237,7 +244,9 @@ span.code {
 
 /* Custom post styles */
 
-/*4th of July, Disney World pic */
+/*
+Posts with big background images, ie "Fillposts"
+4th of July, Disney World pic */
 
 article.post.post-35, 
 .fillpost article {
@@ -249,6 +258,10 @@ article.post.post-35,
 
 article {
 	.articleWrap.fillpost {
+		p {
+			color: #000; 
+		}
+		
 		.pager {
 			clear: both; 
 			background: rgba(255,255,255,0.7);
@@ -258,23 +271,33 @@ article {
 	}
 }
 
-/*Pathology report excerpt post */
-article.post.post-44 {
-	background: rgba(255,255,255,0.85);
-	float: left; 
-	margin-left: 100px; 
-}
+/*Posts that float the article left and the pagers right */
+
 article {
-	.articleWrap.post-44 {
-		background: url('i/tan-noise-fill.jpg'); 
+	.articleWrap.left {
 		.clearfix(); 
 		
-		.pager {
-			float: left; 
+		article.post {
 			margin-left: 100px; 
+			float: left; 
+		}
+		
+		.pager {
 			border: 1px solid #fff; 
 			border-top: none; 
 		}
-		
 	}
 }
+
+
+/*Pathology report excerpt post */
+
+article {
+	.articleWrap.post-44 {
+		background: url('i/tan-noise-fill.jpg'); 
+		article.post {
+			background: rgba(255,255,255,0.85);			
+		}				
+	}
+}
+

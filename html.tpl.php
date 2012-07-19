@@ -93,9 +93,9 @@
 	<meta name="msvalidate.01" content="245E420BBF46223DB09CDC8499509EEA" />
 	
 	<!--Typekit-->
-	<script type="text/javascript" src="http://use.typekit.com/fwa2ojb.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
+	<script type="text/javascript" src="//use.typekit.net/fwa2ojb.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>	
+
 	<meta name="readability-verification" content="RXcZffYXSqCSyFZTgvtpv3ugzCN9npsQndVBMLjm"/>
 	
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />

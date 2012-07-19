@@ -151,7 +151,6 @@
 				a {
 					display: block;
 					float: none; 
-
 				}
 				
 				a,
@@ -164,26 +163,9 @@
 				a.active  {
 				
 				}
-			
-				&.rss {
-					a {
-						margin-left: 0; 
-						padding: 0 15px 7px; 
-						background: transparent; 
-						text-indent: 0;
-						height: auto; 
-						width: auto;  
-					}
-					
-				}
-			
 			}
-			
 		}
-		
-	}
-	
-	
+	}	
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -233,7 +215,21 @@
 	}
 }
 
+
+@media screen and (max-width: 1024px) {
+	
+	article .articleWrap.left article.post 	{
+		margin-left: auto; 
+		margin-right: auto; 
+		float: none; 
+	}
+
+}
+
 @media screen and (min-width: 1024px) {
+
+
+
 	article {
 		.articleWrap {
 			.pager {
@@ -253,19 +249,24 @@
 		
 	}
 
-	/*Excerpts from pathology report */
-	article .articleWrap.post-44 .pager {
-		background: transparent;
-		padding: 0; 
-		border: none; 
-		margin-left: 0; 
-		.next {
-			float: right; 
-			border-bottom: 1px solid #ccc; 
-		}
-		
-		.prev {
-			clear: right; 
+	/* custom layout: left articles */
+	article {
+		 .articleWrap.left {
+			 	.pager {
+				background: transparent;
+				padding: 0; 
+				border: none; 
+				margin-left: 0; 
+
+				.next {
+					float: right; 
+					border-bottom: 1px solid #ccc; 
+				}
+				
+				.prev {
+					clear: right; 
+				}
+			}
 		}
 	}
 
