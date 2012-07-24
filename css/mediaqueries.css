@@ -101,6 +101,15 @@
     display: block;
     float: none;
   }
+  nav ul li.rss a {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0 15px 7px;
+    background: transparent;
+    text-indent: 0;
+    height: auto;
+    width: auto;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   ul.worklist li {

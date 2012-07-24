@@ -8,6 +8,9 @@
 	hide($content['field_background_image']); 
 	hide($content['field_custom_layout']); 
 	
+	$firstParagraph = render($content['field_article_first_paragraph']['#items'][0]['value']); 	
+	
+	
 	if (array_key_exists('#items', $content['field_background_image'])) { 
 		$fillImageExists = 1; 
 	} else {
@@ -24,6 +27,14 @@
 		$nextPost = pn_node($node, 'n'); 	
 		$prevPost = pn_node($node, 'p'); 
 	}	
+	
+	//Post reading time estimate--props: http://briancray.com/posts/estimated-reading-time-web-design/
+	$postContent = $firstParagraph . render($content); 
+	$word = str_word_count(strip_tags($postContent));
+	$m = floor($word / 200);
+	$s = floor($word % 200 / (200 / 60));
+	$est = $m . ' minute' . ($m == 1 ? '' : 's') . ', ' . $s . ' second' . ($s == 1 ? '' : 's');
+	
 ?>
 
 <div class="articleWrap post-<?php print $nid; if ($fillImageExists == 1) print ' fillpost';
@@ -47,12 +58,15 @@ if ($customLayout == 1) print ' '. $content['field_custom_layout']['#items'][0][
 			<?php if ($nid != 24): //the date of the TC post is in the body of the post ?>
 				<?php print format_date($created, 'custom', 'F j Y'); ?>
 				<span class="tags"><?php print render($content['field_tags']); ?></span>
+				<br/><span class="readingTime">Estimated reading time: <?php echo $est; ?></span>
 			<?php endif; ?>
 			
 		</aside>
 	
-		<div class="firstParagraph"><?php print render($content['field_article_first_paragraph']['#items'][0]['value']); ?></div>
-		<?php print render($content); ?>
+		<div class="firstParagraph"><?php print $firstParagraph; ?></div>
+		<?php 
+		//krumo(render($content)); 
+		print render($content); ?>
 	
 	</article>
 	<?php if ($page) { ?>

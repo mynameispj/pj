@@ -17,6 +17,9 @@
     )); ?>
 	
 	</nav>
+	<div class="banner longRoadBack">
+		<h3><a href="#">New fiction: Long Road Back. A brief, haunting tale of loss. $1, buy on Amazon.com</a></h3>
+	</div>
 </header>
 
 <article class="clearfix" id="blogRoll">
