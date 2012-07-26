@@ -51,7 +51,7 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <?php if ($is_front) { ?>
-  	<title>PJ McCormick | Design, development, cancer, and, y'know, other stuff.</title>
+  	<title>PJ McCormick | Designer, developer, cancer patient/survivor, writer, and, y'know, other stuff.</title>
   <?php } else { ?>	
   	<title><?php print $head_title; ?></title>
   <?php } ?>	  
@@ -84,7 +84,7 @@
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
-	
+			
 	</script>
 	
 	<meta name="google-site-verification" content="CaJrlEs8DAKp19J2n7pD_Qd9Gs-KFJCrAZstoGVa7Qc" />

@@ -1,6 +1,6 @@
 <header id="page" class="clearfix">
 	<?php print render($primary_local_tasks); ?>
-	<h2><a href="/">PJMcCormick.com</a> Design, development, cancer, and, y'know, other stuff.</h2>
+	<h2><a href="/">PJ McCormick</a> Designer, developer, cancer patient/survivor, writer, and, y'know, other stuff.</h2>
 	<a class="showMenu">Menu <span class="arrow-down"></span> </a>
 	<nav>
 	<?php print theme('links__system_main_menu', array(
@@ -17,9 +17,9 @@
     )); ?>
 	
 	</nav>
-	<div class="banner longRoadBack">
-		<h3><a href="#">New fiction: Long Road Back. A brief, haunting tale of loss. $1, buy on Amazon.com</a></h3>
-	</div>
+	<!--<div class="banner longRoadBack">
+		<h3><a href="http://www.amazon.com/gp/product/B008OUVF7K/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008OUVF7K&linkCode=as2&tag=mnip-20" onClick="_gaq.push(['_trackEvent', 'Long Road Back Promos', 'Top Banner']);">New fiction: Long Road Back. A brief, haunting tale of loss. $1, buy on Amazon.com</a></h3>
+	</div>-->
 </header>
 
 <article class="clearfix" id="blogRoll">

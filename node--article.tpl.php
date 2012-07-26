@@ -7,6 +7,7 @@
 	hide($content['field_article_first_paragraph']);
 	hide($content['field_background_image']); 
 	hide($content['field_custom_layout']); 
+	hide($content['field_hide_title']); 
 	
 	$firstParagraph = render($content['field_article_first_paragraph']['#items'][0]['value']); 	
 	
@@ -22,6 +23,13 @@
 	} else {
 		$customLayout = 0;  		
 	} 
+
+	if (array_key_exists('#items', $content['field_hide_title'])) { 
+		$hideTitle = render($content['field_hide_title']['#items'][0]['value']);  
+	} else {
+		$hideTitle = 0;  		
+	} 
+
 
 	if ($page) { 
 		$nextPost = pn_node($node, 'n'); 	
@@ -47,19 +55,23 @@ if ($customLayout == 1) print ' '. $content['field_custom_layout']['#items'][0][
 	
 	<article class="post post-<?php print $nid;?>"> 
 		<header>
-			<?php if ($nid != 24): //the title of the testicular cancer post is in the body of the post ?>
+			<?php  if ($hideTitle == 0) { //the title of the testicular cancer post is in the body of the post ?>
 				<?php print render($title_prefix); ?>
 					<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
 				<?php print render($title_suffix); ?>
-			<?php endif; ?>
+			<?php } else if (($hideTitle == 1) || ($nid != 24)) { ?>
+						
+			<?php }?>
 	
 		</header>
 		<aside>
-			<?php if ($nid != 24): //the date of the TC post is in the body of the post ?>
+			<?php  if ($hideTitle == 0) { //the title of the testicular cancer post is in the body of the post ?>
 				<?php print format_date($created, 'custom', 'F j Y'); ?>
 				<span class="tags"><?php print render($content['field_tags']); ?></span>
 				<br/><span class="readingTime">Estimated reading time: <?php echo $est; ?></span>
-			<?php endif; ?>
+			<?php } else if (($hideTitle == 1) || ($nid != 24)) { ?>
+						
+			<?php }?>
 			
 		</aside>
 	

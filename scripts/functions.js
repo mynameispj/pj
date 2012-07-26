@@ -165,6 +165,8 @@ var Site = window.Site || {};
 					postOffset  = postWrap.offset(),  
 					windowWidth = $(window).width();
 					scrollTop 	= $(window).scrollTop(); 
+					pageTopPadding = 50; 
+					scrollTop = scrollTop + pageTopPadding; 
 				if ((scrollTop > postOffset.top) && (windowWidth > 1024)) {
 					$('.pager').addClass('sticky'); 
 					
@@ -175,6 +177,7 @@ var Site = window.Site || {};
 				if (windowWidth < 1024) {
 					$('.pager').removeClass('sticky'); 									
 				}
+				console.log(scrollTop); 
 			}
 			
 			//Props to Chris Coyier: http://css-tricks.com/persistent-headers/
@@ -234,7 +237,7 @@ var Site = window.Site || {};
 	$(window).bind("load", function() {
 			function sizeFillImageContainers() {
 				fillImageHeight = $('.fill img').height(); 
-				console.log(fillImageHeight); 
+				//console.log(fillImageHeight); 
 				$('.fill img').closest('.articleWrap').css('min-height',fillImageHeight+'px'); 
 				
 			}
