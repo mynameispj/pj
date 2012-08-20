@@ -1,0 +1,105 @@
+.page-cart {
+	
+	.commerce-line-item-views-form {
+		table {
+			width: 70%;
+			float: left; 
+			
+			
+			td, 
+			th {
+				padding: 10px; 
+			}
+			
+			th {
+				padding-bottom: 0; 
+				font-size: 12px; 
+				text-transform: uppercase; 
+				letter-spacing: 1px; 
+			}
+		}
+		
+		.line-item-summary, 
+		.form-actions {
+			float: right;
+			clear: right;  
+		}
+		
+		.line-item-summary {
+			padding: 10px 0 0 10px; 
+			margin-top: 30px;
+			width: 25%; 
+			.line-item-total-label {
+				font-size: 15px; 
+				text-transform: uppercase; 
+				letter-spacing: 1px; 
+			}
+			.line-item-total-raw {
+				font-size: 24px;
+			}
+			
+			.credtCards {
+				background: transparent url(i/cc_icons.gif) no-repeat right 10px;
+				padding-top: 40px; 
+				position: absolute; 
+				top: 150px;
+				border-top: 1px solid #e6e6e6; 
+				
+				p {
+					font-size: 11px;
+					line-height: 14px;
+					.dagny(); 
+					font-weight: normal; 
+				}
+			}
+			
+		}
+		
+		.form-actions {
+			margin-top: 0; 
+			
+			#edit-submit, 
+			#edit-checkout {
+				position: relative; 
+			}
+			
+			#edit-submit {
+				border: none; 
+				background: #fff; 
+				margin-right: 20px; 
+				font-size: 13px;
+				text-decoration: underline; 
+				color: lighten(@gray,20%); 
+			
+			}
+			
+			#edit-submit:hover {
+				color: #000; 
+			}
+			
+			#edit-checkout {
+				background: #BE7; 
+				border: 1px solid darken(#BE7,30%);
+				font-size: 15px; 
+				text-transform: uppercase; 
+				letter-spacing: 1px; 
+				color: darken(#BE7,50%); 
+				padding: 10px; 
+				position: relative; 
+			}
+			
+			#edit-checkout:hover {
+				background: darken(#BE7,10%); 
+				border: 1px solid darken(#BE7,40%);
+				color: darken(#BE7,60%); 
+			}
+			
+			#edit-submit:active, 
+			#edit-checkout:active {
+				top: 1px; 
+			}
+			
+		}
+	}
+}
+

@@ -18,9 +18,9 @@
 	
 	</nav>
 	<?php if ($node->nid != 57):?>
-		<div class="banner longRoadBack">
-			<h3><a href="http://www.amazon.com/gp/product/B008OUVF7K/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008OUVF7K&linkCode=as2&tag=mnip-20" onClick="_gaq.push(['_trackEvent', 'Long Road Back Promos', 'Top Banner']);">New fiction: Long Road Back. A brief, haunting tale of loss. $1, buy on Amazon.com</a></h3>
-		</div>
+		<!--<div class="banner longRoadBack">
+			<h3><a href="http://www.amazon.com/gp/product/B008OUVF7K/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008OUVF7K&linkCode=as2&tag=mnip-20" onClick="_gaq.push(['_trackEvent', 'LongRoadBack_Promos', 'Banner']);">New fiction: Long Road Back. A brief, haunting tale of loss. $1, buy on Amazon.com</a></h3>
+		</div>-->
 	<?php endif; ?>
 </header>
 

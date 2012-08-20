@@ -1,11 +1,6 @@
 /* NEW RULES */
-@media screen and (min-width: 240px) and (max-width: 600px) {
+@media screen and (min-width: 240px) and (max-width: 1000px) {
   article article {
-    width: 90%;
-    margin-left: 5%;
-  }
-  .node-type-article footer .content,
-  .not-front article#blogRoll .articleWrap article {
     width: 90%;
     margin-left: 5%;
   }
@@ -24,8 +19,7 @@
     text-align: center;
     margin-top: 40px;
   }
-  article header h1,
-  article header h2 {
+  article header h1 {
     position: relative;
     margin-top: 0;
   }
@@ -97,43 +91,6 @@
   ul.worklist li {
     width: 50%;
   }
-  header h1,
-  header h2 {
-    position: relative;
-    margin-top: 0;
-  }
-  nav {
-    height: auto;
-    margin-bottom: 20px;
-  }
-  nav ul li {
-    direction: block;
-  }
-  nav ul li a {
-    display: block;
-    border-top: none;
-    border-bottom: 1px solid #F0F0F0;
-  }
-  nav ul li a,
-  nav ul li a.active {
-    padding: 10px 0;
-  }
-  nav ul li a:hover,
-  nav ul li a.active:hover,
-  nav ul li a.active {
-    border-top: none;
-    top: 0;
-  }
-  .node-type-work nav li.work a:hover,
-  .node-type-article nav li.words a:hover,
-  .page-taxonomy-term nav li.words a:hover,
-  .node-type-work nav li.work a,
-  .node-type-article nav li.words a,
-  .page-taxonomy-term nav li.words a {
-    border-top: none;
-    top: 0;
-    padding: 10px 0;
-  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   ul.worklist li {
@@ -141,14 +98,19 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  header.clearfix h1 {
-    width: 50%;
-  }
   .body p {
     margin-right: 30%;
     margin-left: 20px;
   }
   .body h3 {
+    margin-left: 20px;
+  }
+  .node-type-article h1 {
+    margin-left: 20px;
+  }
+  .node-type-article .firstParagraph {
+    padding-right: 0;
+    margin-right: 20%;
     margin-left: 20px;
   }
 }

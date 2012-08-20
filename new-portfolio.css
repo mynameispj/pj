@@ -1,0 +1,61 @@
+body.front article {
+  width: 100%;
+}
+ul.worklist li a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.496094) 0px 1px 3px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.496094) 0px 1px 3px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.496094) 0px 1px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.496094) 0px 1px 3px 0px;
+}
+ul.worklist li a h2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  padding: 10px;
+  font-weight: normal;
+  font-size: 0.9em;
+  z-index: 400;
+  -webkit-transition: all 0.25 x ease-in-out;
+  -moz-transition: all 0.25 x ease-in-out;
+  -o-transition: all 0.25 x ease-in-out;
+  transition: all 0.25 x ease-in-out;
+}
+ul.worklist li a:hover h2 {
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+}
+ul.worklist .nid, ul.worklist .path {
+  display: none;
+}
+ul.worklist li {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  margin: 0 -2px;
+}
+ul.worklist li a {
+  float: left;
+  width: 100%;
+}
+ul.worklist li a:hover {
+  transform: scale(1.03);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px 0px;
+}
+ul.worklist li img {
+  width: 100%;
+}
+.front h2 {
+  font-size: 14px;
+  text-align: left;
+  padding-top: 5px;
+  clear: left;
+  color: #545454;
+}

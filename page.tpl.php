@@ -19,6 +19,7 @@
 	</nav>
 </header>
 
+
 <article class="clearfix">
 	<?php if ($tabs): ?>
 		<div class="tabs">

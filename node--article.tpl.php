@@ -8,6 +8,8 @@
 	hide($content['field_background_image']); 
 	hide($content['field_custom_layout']); 
 	hide($content['field_hide_title']); 
+	hide($content['field_linked_article']); 
+
 	
 	$firstParagraph = render($content['field_article_first_paragraph']['#items'][0]['value']); 	
 	
