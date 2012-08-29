@@ -1,0 +1,267 @@
+//COMPASS stuff
+@import "compass/reset";
+@import "compass/utilities";
+@import "compass/css3";
+//@import "rgbapng";
+
+//My Stuff
+@import 'type.scss';
+@import 'variables-helpers.scss';
+
+
+/*- LET'S GET STARTED!
+----------------------------------------------------------------------*/
+html, body { height: 100%;}
+
+body {
+	background-color: #fff;
+	color: #000;
+	@include font();  
+	font-size: 17px;
+	line-height: 22px;
+	margin: 0;
+	padding: 0;
+
+	&.projectOpen {
+		background: #F4F4F4;
+		header {
+			background: transparent; 
+		}
+	}
+}
+
+abbr { cursor: help; }
+
+a { 
+	color: #000; 
+	text-decoration: none;
+
+	&:hover {
+		color: #000; 		
+	}
+}
+	
+p { 
+	font-size: 18px; 
+	margin-bottom: 1.2em; 
+	color: $gray; 
+	font-weight: 200; 
+	line-height: 1.4em;	
+	@include font(chaparral);  
+	a {
+		border-bottom: 1px solid #ccc;  
+		@include single-transition(border-bottom, 0.2s, linear, 0); 
+		position: relative;
+		
+		&:hover {
+			border-bottom: 1px solid #000; 			
+		}
+		
+		&:active {
+			top: 1px;
+		}
+	}	
+}
+
+/*- Nav
+----------------------------------------------------------------------*/
+
+@import 'nav.scss'; 
+
+
+
+/*- CONTENT
+----------------------------------------------------------------------*/
+
+article.clearfix {
+  overflow-x: hidden;
+  padding-top: 50px; 
+}
+
+article, 
+header, 
+footer, 
+#loading { 
+	position: relative; 
+	display: block; 
+	margin: 0 auto;  
+	max-width: none; 
+}
+ 
+.not-front.page-node-23 footer {
+	max-width: none; 
+}
+
+
+@import 'portfolio.scss'; 
+
+
+/*- FOOTER
+----------------------------------------------------------------------*/
+
+footer { 
+	padding: 30px 0; 
+	font-size: 0.7em; 
+	color: darken($gray, 20%); 
+	overflow: hidden; 
+	width: 100%; 
+	max-width: 1000px;	
+	
+	.content {
+		float: left;
+	}
+	
+	a {
+		color: darken($gray, 40%); 
+		border-bottom: 1px solid darken($gray, 40%); 	
+		
+		&:hover {
+			color: darken($gray, 60%);  
+			border-bottom: 1px solid darken($gray, 60%); 			
+		}	
+	}
+} //close footer
+
+.projectOpen footer {
+	color: #000; 
+	a {
+		color: #000; 
+	}
+}
+		 
+.front footer .content, 
+.page-node-23 footer .content  {
+	margin: 0px auto;
+	text-align: center;
+	float: none;
+}
+	 
+
+/*- About PJ Page
+----------------------------------------------------------------------*/
+
+img.aboutPJ {
+	position: absolute; 
+	z-index: 0; 
+	top: -50px; 
+	}
+	
+.aboutcontent {
+	background: rgba(#000,0.8);
+	position: absolute;
+	width: 400px;
+	left: 500px;
+	top: 520px;
+	padding: 12px;
+	color: white;
+	
+	p {
+		color: #fff;	
+		
+		a {
+			color: #999;
+			border-bottom: 1px solid #999;
+			@include single-transition(color,0.2s,linear,0); 
+
+			&:hover {
+				color: #fff;
+				border-bottom: 1px solid #fff;				
+			}	
+		}			
+	}
+}
+	
+	
+.page-node-6 {
+	h1 {
+		display: none;
+	}
+	#body {
+		min-height: 1000px;
+		width: 1000px;
+		position: relative; 
+		margin: 0 auto; 
+	}	
+}
+
+#about {
+		
+	p {	
+		position: relative; 
+		z-index: 10;
+	}
+
+	h2, 
+	h3, 
+	h4 {
+		position: relative;
+		z-index: 10;			
+	}
+
+	h2 {
+		font-size: 42px;
+		line-height: 1em;
+		font-weight: 600;
+		top: -56px;
+		left: 20px;
+		color: #000;
+		color: rgba(#000, 0.75);		
+	}
+
+	h3 {
+		font-size: 160px;
+		font-weight: 600;
+		color: #fff;
+		color: rgba(#FFF, 1);
+		text-shadow: -1px 1px 3px rgba(#000, 0.8);
+		top: -47px;
+		left: 29px;
+		line-height: 150px;
+		padding-top: 0;		
+	}
+	
+	h4 {
+		font-size: 24px;
+		width: 430px;
+		line-height: 1.3em;
+		top: -116px;
+		left: 40px;
+		color: rgba(#000, 0.9);
+		text-shadow: -1px 1px 1px rgba(#fff, 0.5);
+	}
+
+}
+
+
+/*- CMS OVerrides
+----------------------------------------------------------------------*/
+ul.tabs { position: relative; z-index: 100; }
+
+
+
+
+/*- Blog
+----------------------------------------------------------------------*/
+
+@import 'blog.scss'; 
+
+
+/*- Testicular Cancer
+----------------------------------------------------------------------*/
+
+@import 'tc.scss'; 
+
+
+/*- Store
+----------------------------------------------------------------------*/
+
+@import 'store.scss'; 
+
+
+/*- Media Queries
+----------------------------------------------------------------------*/
+
+@import 'mediaqueries.scss'; 
+
+
+

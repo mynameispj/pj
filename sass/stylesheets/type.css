@@ -1,0 +1,18 @@
+/* line 14, ../sass/type.scss */
+h1,
+h2,
+h3,
+nav ul li a {
+  font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf; }
+
+/* line 19, ../sass/type.scss */
+#body h1, #body h2, #body h3 {
+  font-weight: normal; }
+/* line 23, ../sass/type.scss */
+#body h3 {
+  padding-top: 0.75em;
+  padding-bottom: 0.5em;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600; }

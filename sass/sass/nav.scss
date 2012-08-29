@@ -1,0 +1,157 @@
+@mixin mainNavBorder($color, $borderthickness) {
+	border-top: $borderthickness solid #000; 
+	color: $color; 
+}
+
+$headerPadding: 0 15px 7px; 
+
+header#page {
+	background: #000; 
+	padding-top: 7px;
+	
+	h1, 
+	h2 {
+		color: #CCC; 
+		padding: $headerPadding; 	
+		float: left; 
+		font-size: 15px;
+		font-weight: 400; 
+		a {
+			color: #fff; 
+		}
+	}
+	
+	.banner {
+		clear: both; 
+		width: 100%; 
+		color: #fff; 
+		text-align: center; 
+		
+		&.longRoadBack {
+			border-top: 1px solid #333; 
+			
+			a {
+				color: #fff; 
+				display: block; 
+				width: 100%; 
+				background: transparent url('i/long-road-back.jpg') no-repeat center top; 
+				height: 100px; 
+				@include hideText(); 
+			}
+		}		
+	}	
+}
+
+nav { 
+	@include relativefloat(right); 
+	@include clearfix;  
+	
+	h2 {
+		position: absolute; 
+		top: -9999px;
+	} 
+	
+	ul {
+		display: block;
+		text-align: center;  
+		li {
+			position: relative; 
+			display: inline; 
+			a {
+				padding: $headerPadding; 
+				display: block; 
+				position: relative; 
+				float: left; 
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				font-size: 13px;
+				color: #999; 
+				
+				&:hover {
+					color: #fff;
+				}
+				
+			}
+
+			a.active,
+			a.active:hover {
+				color: #fff; 
+			}
+			
+			&.rss {
+				a {
+					text-indent: -9999px; 	
+					@include w-h(10px, 10px);
+					background: transparent url('i/rss.png');  
+					padding: 0; 
+					margin: 5px 10px 0 -8px;  
+					
+					&:hover {
+						background-position: left -10px;
+					}
+					
+				}
+			}					
+		}	
+	}
+}
+
+.page-taxonomy-term nav li.words a {
+	color: #fff;  	
+	
+	&:hover {
+		color: #fff;  			
+	}
+		 
+}
+
+.showMenu {
+	color: #999; 
+	display: block;
+	clear: left;
+	text-align: center;
+	cursor: pointer; 
+	height: 44px; 
+	line-height: 44px;
+	display: none;  
+	
+	.arrow-down {
+		position: absolute; 
+		margin: 20px 0 0 5px; 
+		border-top: 5px solid #999;
+	}
+	
+	&.open {
+		.arrow-down {
+			border-bottom: 5px solid #999;
+			border-top: none; 
+		}	
+	}
+	
+	&:hover {
+		.showMenu:hover {
+			color: #fff; 
+			
+			.arrow-down {
+				border-top: 5px solid #FFF;		
+			}
+			
+			&.open {
+				.arrow-down {
+					border-bottom: 5px solid #FFF;
+					border-top: none; 
+				}	
+			}
+		}		
+	}
+}
+
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #FFF;
+}

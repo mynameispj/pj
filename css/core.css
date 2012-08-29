@@ -1058,8 +1058,6 @@ ul.worklist li img {
 .post h2 {
   font-size: 24px;
   text-transform: uppercase;
-  font-weight: bold;
-  margin: 30px 0 20px;
 }
 .node-type-article article .articleWrap.fillpost {
   margin-top: -50px;
@@ -1098,6 +1096,8 @@ article .articleWrap article.post img {
   -moz-box-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
   -o-box-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  display: block;
 }
 article .articleWrap article.post img.noShadow {
   -webkit-box-box-shadow: none;

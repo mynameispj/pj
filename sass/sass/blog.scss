@@ -61,12 +61,13 @@ article {
 			z-index: 500; 
 			
 			img {
-				.box-shadow(0px 1px 5px 0px rgba(0, 0, 0, 0.2)); 
+				@include box-shadow(rgba(#000,0.2) 0px 1px 5px 0px);
 				margin: 0 auto; 
 				display: block; 
+				width: 100%; 
 				
 				&.noShadow {
-					.box-shadow(none); 
+					@include box-shadow(rgba(#000,0) 0px 1px 5px 0px);
 				}
 			
 			}
@@ -84,10 +85,9 @@ article {
 					
 					a {
 						float: none; 
-					}
-					
-					a:hover {
-						border-bottom: none; 
+						&:hover {
+							border-bottom: none; 
+						}
 					}
 				}
 			}
@@ -107,12 +107,11 @@ article {
 				font-size: 12px; 
 				text-transform: uppercase; 
 				font-weight: bold; 
-				color: @gray; 
+				color: $gray; 
 				
 				.tags {
 					div {
 						display: inline; 
-						
 					}
 				
 					padding-left: 5px; 
@@ -120,18 +119,18 @@ article {
 					border-left: 1px solid #e6e6e6; 
 					
 					a {				
-						background: lighten(@gray,50%); 
+						background: lighten($gray,50%); 
 						padding: 3px 5px; 
-						.border-radius(3px); 
-					}
-					
-					a:hover {
-						background: @gray; 
-						color: #fff; 
+						@include border-radius(3px);
+						
+						&:hover {
+							background: $gray; 
+							color: #fff; 							
+						}
 						
 					}
-				}
-			}
+				} //close .tags
+			} //close aside
 			
 			.firstParagraph {
 				p {
@@ -149,9 +148,10 @@ article {
 				img {
 					display: block; 
 					margin: 0 auto; 
+					width: 100%;
 				}
 				
-			}
+			} //close firstParagraph
 		
 		
 			blockquote {
@@ -166,19 +166,16 @@ article {
 				width: 0;
 				position: absolute;
 				pointer-events: none;
-			}
-			
-			blockquote:after {
 				border-top-color: #ececec;
 				border-width: 10px;
 				left: 50%;
-				margin-left: -10px;
+				margin-left: -10px;				
 			}
-			
+
 			p.cite {
 				padding-top: 15px; 
 				text-align: center; 
-				.dagny(); 
+				@include font(); 
 				font-size: 12px; 
 				letter-spacing: 1px; 
 				text-transform: uppercase; 
@@ -191,7 +188,7 @@ article {
 		.pager {
 			width: 600px; 
 			margin: 0 auto; 
-			.clearfix(); 
+			@include legacy-pie-clearfix;
 			
 			&.sticky {
 				position: fixed; 
@@ -201,19 +198,19 @@ article {
 			.prev {
 				width: 50%; 
 				position: relative; 
-				background: rgba(255,255,255,0.85);
+				background: rgba(#fff,0.85);
 
 				a {
 					color: #999; 
-					.transition(all, 0.2s, linear);
+					@include single-transition(all,0.2s,linear,0);
 					border-bottom: 1px solid #FFF;
 					font-size: 15px; 
 					line-height: 18px; 
-				}
-				
-				a:hover {
-					color: #000; 
-					border-bottom: 1px solid #000; 	
+					
+					&:hover {
+						color: #000; 
+						border-bottom: 1px solid #000; 							
+					}					
 				}
 			}
 			
@@ -223,8 +220,9 @@ article {
 			
 			.prev {
 				float: right; 
-				text-align: right; 
+				text-align: right; 				
 			}
+			
 			.label {
 				font-size: 12px; 
 				text-transform: uppercase; 
@@ -235,6 +233,7 @@ article {
 	
 	} // end .articleWrap
 } //end article
+
 article {
 	.gist {
 		font-size: 14px; 
@@ -252,7 +251,7 @@ article {
 }
 
 span.code {
-	.mono(); 
+	@include font(mono);  
 	font-size: 15px; 
 	color: #000; 
 	font-weight: bold; 
@@ -267,7 +266,7 @@ Posts with big background images, ie "Fillposts"
 
 article.post.post-35, 
 .fillpost article {
-	background: rgba(255,255,255,0.7);
+	background: rgba(#fff,0.7);
 	border: 1px solid #fff; 
 	padding: 20px; 
 	margin-top: 200px;	
@@ -281,7 +280,7 @@ article {
 		
 		.pager {
 			clear: both; 
-			background: rgba(255,255,255,0.7);
+			background: rgba(#fff,0.7);
 			padding: 20px; 			
 		}
 
@@ -292,7 +291,7 @@ article {
 
 article {
 	.articleWrap.left {
-		.clearfix(); 
+		@include legacy-pie-clearfix; 
 		
 		article.post {
 			margin-left: 100px; 
@@ -313,7 +312,7 @@ article {
 	.articleWrap.post-44 {
 		background: url('i/tan-noise-fill.jpg'); 
 		article.post {
-			background: rgba(255,255,255,0.85);			
+			background: rgba(#fff,0.85);			
 		}				
 	}
 
@@ -335,7 +334,6 @@ article {
 				p {
 					color: #f0f0f0; 
 				}
-				
 			}
 		}
 		

@@ -5,7 +5,6 @@
 			width: 70%;
 			float: left; 
 			
-			
 			td, 
 			th {
 				padding: 10px; 
@@ -48,7 +47,7 @@
 				p {
 					font-size: 11px;
 					line-height: 14px;
-					.dagny(); 
+					@include font();  
 					font-weight: normal; 
 				}
 			}
@@ -69,14 +68,13 @@
 				margin-right: 20px; 
 				font-size: 13px;
 				text-decoration: underline; 
-				color: lighten(@gray,20%); 
+				color: lighten($gray,20%); 
+				
+				&:hover {
+					color: #000; 
+				}
 			
 			}
-			
-			#edit-submit:hover {
-				color: #000; 
-			}
-			
 			#edit-checkout {
 				background: #BE7; 
 				border: 1px solid darken(#BE7,30%);
@@ -86,14 +84,15 @@
 				color: darken(#BE7,50%); 
 				padding: 10px; 
 				position: relative; 
+				
+				&:hover {
+					background: darken(#BE7,10%); 
+					border: 1px solid darken(#BE7,40%);
+					color: darken(#BE7,60%); 					
+				}
+				
 			}
-			
-			#edit-checkout:hover {
-				background: darken(#BE7,10%); 
-				border: 1px solid darken(#BE7,40%);
-				color: darken(#BE7,60%); 
-			}
-			
+						
 			#edit-submit:active, 
 			#edit-checkout:active {
 				top: 1px; 

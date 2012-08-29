@@ -1,0 +1,335 @@
+.node-type-work,
+.page-node-23 { 
+	
+	#headerContent {
+		position: relative; 
+		display: block; 
+		margin: 0 auto; 
+		padding: 0;  
+		width: 100%; 
+		max-width: 960px;  			
+	}		
+	
+	article {
+		overflow: hidden; 
+		width: 100%;
+		margin: 0 auto;			
+	} 	
+
+	#body { 
+		position: relative; 
+		width: 100%; 
+		max-width: 1000px; 
+		padding: 0; 
+		z-index: 2; 
+		margin: 0 auto; 
+	
+	
+		#lead {
+			margin-bottom: 2%; 	
+			.intro {
+				position: absolute; 
+				top: 50px; 
+				width: 200px; 
+				left: 750px;  
+				z-index: 100;
+				
+				h1 {
+					font-weight: 600;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					margin-bottom: 10px;	
+				}
+				
+				p {
+					line-height: 22px; 
+					font-size: 16px; 	
+				}
+			}		
+		} //close #lead
+
+	
+		#words {
+			width: 35%; 
+			float: right; 
+			clear: right;  
+
+			p {
+				line-height: 22px; 
+				font-size: 16px; 			
+			}				
+
+			li{
+				width: 100%;
+			}
+		}
+		
+		ul { 
+			font-size: 0.8em; 
+			color: #9A9885; 
+			margin-bottom: 1em;
+			padding-left: 15px;  
+			li {
+				margin-bottom: 0.5em; 
+				color: #9A9885; 
+				
+				a {
+					color: #9A9885; 
+					
+					&:hover {
+						color: #616054;	
+					}
+				}			
+			}
+		}
+		
+		
+		#otherImages {
+			float: left; 
+			width: 62%; 
+			margin-right: 2%; 
+			img {
+				width: 100%; 
+				margin-bottom: 2%;
+				display: block; 
+			}
+		} //close #otherImages					
+
+				
+	} //close #body
+	
+	.block {
+		h1 {
+			border-bottom: 1px solid black; 
+			font-size: 0.9em; 
+			letter-spacing: -0.05em; 
+			padding-bottom: 5px; 
+			margin-bottom: 10px; 			
+		}	
+	} 
+
+	
+	
+} //close .page-node-23		
+	
+	/*White backgrounds on the lead paragraphs for pieces 
+	that have a dark background */
+	 #body.powercenterwebsite #lead .intro, 
+	 #body.gabbardfarms #lead .intro,
+	 #body.versionone #lead .intro,
+	 #body.springcreekranch #lead .intro { 
+	 	background: rgba(#fff, 0.9); 
+	 	left: 800px; 
+	 	width: 150px; 
+	 	padding: 10px; 
+	 	}
+	 	
+		 #body.gabbardfarms #lead .intro,
+		 #body.versionone #lead .intro { 
+		 	width: 175px; 
+		 	left: 775px; 
+		 	}
+	
+		#body.springcreekranch #lead .intro {
+			left: 740px;
+			width: 200px;
+			}
+
+	/*Black backgrounds on the lead paragraphs for pieces 
+	that have a light background */		
+	#body.cottonusasupplychain #lead .intro,
+	#body.myportfoliowebapp #lead .intro,
+	#body.eticketsapp #lead .intro	{ 
+		background: rgba(#000, 0.9); 
+		left: 688px;
+		width: 270px; 
+		top: 200px; 
+		padding: 10px; 
+		color: #fff; 
+		}
+		
+		#body.myportfoliowebapp #lead .intro,
+		#body.eticketsapp #lead .intro	{ 
+			width: 200px;
+			left: 730px;
+			}
+
+	 .block .cottonusasupplychain h1,
+	 .block .myportfoliowebapp h1,
+	 .block .eticketsapp h1 {
+		border-bottom: 1px solid #fff;
+		}
+
+	 #body.cottonusasupplychain #lead .intro p,
+	 #body.myportfoliowebapp #lead .intro p,
+	 #body.eticketsapp #lead .intro p {
+		color: #fff;
+		line-height: 1.5em;
+		}
+	
+
+
+
+#bodyWrap {
+	.header {
+		display: none; 
+	}
+}
+
+ul.worklist { 
+	width: 102%; 
+	margin-right: -1%;
+	.nid, 
+	.path {
+		display: none; 
+	}
+	li {
+		display: inline-block; 
+		vertical-align: top; 
+		width: 25%; 
+		margin: 0 -3px 0 -2px; 
+		
+		&.open {
+			margin-bottom: 15px;
+		
+			#bodyWrap {
+				background: #fff; 
+				/*If you add to the padding-top value, remember to add the same amount to the +height in the 
+				sizeProjectCanvas() function in functions.js */
+				padding: 60px 0 40px; 
+				position: absolute; 
+				width: 98%; 
+				left: 1%;
+				border: 1px solid #ccc; 
+				margin-top: -1px;
+				@include box-shadow(rgba(#000, 0.1) 0 0 6px 0); 
+
+				a {
+					background: transparent; 
+					width: auto; 
+					border: none; 
+					float: none; 
+				} 				
+				.header {
+					display: block; 
+					border-bottom: 1px solid #e6e6e6;
+					@include legacy-pie-clearfix; 
+					width: 100%; 
+					position: absolute; 
+					background: #fff; 
+					top: 0; 
+					
+					&.floatingHeader {
+						position: fixed; 
+						width: 98%; 
+						left: 1%;
+						border-left: 1px solid #ccc;
+						z-index: 9999;  
+					}
+					
+					
+					.title, 
+					.controls {
+						padding: 10px; 
+						font-size: 12px;
+						text-transform: uppercase; 
+						letter-spacing: 3px;
+					}
+					
+					.controls {
+						@include relativefloat(right);
+						
+						.closeProject {
+							font-size: 40px; 
+							position: absolute; 
+							right: 10px; 
+							color: lighten($gray,30%); 
+						}
+						
+						.closeProject:hover {
+							color: $gray;
+						}
+						
+					}
+					
+					.title {
+						color: $gray; 
+						@include relativefloat(left);
+						width: 50%; 
+					}
+				}				
+			}
+			
+			.image {
+				background: transparent url(i/project-arrow.png) no-repeat center bottom;
+				position: relative; 
+				z-index: 1000; 
+			}
+			
+			img {
+				opacity: 1 !important;
+			}
+		}
+		
+		h2 {
+			text-align: left; 
+			padding-top: 5px; 
+			clear: left; 
+			color: darken($gray, 40%); 
+			border-left: 1px solid $gray; 
+			padding-left: 14px; 
+			margin-bottom: 5px; 
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+		
+		.blurb {
+			font-size: 13px; 
+			padding-left: 15px;
+			width: 80%; 
+			p {
+				line-height: 1.5em; 
+				color: lighten($gray,10%); 
+				font-size: 14px;
+				font-weight: 400;
+				
+				strong {
+					color: #000; 
+					font-weight: normal; 
+					text-transform: uppercase; 
+					letter-spacing: 1px;
+					@include font();
+				}
+			
+				a {
+					display: inline; 
+					background: transparent; 
+					border-top: none; 
+					max-height: none; 
+					float: none; 
+					
+				}
+			}
+		} //close blurb
+		
+		.image {
+			padding-bottom: 40px; 
+		}
+		
+		a {
+			float: left; 
+			width: 100%; 
+			max-height: 300px; 
+			overflow: hidden; 
+			background: $black; 
+			border-top: 5px solid $black; 
+		}
+		
+		img {
+			width: 100%;
+			
+		}
+	} //close li
+} //close ul.worklist
