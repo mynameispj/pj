@@ -1,7 +1,5 @@
 # Require any additional compass plugins here.
-#require "/Library/Ruby/Gems/1.8/gems/compass-rgbapng-0.1.1/lib/rgbapng/functions.rb"
-#require "/Library/Ruby/Gems/1.8/gems/compass-rgbapng-0.1.1/lib/rgbapng.rb"
-#require "/Library/Ruby/Gems/1.8/gems/compass-rgbapng-0.1.1/lib/stylesheets/_rgbapng.scss"
+require "rgbapng"
 
 # Set this to the root of your project when deployed:
 http_path = "/"
