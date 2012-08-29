@@ -30,6 +30,11 @@ body {
 	}
 }
 
+hr {
+	height: 0;
+	margin-bottom: 1em;
+}
+
 abbr { cursor: help; }
 
 a { 
@@ -39,6 +44,10 @@ a {
 	&:hover {
 		color: #000; 		
 	}
+}
+
+em {
+	font-style: italic; 
 }
 	
 p { 
@@ -61,6 +70,10 @@ p {
 			top: 1px;
 		}
 	}	
+	
+	em {
+		font-style: italic; 
+	}
 }
 
 /*- Nav
@@ -74,7 +87,6 @@ p {
 ----------------------------------------------------------------------*/
 
 article.clearfix {
-  overflow-x: hidden;
   padding-top: 50px; 
 }
 

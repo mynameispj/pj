@@ -100,18 +100,27 @@ body {
       background: transparent; }
 
 /* line 33, ../sass/screen.scss */
+hr {
+  height: 0;
+  margin-bottom: 1em; }
+
+/* line 38, ../sass/screen.scss */
 abbr {
   cursor: help; }
 
-/* line 35, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 a {
   color: #000;
   text-decoration: none; }
-  /* line 39, ../sass/screen.scss */
+  /* line 44, ../sass/screen.scss */
   a:hover {
     color: #000; }
 
-/* line 44, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
+em {
+  font-style: italic; }
+
+/* line 53, ../sass/screen.scss */
 p {
   font-size: 18px;
   margin-bottom: 1.2em;
@@ -119,7 +128,7 @@ p {
   font-weight: 200;
   line-height: 1.4em;
   font-family: "chaparral-pro-1","chaparral-pro-2", Georgia, Times New Roman, Times, serif; }
-  /* line 51, ../sass/screen.scss */
+  /* line 60, ../sass/screen.scss */
   p a {
     border-bottom: 1px solid #ccc;
     -webkit-transition: border-bottom 0.2s linear;
@@ -128,12 +137,15 @@ p {
     -o-transition: border-bottom 0.2s linear 0;
     transition: border-bottom 0.2s linear 0;
     position: relative; }
-    /* line 56, ../sass/screen.scss */
+    /* line 65, ../sass/screen.scss */
     p a:hover {
       border-bottom: 1px solid #000; }
-    /* line 60, ../sass/screen.scss */
+    /* line 69, ../sass/screen.scss */
     p a:active {
       top: 1px; }
+  /* line 74, ../sass/screen.scss */
+  p em {
+    font-style: italic; }
 
 /*- Nav
 ----------------------------------------------------------------------*/
@@ -268,12 +280,11 @@ nav {
 
 /*- CONTENT
 ----------------------------------------------------------------------*/
-/* line 76, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 article.clearfix {
-  overflow-x: hidden;
   padding-top: 50px; }
 
-/* line 84, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 article,
 header,
 footer,
@@ -283,7 +294,7 @@ footer,
   margin: 0 auto;
   max-width: none; }
 
-/* line 91, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .not-front.page-node-23 footer {
   max-width: none; }
 
@@ -600,7 +611,7 @@ ul.worklist {
 
 /*- FOOTER
 ----------------------------------------------------------------------*/
-/* line 102, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 footer {
   padding: 30px 0;
   font-size: 0.7em;
@@ -608,26 +619,26 @@ footer {
   overflow: hidden;
   width: 100%;
   max-width: 1000px; }
-  /* line 110, ../sass/screen.scss */
+  /* line 122, ../sass/screen.scss */
   footer .content {
     float: left; }
-  /* line 114, ../sass/screen.scss */
+  /* line 126, ../sass/screen.scss */
   footer a {
     color: black;
     border-bottom: 1px solid black; }
-    /* line 118, ../sass/screen.scss */
+    /* line 130, ../sass/screen.scss */
     footer a:hover {
       color: black;
       border-bottom: 1px solid black; }
 
-/* line 125, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .projectOpen footer {
   color: #000; }
-  /* line 127, ../sass/screen.scss */
+  /* line 139, ../sass/screen.scss */
   .projectOpen footer a {
     color: #000; }
 
-/* line 133, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .front footer .content,
 .page-node-23 footer .content {
   margin: 0px auto;
@@ -636,13 +647,13 @@ footer {
 
 /*- About PJ Page
 ----------------------------------------------------------------------*/
-/* line 143, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 img.aboutPJ {
   position: absolute;
   z-index: 0;
   top: -50px; }
 
-/* line 149, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .aboutcontent {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -651,10 +662,10 @@ img.aboutPJ {
   top: 520px;
   padding: 12px;
   color: white; }
-  /* line 158, ../sass/screen.scss */
+  /* line 170, ../sass/screen.scss */
   .aboutcontent p {
     color: #fff; }
-    /* line 161, ../sass/screen.scss */
+    /* line 173, ../sass/screen.scss */
     .aboutcontent p a {
       color: #999;
       border-bottom: 1px solid #999;
@@ -663,32 +674,32 @@ img.aboutPJ {
       -moz-transition: color 0.2s linear 0;
       -o-transition: color 0.2s linear 0;
       transition: color 0.2s linear 0; }
-      /* line 166, ../sass/screen.scss */
+      /* line 178, ../sass/screen.scss */
       .aboutcontent p a:hover {
         color: #fff;
         border-bottom: 1px solid #fff; }
 
-/* line 176, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .page-node-6 h1 {
   display: none; }
-/* line 179, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .page-node-6 #body {
   min-height: 1000px;
   width: 1000px;
   position: relative;
   margin: 0 auto; }
 
-/* line 189, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 #about p {
   position: relative;
   z-index: 10; }
-/* line 196, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 #about h2,
 #about h3,
 #about h4 {
   position: relative;
   z-index: 10; }
-/* line 201, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 #about h2 {
   font-size: 42px;
   line-height: 1em;
@@ -697,7 +708,7 @@ img.aboutPJ {
   left: 20px;
   color: #000;
   color: rgba(0, 0, 0, 0.75); }
-/* line 211, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 #about h3 {
   font-size: 160px;
   font-weight: 600;
@@ -708,7 +719,7 @@ img.aboutPJ {
   left: 29px;
   line-height: 150px;
   padding-top: 0; }
-/* line 223, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 #about h4 {
   font-size: 24px;
   width: 430px;
@@ -720,7 +731,7 @@ img.aboutPJ {
 
 /*- CMS OVerrides
 ----------------------------------------------------------------------*/
-/* line 238, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 ul.tabs {
   position: relative;
   z-index: 100; }

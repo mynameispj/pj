@@ -1,6 +1,6 @@
 @mixin font($font: dagny) {
 	@if $font == dagny {
-		font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf; 		
+		font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf; 	
 	} @else if $font == chaparral {
 		font-family: "chaparral-pro-1","chaparral-pro-2", Georgia, Times New Roman, Times, serif; 	
 	} @else if $font == mono {
