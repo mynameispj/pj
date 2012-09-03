@@ -130,7 +130,7 @@ var Site = window.Site || {};
 	
 			$(window).resize(function() {
 				sizeProjectCanvas(); 
-				stickyPostPagers(); 
+				//stickyPostPagers(); 
 			});
 			
 			$('ul.worklist').find('li:last-child').addClass('last'); 
@@ -160,7 +160,7 @@ var Site = window.Site || {};
 			$(window).trigger('onFirstLoad');
 	
 			
-			function stickyPostPagers() {
+			/*function stickyPostPagers() {
 				var postWrap    = $('.articleWrap'), 
 					postOffset  = postWrap.offset(),  
 					windowWidth = $(window).width();
@@ -177,8 +177,8 @@ var Site = window.Site || {};
 				if (windowWidth < 1024) {
 					$('.pager').removeClass('sticky'); 									
 				}
-				console.log(scrollTop); 
-			}
+				//console.log(scrollTop); 
+			}*/
 			
 			//Props to Chris Coyier: http://css-tricks.com/persistent-headers/
 			function UpdateTableHeaders() {
@@ -215,7 +215,7 @@ var Site = window.Site || {};
 			$(window)
 			.scroll(function(){
 				UpdateTableHeaders(); 
-				stickyPostPagers(); 
+				//stickyPostPagers(); 
 				
 			})
 			.trigger("scroll");
@@ -228,6 +228,18 @@ var Site = window.Site || {};
 				$('body').removeClass('projectOpen');
 				return false; 
 			}); 
+		
+			$('.post p a img').each(function(){
+				$(this).parent().unwrap(); 			
+			}); 
+
+			$('.post p img').each(function(){
+				$(this).unwrap(); 			
+			}); 
+			/*
+			$('.content p').each(function(){
+				$(this).addClass('d2');
+			});*/
 		
 		});
 	//END ONLOAD			
@@ -248,12 +260,7 @@ var Site = window.Site || {};
 				sizeProjectCanvas(); 
 				sizeFillImageContainers(); 
 			});
-	
-			//$('.front #loading').fadeOut('slow', function() {
-			//    $('.front article').fadeIn(500);			
-			//	$('.front footer').fadeIn(500);
-			//});
-			
+				
 	});
 	
 })(jQuery);

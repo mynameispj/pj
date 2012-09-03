@@ -1,4 +1,4 @@
-/* line 17, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,45 +19,41 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
-/* line 22, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
 
-/* line 24, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none; }
 
-/* line 26, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 28, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
-/* line 30, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
-  /* line 103, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  /* line 103, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
-/* line 32, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
-/* line 116, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/*
-  Mixins are slightly modified from Benjamin Doherty's first implementations: http://gist.github.com/377912
-  rgba-background mixin can now be passed an option $dir variable
-*/
 /* line 14, ../sass/type.scss */
 h1,
 h2,
@@ -79,11 +75,11 @@ nav ul li a {
 
 /*- LET'S GET STARTED!
 ----------------------------------------------------------------------*/
-/* line 14, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
 html, body {
   height: 100%; }
 
-/* line 16, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 body {
   background-color: #fff;
   color: #000;
@@ -92,35 +88,35 @@ body {
   line-height: 22px;
   margin: 0;
   padding: 0; }
-  /* line 25, ../sass/screen.scss */
+  /* line 24, ../sass/screen.scss */
   body.projectOpen {
     background: #F4F4F4; }
-    /* line 27, ../sass/screen.scss */
+    /* line 26, ../sass/screen.scss */
     body.projectOpen header {
       background: transparent; }
 
-/* line 33, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 hr {
   height: 0;
   margin-bottom: 1em; }
 
-/* line 38, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 abbr {
   cursor: help; }
 
-/* line 40, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 a {
   color: #000;
   text-decoration: none; }
-  /* line 44, ../sass/screen.scss */
+  /* line 43, ../sass/screen.scss */
   a:hover {
     color: #000; }
 
-/* line 49, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 em {
   font-style: italic; }
 
-/* line 53, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 p {
   font-size: 18px;
   margin-bottom: 1.2em;
@@ -128,7 +124,7 @@ p {
   font-weight: 200;
   line-height: 1.4em;
   font-family: "chaparral-pro-1","chaparral-pro-2", Georgia, Times New Roman, Times, serif; }
-  /* line 60, ../sass/screen.scss */
+  /* line 59, ../sass/screen.scss */
   p a {
     border-bottom: 1px solid #ccc;
     -webkit-transition: border-bottom 0.2s linear;
@@ -137,13 +133,13 @@ p {
     -o-transition: border-bottom 0.2s linear 0;
     transition: border-bottom 0.2s linear 0;
     position: relative; }
-    /* line 65, ../sass/screen.scss */
+    /* line 64, ../sass/screen.scss */
     p a:hover {
       border-bottom: 1px solid #000; }
-    /* line 69, ../sass/screen.scss */
+    /* line 68, ../sass/screen.scss */
     p a:active {
       top: 1px; }
-  /* line 74, ../sass/screen.scss */
+  /* line 73, ../sass/screen.scss */
   p em {
     font-style: italic; }
 
@@ -280,9 +276,10 @@ nav {
 
 /*- CONTENT
 ----------------------------------------------------------------------*/
-/* line 89, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 article.clearfix {
-  padding-top: 50px; }
+  padding-top: 50px;
+  background: #000; }
 
 /* line 96, ../sass/screen.scss */
 article,
@@ -507,7 +504,7 @@ ul.worklist {
           position: absolute;
           background: #fff;
           top: 0; }
-          /* line 22, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+          /* line 22, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
           ul.worklist li.open #bodyWrap .header:after {
             content: "\0020";
             display: block;
@@ -738,138 +735,154 @@ ul.tabs {
 
 /*- Blog
 ----------------------------------------------------------------------*/
-/* line 1, ../sass/blog.scss */
+/* line 38, ../sass/blog.scss */
 .node-type-article footer .content {
   width: 1000px; }
 
-/* line 5, ../sass/blog.scss */
+/* line 42, ../sass/blog.scss */
 .post {
   position: relative; }
-  /* line 8, ../sass/blog.scss */
+  /* line 45, ../sass/blog.scss */
   .post h2 {
     font-size: 24px;
-    text-transform: uppercase; }
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 20px 10px; }
 
-/* line 16, ../sass/blog.scss */
+/* line 58, ../sass/blog.scss */
 .node-type-article article .articleWrap.fillpost {
   margin-top: -50px; }
 
-/* line 24, ../sass/blog.scss */
+/* line 64, ../sass/blog.scss */
+article .content {
+  position: relative; }
+/* line 70, ../sass/blog.scss */
 article .post.first .articleWrap.fillpost {
   margin-top: -50px; }
-/* line 30, ../sass/blog.scss */
+/* line 76, ../sass/blog.scss */
 article#blogRoll {
   max-width: none; }
-/* line 34, ../sass/blog.scss */
+/* line 80, ../sass/blog.scss */
 article .articleWrap {
   border-bottom: 1px solid #ccc;
   padding-bottom: 40px;
-  margin-bottom: 40px; }
-  /* line 39, ../sass/blog.scss */
+  margin-bottom: 40px;
+  overflow: hidden;
+  width: 85%;
+  background: #fff;
+  float: left; }
+  /* line 89, ../sass/blog.scss */
   article .articleWrap.fillpost {
     margin-top: -40px; }
-  /* line 43, ../sass/blog.scss */
+  /* line 93, ../sass/blog.scss */
   article .articleWrap.post-35 {
     border-bottom: none;
     padding-bottom: 0; }
-  /* line 49, ../sass/blog.scss */
+  /* line 99, ../sass/blog.scss */
   article .articleWrap .fill img {
     position: absolute;
     z-index: 0;
     width: 100%;
     min-width: 1000px;
     top: 0; }
-  /* line 59, ../sass/blog.scss */
+  /* line 109, ../sass/blog.scss */
   article .articleWrap article.post {
-    max-width: 600px;
-    z-index: 500; }
-    /* line 63, ../sass/blog.scss */
+    max-width: 900px;
+    z-index: 500;
+    padding: 20px; }
+    /* line 114, ../sass/blog.scss */
+    article .articleWrap article.post p {
+      margin-left: 17.12121212%; }
+    /* line 119, ../sass/blog.scss */
     article .articleWrap article.post img {
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
       -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
       box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
-      margin: 0 auto;
-      display: block;
-      width: 100%; }
-      /* line 69, ../sass/blog.scss */
+      width: 100%;
+      margin-bottom: 1em;
+      display: block; }
+      /* line 125, ../sass/blog.scss */
       article .articleWrap article.post img.noShadow {
         -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 1px 5px 0px;
         -moz-box-shadow: rgba(0, 0, 0, 0) 0px 1px 5px 0px;
         box-shadow: rgba(0, 0, 0, 0) 0px 1px 5px 0px; }
-    /* line 77, ../sass/blog.scss */
-    article .articleWrap article.post header h1,
-    article .articleWrap article.post header h2 {
-      text-align: center;
-      float: none;
-      display: block;
-      font-size: 42px;
-      font-weight: 600;
-      color: #000;
-      line-height: 48px; }
-      /* line 86, ../sass/blog.scss */
-      article .articleWrap article.post header h1 a,
-      article .articleWrap article.post header h2 a {
-        float: none; }
-        /* line 88, ../sass/blog.scss */
-        article .articleWrap article.post header h1 a:hover,
-        article .articleWrap article.post header h2 a:hover {
-          border-bottom: none; }
-    /* line 95, ../sass/blog.scss */
+    /* line 131, ../sass/blog.scss */
+    article .articleWrap article.post header {
+      margin: 0; }
+      /* line 134, ../sass/blog.scss */
+      article .articleWrap article.post header h1,
+      article .articleWrap article.post header h2 {
+        text-align: left;
+        float: none;
+        display: block;
+        font-size: 60px;
+        font-weight: 600;
+        color: #000;
+        line-height: 1.2em;
+        margin-bottom: 20px; }
+        /* line 144, ../sass/blog.scss */
+        article .articleWrap article.post header h1 a,
+        article .articleWrap article.post header h2 a {
+          float: none; }
+          /* line 146, ../sass/blog.scss */
+          article .articleWrap article.post header h1 a:hover,
+          article .articleWrap article.post header h2 a:hover {
+            border-bottom: none; }
+    /* line 153, ../sass/blog.scss */
     article .articleWrap article.post ul {
       list-style: outside;
       margin-bottom: 1.2em; }
-      /* line 99, ../sass/blog.scss */
+      /* line 157, ../sass/blog.scss */
       article .articleWrap article.post ul li {
         margin-bottom: 5px; }
-    /* line 104, ../sass/blog.scss */
+    /* line 162, ../sass/blog.scss */
     article .articleWrap article.post aside {
-      text-align: center;
-      padding: 10px 0 30px;
-      font-size: 12px;
+      width: 15.1010101%;
+      text-align: left;
+      padding: 10px 0 0;
+      float: left;
+      font-size: 11px;
+      line-height: 15px;
       text-transform: uppercase;
       font-weight: bold;
       color: #545454; }
-      /* line 112, ../sass/blog.scss */
-      article .articleWrap article.post aside .tags {
-        padding-left: 5px;
-        margin-left: 5px;
-        border-left: 1px solid #e6e6e6; }
-        /* line 113, ../sass/blog.scss */
-        article .articleWrap article.post aside .tags div {
-          display: inline; }
-        /* line 121, ../sass/blog.scss */
-        article .articleWrap article.post aside .tags a {
-          background: #d3d3d3;
-          padding: 3px 5px;
-          -webkit-border-radius: 3px;
-          -moz-border-radius: 3px;
-          -ms-border-radius: 3px;
-          -o-border-radius: 3px;
-          border-radius: 3px; }
-          /* line 126, ../sass/blog.scss */
-          article .articleWrap article.post aside .tags a:hover {
-            background: #545454;
-            color: #fff; }
-    /* line 136, ../sass/blog.scss */
+      /* line 174, ../sass/blog.scss */
+      article .articleWrap article.post aside .tags div {
+        display: inline; }
+      /* line 179, ../sass/blog.scss */
+      article .articleWrap article.post aside .tags a {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px; }
+        /* line 182, ../sass/blog.scss */
+        article .articleWrap article.post aside .tags a:hover {
+          color: #000;
+          text-decoration: underline; }
+    /* line 192, ../sass/blog.scss */
     article .articleWrap article.post .firstParagraph p {
       font-size: 24px;
       line-height: 32px;
       color: #000; }
-    /* line 142, ../sass/blog.scss */
+    /* line 198, ../sass/blog.scss */
     article .articleWrap article.post .firstParagraph span.code {
       font-size: 18px;
       padding-left: 5px;
       padding-right: 5px; }
-    /* line 148, ../sass/blog.scss */
+    /* line 204, ../sass/blog.scss */
     article .articleWrap article.post .firstParagraph img {
       display: block;
       margin: 0 auto;
       width: 100%; }
-    /* line 157, ../sass/blog.scss */
+    /* line 213, ../sass/blog.scss */
     article .articleWrap article.post blockquote {
       background: #ECECEC;
       padding: 15px 15px 2px 15px; }
-    /* line 162, ../sass/blog.scss */
+    /* line 218, ../sass/blog.scss */
     article .articleWrap article.post blockquote:after {
       border: solid transparent;
       content: " ";
@@ -881,7 +894,7 @@ article .articleWrap {
       border-width: 10px;
       left: 50%;
       margin-left: -10px; }
-    /* line 175, ../sass/blog.scss */
+    /* line 231, ../sass/blog.scss */
     article .articleWrap article.post p.cite {
       padding-top: 15px;
       text-align: center;
@@ -890,32 +903,36 @@ article .articleWrap {
       letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 600; }
-  /* line 188, ../sass/blog.scss */
-  article .articleWrap .pager {
-    width: 600px;
-    margin: 0 auto;
-    *zoom: 1; }
-    /* line 22, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-    article .articleWrap .pager:after {
-      content: "\0020";
-      display: block;
-      height: 0;
-      clear: both;
-      overflow: hidden;
-      visibility: hidden; }
-    /* line 193, ../sass/blog.scss */
-    article .articleWrap .pager.sticky {
-      position: fixed; }
-    /* line 198, ../sass/blog.scss */
-    article .articleWrap .pager .next,
-    article .articleWrap .pager .prev {
-      width: 50%;
-      position: relative;
-      background: rgba(255, 255, 255, 0.85); }
-      /* line 203, ../sass/blog.scss */
-      article .articleWrap .pager .next a,
-      article .articleWrap .pager .prev a {
-        color: #999;
+
+/* line 249, ../sass/blog.scss */
+section.sidebar {
+  float: right;
+  *zoom: 1;
+  width: 15%;
+  position: absolute;
+  right: 0; }
+  /* line 22, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  section.sidebar:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
+  /* line 256, ../sass/blog.scss */
+  section.sidebar .group {
+    padding-left: 20px; }
+  /* line 260, ../sass/blog.scss */
+  section.sidebar .pager {
+    top: 0; }
+    /* line 264, ../sass/blog.scss */
+    section.sidebar .pager .next,
+    section.sidebar .pager .prev {
+      position: relative; }
+      /* line 267, ../sass/blog.scss */
+      section.sidebar .pager .next a,
+      section.sidebar .pager .prev a {
+        color: #ccc;
         -webkit-transition: all 0.2s linear;
         -webkit-transition-delay: 0;
         -moz-transition: all 0.2s linear 0;
@@ -924,36 +941,29 @@ article .articleWrap {
         border-bottom: 1px solid #FFF;
         font-size: 15px;
         line-height: 18px; }
-        /* line 210, ../sass/blog.scss */
-        article .articleWrap .pager .next a:hover,
-        article .articleWrap .pager .prev a:hover {
-          color: #000;
+        /* line 274, ../sass/blog.scss */
+        section.sidebar .pager .next a:hover,
+        section.sidebar .pager .prev a:hover {
+          color: #fff;
           border-bottom: 1px solid #000; }
-    /* line 217, ../sass/blog.scss */
-    article .articleWrap .pager .next {
-      float: left; }
-    /* line 221, ../sass/blog.scss */
-    article .articleWrap .pager .prev {
-      float: right;
-      text-align: right; }
-    /* line 226, ../sass/blog.scss */
-    article .articleWrap .pager .label {
+    /* line 281, ../sass/blog.scss */
+    section.sidebar .pager .label {
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: #999; }
 
-/* line 238, ../sass/blog.scss */
+/* line 291, ../sass/blog.scss */
 article .gist {
   font-size: 14px; }
-  /* line 241, ../sass/blog.scss */
+  /* line 294, ../sass/blog.scss */
   article .gist pre {
     white-space: pre; }
-  /* line 246, ../sass/blog.scss */
+  /* line 299, ../sass/blog.scss */
   article .gist .gist-file .gist-meta {
     font-size: 11px; }
 
-/* line 253, ../sass/blog.scss */
+/* line 306, ../sass/blog.scss */
 span.code {
   font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
   font-size: 15px;
@@ -964,7 +974,7 @@ span.code {
 /*
 Posts with big background images, ie "Fillposts"
 4th of July, Disney World pic */
-/* line 268, ../sass/blog.scss */
+/* line 321, ../sass/blog.scss */
 article.post.post-35,
 .fillpost article {
   background: rgba(255, 255, 255, 0.7);
@@ -972,20 +982,20 @@ article.post.post-35,
   padding: 20px;
   margin-top: 200px; }
 
-/* line 277, ../sass/blog.scss */
+/* line 330, ../sass/blog.scss */
 article .articleWrap.fillpost p {
   color: #000; }
-/* line 281, ../sass/blog.scss */
+/* line 334, ../sass/blog.scss */
 article .articleWrap.fillpost .pager {
   clear: both;
   background: rgba(255, 255, 255, 0.7);
   padding: 20px; }
 
 /*Posts that float the article left and the pagers right */
-/* line 293, ../sass/blog.scss */
+/* line 346, ../sass/blog.scss */
 article .articleWrap.left {
   *zoom: 1; }
-  /* line 22, ../../../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 22, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   article .articleWrap.left:after {
     content: "\0020";
     display: block;
@@ -993,36 +1003,36 @@ article .articleWrap.left {
     clear: both;
     overflow: hidden;
     visibility: hidden; }
-  /* line 296, ../sass/blog.scss */
+  /* line 349, ../sass/blog.scss */
   article .articleWrap.left article.post {
     margin-left: 100px;
     float: left; }
-  /* line 301, ../sass/blog.scss */
+  /* line 354, ../sass/blog.scss */
   article .articleWrap.left .pager {
     border: 1px solid #fff;
     border-top: none; }
 
-/* line 312, ../sass/blog.scss */
+/* line 365, ../sass/blog.scss */
 article .articleWrap.post-44 {
   background: url("i/tan-noise-fill.jpg"); }
-  /* line 314, ../sass/blog.scss */
+  /* line 367, ../sass/blog.scss */
   article .articleWrap.post-44 article.post {
     background: rgba(255, 255, 255, 0.85); }
-/* line 320, ../sass/blog.scss */
+/* line 373, ../sass/blog.scss */
 article .articleWrap.post-57 {
   background: #000;
   margin-top: -50px; }
-  /* line 326, ../sass/blog.scss */
+  /* line 379, ../sass/blog.scss */
   article .articleWrap.post-57 .pager .next,
   article .articleWrap.post-57 .pager .prev {
     background: transparent; }
-  /* line 334, ../sass/blog.scss */
+  /* line 387, ../sass/blog.scss */
   article .articleWrap.post-57 article.post .firstParagraph p {
     color: #f0f0f0; }
-  /* line 340, ../sass/blog.scss */
+  /* line 393, ../sass/blog.scss */
   article .articleWrap.post-57 p {
     color: #ccc; }
-  /* line 343, ../sass/blog.scss */
+  /* line 396, ../sass/blog.scss */
   article .articleWrap.post-57 a {
     color: #fff; }
 
@@ -1231,37 +1241,22 @@ li.post article.post-24 {
 /*- Media Queries
 ----------------------------------------------------------------------*/
 /* NEW RULES */
-@media screen and (min-width: 240px) and (max-width: 600px) {
-  /* line 8, ../sass/mediaqueries.scss */
-  article .articleWrap .pager {
-    width: 90%;
-    margin-left: 5%; }
-  /* line 15, ../sass/mediaqueries.scss */
-  article article {
-    width: 90%;
-    margin-left: 5%; }
-
-  /* line 23, ../sass/mediaqueries.scss */
-  .node-type-article footer .content,
-  .not-front article#blogRoll .articleWrap article {
-    width: 90%;
-    margin-left: 5%; } }
 @media screen and (min-width: 240px) and (max-width: 768px) {
-  /* line 33, ../sass/mediaqueries.scss */
+  /* line 7, ../sass/mediaqueries.scss */
   ul.worklist li {
     width: 70%; }
 
-  /* line 38, ../sass/mediaqueries.scss */
+  /* line 12, ../sass/mediaqueries.scss */
   article header h1,
   article header h2 {
     position: relative;
     margin-top: 0; } }
 @media screen and (min-width: 240px) and (max-width: 320px) {
-  /* line 48, ../sass/mediaqueries.scss */
+  /* line 22, ../sass/mediaqueries.scss */
   ul.worklist li {
     width: 50%; } }
 @media screen and (min-width: 320px) and (max-width: 930px) {
-  /* line 62, ../sass/mediaqueries.scss */
+  /* line 36, ../sass/mediaqueries.scss */
   .front #body #lead .intro,
   .node-type-work #body #lead .intro,
   .page-node-23 #body #lead .intro {
@@ -1270,26 +1265,26 @@ li.post article.post-24 {
     position: relative;
     top: 0;
     left: 0; }
-  /* line 70, ../sass/mediaqueries.scss */
+  /* line 44, ../sass/mediaqueries.scss */
   .front #body #lead img,
   .node-type-work #body #lead img,
   .page-node-23 #body #lead img {
     width: 120%;
     max-width: 120%; } }
 @media screen and (min-width: 320px) and (max-width: 600px) {
-  /* line 86, ../sass/mediaqueries.scss */
+  /* line 60, ../sass/mediaqueries.scss */
   .front #body #otherImages,
   .node-type-work #body #otherImages,
   .page-node-23 #body #otherImages {
     width: 100%; }
-    /* line 88, ../sass/mediaqueries.scss */
+    /* line 62, ../sass/mediaqueries.scss */
     .front #body #otherImages img,
     .node-type-work #body #otherImages img,
     .page-node-23 #body #otherImages img {
       width: 90%;
       margin: 0 auto 10px; }
 
-  /* line 99, ../sass/mediaqueries.scss */
+  /* line 73, ../sass/mediaqueries.scss */
   .node-type-work #body #words,
   .front #body #words,
   .page-node-23 #body #words {
@@ -1297,46 +1292,54 @@ li.post article.post-24 {
     float: left;
     clear: left;
     padding-left: 10%; } }
+@media screen and (min-width: 240px) and (max-width: 600px) {
+  /* line 88, ../sass/mediaqueries.scss */
+  article .articleWrap article.post p {
+    margin-left: 0; }
+  /* line 94, ../sass/mediaqueries.scss */
+  article .articleWrap article.post p,
+  article .articleWrap article.post ul li {
+    font-size: 18px; }
+  /* line 98, ../sass/mediaqueries.scss */
+  article .articleWrap article.post aside {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center; }
+  /* line 103, ../sass/mediaqueries.scss */
+  article .articleWrap article.post header h1, article .articleWrap article.post header h2 {
+    font-size: 36px;
+    line-height: 42px; }
+  /* line 110, ../sass/mediaqueries.scss */
+  article .articleWrap article.post .firstParagraph p {
+    font-size: 24px;
+    line-height: 30px; } }
 @media screen and (min-width: 240px) and (max-width: 480px) {
-  /* line 112, ../sass/mediaqueries.scss */
+  /* line 129, ../sass/mediaqueries.scss */
   ul.worklist li {
     width: 50%; }
 
-  /* line 123, ../sass/mediaqueries.scss */
-  article .articleWrap article.post header h1,
-  article .articleWrap article.post header h2 {
-    font-size: 30px;
-    line-height: 36px; }
-
-  /* line 129, ../sass/mediaqueries.scss */
-  article .articleWrap article.post .firstParagraph p {
-    font-size: 18px;
-    line-height: 24px; }
-
-  /* line 136, ../sass/mediaqueries.scss */
-  article.post p,
-  article.post ul li {
-    font-size: 16px; }
-
-  /* line 140, ../sass/mediaqueries.scss */
+  /* line 139, ../sass/mediaqueries.scss */
   .showMenu {
     display: block; }
 
-  /* line 144, ../sass/mediaqueries.scss */
+  /* line 143, ../sass/mediaqueries.scss */
   nav {
     float: left;
     display: none; }
-    /* line 147, ../sass/mediaqueries.scss */
+    /* line 146, ../sass/mediaqueries.scss */
     nav ul {
       text-align: left; }
-      /* line 149, ../sass/mediaqueries.scss */
+      /* line 148, ../sass/mediaqueries.scss */
       nav ul li {
         direction: block; }
-        /* line 151, ../sass/mediaqueries.scss */
+        /* line 150, ../sass/mediaqueries.scss */
         nav ul li a {
           display: block;
           float: none; }
-        /* line 168, ../sass/mediaqueries.scss */
+        /* line 167, ../sass/mediaqueries.scss */
         nav ul li.rss a {
           margin-left: 0;
           margin-top: 0;
@@ -1346,63 +1349,38 @@ li.post article.post-24 {
           height: auto;
           width: auto; } }
 @media screen and (min-width: 480px) and (max-width: 768px) {
-  /* line 187, ../sass/mediaqueries.scss */
+  /* line 186, ../sass/mediaqueries.scss */
   ul.worklist li {
     width: 50%; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* line 196, ../sass/mediaqueries.scss */
+  /* line 195, ../sass/mediaqueries.scss */
   header.clearfix h1 {
     width: 50%; }
 
-  /* line 203, ../sass/mediaqueries.scss */
+  /* line 201, ../sass/mediaqueries.scss */
   .body p {
     margin-right: 30%;
     margin-left: 20px; }
-  /* line 209, ../sass/mediaqueries.scss */
+  /* line 206, ../sass/mediaqueries.scss */
   .body h3 {
     margin-left: 20px; } }
 @media screen and (min-width: 1145px) and (max-width: 1700px) {
-  /* line 218, ../sass/mediaqueries.scss */
+  /* line 214, ../sass/mediaqueries.scss */
   ul.worklist li {
     width: 20%; } }
 @media screen and (min-width: 1700px) {
-  /* line 224, ../sass/mediaqueries.scss */
+  /* line 220, ../sass/mediaqueries.scss */
   ul.worklist li {
     width: 10%; } }
 @media screen and (max-width: 1024px) {
-  /* line 232, ../sass/mediaqueries.scss */
+  /* line 228, ../sass/mediaqueries.scss */
   article .articleWrap.left article.post {
     margin-left: auto;
     margin-right: auto;
     float: none; } }
 @media screen and (min-width: 1024px) {
-  /* line 250, ../sass/mediaqueries.scss */
+  /* line 243, ../sass/mediaqueries.scss */
   article .articleWrap article.post img.large,
   article .articleWrap article.post .firstParagraph img.large {
     max-width: 1000px;
-    margin-left: -200px; }
-  /* line 257, ../sass/mediaqueries.scss */
-  article .articleWrap .pager {
-    width: 100%;
-    position: absolute;
-    top: 40px; }
-    /* line 263, ../sass/mediaqueries.scss */
-    article .articleWrap .pager .next,
-    article .articleWrap .pager .prev {
-      width: 150px;
-      padding: 20px; }
-
-  /* custom layout: left articles */
-  /* line 277, ../sass/mediaqueries.scss */
-  article .articleWrap.left .pager {
-    background: transparent;
-    padding: 0;
-    border: none;
-    margin-left: 0; }
-    /* line 283, ../sass/mediaqueries.scss */
-    article .articleWrap.left .pager .next {
-      float: right;
-      border-bottom: 1px solid #ccc; }
-    /* line 288, ../sass/mediaqueries.scss */
-    article .articleWrap.left .pager .prev {
-      clear: right; } }
+    margin-left: -200px; } }

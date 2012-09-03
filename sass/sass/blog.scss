@@ -1,3 +1,40 @@
+@mixin aside-mobile() {
+	width: 100%; 
+	font-size: 12px; 
+	padding: 10px 0; 
+	border-top: 1px solid #ccc; 
+	border-bottom: 1px solid #ccc; 
+	text-align: center; 
+}
+
+
+@mixin column($col:1) {
+	@if $col==1 {
+		width: 15.1010101%;	
+	} @else if $col==2 {
+		width: 60.6060606%;
+		margin-left: 17.12121212%;		
+	} @else if $col==3 {
+		width: 20.2020202%;
+	} @else if $col==1-2 {
+		width: 77.72727272%;
+	}
+	
+}
+
+@mixin inner-column($col:1) {
+	@if $col==1 {
+		width: 15.1010101%;	
+	} @else if $col==2 {
+		margin-left: 17.12121212%;		
+	} @else if $col==3 {
+		margin-left: 79.74747474%;	
+	} @else if $col==1-2 {
+		width: 77.72727272%;
+	}	
+}
+
+
 .node-type-article footer .content { 
 	width: 1000px; 
 }
@@ -7,7 +44,12 @@
 	
 	h2 {
 		font-size: 24px; 
+		font-weight: bold; 
+		margin-bottom: 0.5em;
 		text-transform: uppercase; 
+		border-bottom: 1px solid #ccc; 
+		border-top: 1px solid #ccc; 
+		padding: 20px 10px;
 	}
 	
 }
@@ -18,6 +60,10 @@
 }
 
 article {
+	
+	.content {
+		position: relative; 
+	}
 
 	.post.first {
 		.articleWrap {
@@ -35,6 +81,10 @@ article {
 		border-bottom: 1px solid #ccc; 
 		padding-bottom: 40px; 
 		margin-bottom: 40px; 
+		overflow: hidden; 
+		width: 85%; 
+		background: #fff; 
+		float: left; 
 		
 		&.fillpost {
 			margin-top: -40px; 
@@ -57,14 +107,20 @@ article {
 
 		
 		article.post {
-			max-width: 600px; 
+			max-width: 900px; 
 			z-index: 500; 
+			padding: 20px;
 			
+			p {
+				@include inner-column(2);
+			}
+
+
 			img {
 				@include box-shadow(rgba(#000,0.2) 0px 1px 5px 0px);
-				margin: 0 auto; 
+				width: 100%;
+				margin-bottom: 1em;
 				display: block; 
-				width: 100%; 
 				
 				&.noShadow {
 					@include box-shadow(rgba(#000,0) 0px 1px 5px 0px);
@@ -73,15 +129,17 @@ article {
 			}
 			
 			header {
+				margin: 0; 
 				h1,
 				h2 {
-					text-align: center; 
+					text-align: left; 
 					float: none; 
 					display: block; 
-					font-size: 42px; 
+					font-size: 60px; 
 					font-weight: 600;
 					color: #000; 
-					line-height: 48px;  
+					line-height: 1.2em;  
+					margin-bottom: 20px;
 					
 					a {
 						float: none; 
@@ -102,9 +160,12 @@ article {
 			}
 			
 			aside {
-				text-align: center; 
-				padding: 10px 0 30px; 
-				font-size: 12px; 
+				@include column(); 
+				text-align: left; 
+				padding: 10px 0 0; 
+				float: left; 
+				font-size: 11px;
+				line-height: 15px; 
 				text-transform: uppercase; 
 				font-weight: bold; 
 				color: $gray; 
@@ -114,18 +175,13 @@ article {
 						display: inline; 
 					}
 				
-					padding-left: 5px; 
-					margin-left: 5px; 
-					border-left: 1px solid #e6e6e6; 
 					
 					a {				
-						background: lighten($gray,50%); 
-						padding: 3px 5px; 
 						@include border-radius(3px);
 						
 						&:hover {
-							background: $gray; 
-							color: #fff; 							
+							color: #000;
+							text-decoration: underline;  							
 						}
 						
 					}
@@ -185,54 +241,51 @@ article {
 			
 		} // end article.post
 	
-		.pager {
-			width: 600px; 
-			margin: 0 auto; 
-			@include legacy-pie-clearfix;
-			
-			&.sticky {
-				position: fixed; 
-			}
-			
-			.next, 
-			.prev {
-				width: 50%; 
-				position: relative; 
-				background: rgba(#fff,0.85);
-
-				a {
-					color: #999; 
-					@include single-transition(all,0.2s,linear,0);
-					border-bottom: 1px solid #FFF;
-					font-size: 15px; 
-					line-height: 18px; 
-					
-					&:hover {
-						color: #000; 
-						border-bottom: 1px solid #000; 							
-					}					
-				}
-			}
-			
-			.next {
-				float: left; 
-			}
-			
-			.prev {
-				float: right; 
-				text-align: right; 				
-			}
-			
-			.label {
-				font-size: 12px; 
-				text-transform: uppercase; 
-				letter-spacing: 2px; 
-				color: #999; 
-			}
-		}
 	
 	} // end .articleWrap
 } //end article
+
+
+section.sidebar {
+	float: right; 
+	@include legacy-pie-clearfix;
+	width: 15%; 
+	position: absolute;
+	right: 0;
+	
+	.group {
+		padding-left: 20px;
+	}
+	
+	.pager {
+		top: 0; 
+		
+		.next, 
+		.prev {
+			position: relative; 
+	
+			a {
+				color: #ccc; 
+				@include single-transition(all,0.2s,linear,0);
+				border-bottom: 1px solid #FFF;
+				font-size: 15px; 
+				line-height: 18px; 
+				
+				&:hover {
+					color: #fff; 
+					border-bottom: 1px solid #000; 							
+				}					
+			}
+		}
+					
+		.label {
+			font-size: 12px; 
+			text-transform: uppercase; 
+			letter-spacing: 2px; 
+			color: #999; 
+		}
+	}	
+}
 
 article {
 	.gist {

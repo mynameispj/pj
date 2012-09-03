@@ -1,32 +1,6 @@
 
 /* NEW RULES */
 
-@media screen and (min-width: 240px) and (max-width: 600px) {
-
-	article {
-		.articleWrap {
-			.pager {
-				width: 90%; 
-				margin-left: 5%; 
-			}
-			
-		}
-	
-		article {
-			width: 90%; 
-			margin-left: 5%; 
-		}
-		
-	}
-	
-	.node-type-article footer .content,
-	.not-front article#blogRoll .articleWrap article {
-		width: 90%; 
-		margin-left: 5%; 		
-	}
-	
-}
-
 
 @media screen and (min-width: 240px) and (max-width: 768px) {
 
@@ -106,7 +80,50 @@
 
 }
 
+@media screen and (min-width: 240px) and (max-width: 600px) {
+
+	article {
+		.articleWrap {
+			article.post {
+				p {
+					margin-left: 0; 
+					
+				}
+				
+				p, 
+				ul li {
+					font-size: 18px;
+				}
+				
+				aside {
+					@include aside-mobile(); 
+				}
+				
+				header {
+					h1, h2 {
+						font-size: 36px; 
+						line-height: 42px;
+					}
+				}
+				
+				.firstParagraph {
+					p {						
+						font-size: 24px; 
+						line-height: 30px;
+					}
+				}
+				
+			}
+		}	
+	}
+
+
+}
+
+
 @media screen and (min-width: 240px) and (max-width: 480px) {
+
+
 
 	ul.worklist {
 		li {
@@ -118,24 +135,6 @@
 		}
 	}
 	
-	
-	article .articleWrap article.post header h1, 
-	article .articleWrap article.post header h2 {
-		font-size: 30px; 
-		line-height: 36px;
-		
-	}
-	
-	article .articleWrap article.post .firstParagraph p {
-		
-		font-size: 18px; 
-		line-height: 24px;
-	}
-	
-	article.post p, 
-	article.post ul li {
-		font-size: 16px;
-	}
 	
 	.showMenu {
 		display: block; 
@@ -196,19 +195,16 @@
 		h1 {
 			width: 50%; 
 		}
-		
 	}
 
 	.body {
 		p {
 			margin-right: 30%;
 			margin-left: 20px;
-			
 		}
 		
 		h3 {
 			margin-left: 20px;
-			
 		}		
 	}	
 }
@@ -239,11 +235,8 @@
 
 @media screen and (min-width: 1024px) {
 
-
-
 	article {
-		.articleWrap {
-			
+		.articleWrap {			
 			article.post {
 				
 				img.large, 
@@ -253,43 +246,6 @@
 				}
 				
 			}
-		
-			.pager {
-				width: 100%; 
-				position: absolute; 
-				top: 40px; 
-				
-				.next, 
-				.prev {
-					width: 150px;
-					padding: 20px;
-				}
-				
-			}
-			
-		}
-		
-	}
-
-	/* custom layout: left articles */
-	article {
-		 .articleWrap.left {
-			 	.pager {
-				background: transparent;
-				padding: 0; 
-				border: none; 
-				margin-left: 0; 
-
-				.next {
-					float: right; 
-					border-bottom: 1px solid #ccc; 
-				}
-				
-				.prev {
-					clear: right; 
-				}
-			}
 		}
 	}
-
 }

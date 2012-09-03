@@ -2,7 +2,6 @@
 @import "compass/reset";
 @import "compass/utilities";
 @import "compass/css3";
-@import "rgbapng";
 
 //My Stuff
 @import 'type.scss';
@@ -88,6 +87,7 @@ p {
 
 article.clearfix {
   padding-top: 50px; 
+  background: #000; 
 }
 
 article, 
@@ -274,6 +274,8 @@ ul.tabs { position: relative; z-index: 100; }
 ----------------------------------------------------------------------*/
 
 @import 'mediaqueries.scss'; 
+
+
 
 
 

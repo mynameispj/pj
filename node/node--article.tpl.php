@@ -56,47 +56,60 @@ if ($customLayout == 1) print ' '. $content['field_custom_layout']['#items'][0][
 	} ?> 
 	
 	<article class="post post-<?php print $nid;?>"> 
-		<header>
-			<?php  if ($hideTitle == 0) { //the title of the testicular cancer post is in the body of the post ?>
-				<?php print render($title_prefix); ?>
-					<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
-				<?php print render($title_suffix); ?>
-			<?php } else if (($hideTitle == 1) || ($nid != 24)) { ?>
-						
-			<?php }?>
+		<div class="content">
+			<header>
+				<?php  if ($hideTitle == 0) { ?>
+					<?php print render($title_prefix); ?>
+						<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+					<?php print render($title_suffix); ?>
+				<?php } else if (($hideTitle == 1) || ($nid != 24)) { ?>
+							
+				<?php }?>
+		
+			</header>
+			<aside>
+				<?php  if ($hideTitle == 0) { //the title of the testicular cancer post is in the body of the post ?>
+					<dl>
+						<dt>Posted</dt>
+							<dd><?php print format_date($created, 'custom', 'F j Y'); ?></dd>
+						<dt>Tagged</dt>
+							<dd><span class="tags"><?php print render($content['field_tags']); ?></span></dd>
+						<dt>Reading Time</dt>
+							<dd><span class="readingTime"><?php echo $est; ?></span></dd>
+					</dl>
+				<?php } else if (($hideTitle == 1) || ($nid != 24)) { ?>
+							
+				<?php }?>
+				
+			</aside>
+		
+			<div class="firstParagraph"><?php print $firstParagraph; ?></div>
 	
-		</header>
-		<aside>
-			<?php  if ($hideTitle == 0) { //the title of the testicular cancer post is in the body of the post ?>
-				<?php print format_date($created, 'custom', 'F j Y'); ?>
-				<span class="tags"><?php print render($content['field_tags']); ?></span>
-				<br/><span class="readingTime">Estimated reading time: <?php echo $est; ?></span>
-			<?php } else if (($hideTitle == 1) || ($nid != 24)) { ?>
-						
-			<?php }?>
-			
-		</aside>
-	
-		<div class="firstParagraph"><?php print $firstParagraph; ?></div>
-		<?php 
-		//krumo(render($content)); 
-		print render($content); ?>
-	
+			<?php 
+			//krumo(render($content)); 
+			print render($content); ?>
+		</div>
 	</article>
+
+</div>
+<section class="sidebar">
 	<?php if ($page) { ?>
-		<div class="pager">
-			<?php if ($nextPost != NULL) { ?>
-				<div class="next">
-					<div class="label">&larr; Next</div>
-					<?php print $nextPost; ?>
-				</div>
-			<?php } ?>
-			<?php if ($prevPost != NULL) { ?>
-				<div class="prev">
-					<div class="label">Previously &rarr; </div>
-					<?php print $prevPost; ?>
-				</div>
-			<?php } ?>
+		<div class="group">
+			<div class="pager">
+				<?php if ($nextPost != NULL) { ?>
+					<div class="next">
+						<div class="label">&larr; Next</div>
+						<?php print $nextPost; ?>
+					</div>
+				<?php } ?>
+				<?php if ($prevPost != NULL) { ?>
+					<div class="prev">
+						<div class="label">Previously &rarr; </div>
+						<?php print $prevPost; ?>
+					</div>
+				<?php } ?>
+			</div>
 		</div>
 	<?php } ?>
-</div>
+</section>
+
