@@ -49,7 +49,42 @@
 			}
 		}		
 	}
+	
+	
+	header#page {
+		h2 {
+			width: 96%;
+			margin-left: 2%; 
+			padding: 0 0 7px;
+			text-align: center; 
+		}
+		
+		nav {
+			float: none; 
+			width: 100%; 
+			
+			ul {
+				width: 100%;
+				text-align: center;
+				
+				li {
+					position: relative;
+					display: inline;
+					
+					a {
+						display: inline-block; 
+						float: none; 
+					}
+					
+				}
+			}
+			
+		}
+	}	
+	
 }
+
+
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
 
@@ -76,7 +111,22 @@
 		clear: left;
 		padding-left: 10%;
 	}
+	
+	article {
+		.articleWrap {
+			width: 90%;
+		}
+	}
 
+	section.sidebar {
+		width: 10%;
+		display: none; 
+	}
+	
+	a.showSidebar {
+		width: 10%;
+		display: block; 
+	}
 
 }
 
@@ -123,8 +173,6 @@
 
 @media screen and (min-width: 240px) and (max-width: 480px) {
 
-
-
 	ul.worklist {
 		li {
 			width: 50%; 
@@ -134,51 +182,7 @@
 			}	
 		}
 	}
-	
-	
-	.showMenu {
-		display: block; 
-	}
-	
-	nav { 
-		float: left; 
-		display: none; 
-		ul {
-			text-align: left; 
-			li {
-				direction: block; 
-				a {
-					display: block;
-					float: none; 
-				}
-				
-				a,
-				a.active {
-				
-				}
-				
-				a:hover, 
-				a.active:hover, 
-				a.active  {
-				
-				}
-				
-				&.rss {
-					a {
-						margin-left: 0; 
-						margin-top: 0; 
-						padding: 0 15px 7px; 
-						background: transparent; 
-						text-indent: 0;
-						height: auto; 
-						width: auto;  
-					}
-
-				}				
-				
-			}
-		}
-	}	
+		
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {

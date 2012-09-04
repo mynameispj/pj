@@ -2,11 +2,22 @@
 	width: 100%; 
 	font-size: 12px; 
 	padding: 10px 0; 
-	border-top: 1px solid #ccc; 
-	border-bottom: 1px solid #ccc; 
 	text-align: center; 
 }
 
+@mixin grayLinkOnBlack() {
+	color: #ccc; 
+	@include single-transition(all,0.2s,linear,0);	
+}
+
+@mixin tertiaryHeader() {
+	border-top: 2px solid #ccc;
+	font-size: 10px; 
+	padding-top: 3px;
+	color: #b0b0b0;
+	text-transform: uppercase; 
+	font-weight: bold; 
+}
 
 @mixin column($col:1) {
 	@if $col==1 {
@@ -85,10 +96,7 @@ article {
 		width: 85%; 
 		background: #fff; 
 		float: left; 
-		
-		&.fillpost {
-			margin-top: -40px; 
-		}
+		position: relative; 
 		
 		&.post-35 {
 			border-bottom: none; 
@@ -109,7 +117,7 @@ article {
 		article.post {
 			max-width: 900px; 
 			z-index: 500; 
-			padding: 20px;
+			padding: 30px 20px 20px;
 			
 			p {
 				@include inner-column(2);
@@ -162,13 +170,27 @@ article {
 			aside {
 				@include column(); 
 				text-align: left; 
-				padding: 10px 0 0; 
+				padding: 5px 0 0; 
 				float: left; 
 				font-size: 11px;
 				line-height: 15px; 
 				text-transform: uppercase; 
 				font-weight: bold; 
 				color: $gray; 
+				
+				
+				dl {
+					dt {
+						@include tertiaryHeader(); 
+					}
+					
+					dd {
+						margin-bottom: 5px;
+					}
+					
+					
+				}
+				
 				
 				.tags {
 					div {
@@ -245,16 +267,49 @@ article {
 	} // end .articleWrap
 } //end article
 
+a.showSidebar {
+	display: none; 
+	
+	.arrow-left {
+		margin: 0 auto; 
+		@include cssarrow(left,10px,#fff);
+	}
+	
+}
 
-section.sidebar {
+section.sidebar, 
+a.showSidebar {
 	float: right; 
 	@include legacy-pie-clearfix;
 	width: 15%; 
 	position: absolute;
 	right: 0;
+	top: 0; 
+	padding-top: 50px;
+	overflow: hidden; 
+	
 	
 	.group {
 		padding-left: 20px;
+		color: #000; 
+		font-size: 13px; 
+		margin-bottom: 25px;
+		h3 {
+			@include tertiaryHeader(); 
+			margin-bottom: 0px;
+			letter-spacing: 1px;
+			color: #878787;
+		}
+		
+		a {
+			@include grayLinkOnBlack();
+			
+			&:hover {
+				color: #fff; 
+			}
+			
+		}
+		
 	}
 	
 	.pager {
@@ -265,8 +320,7 @@ section.sidebar {
 			position: relative; 
 	
 			a {
-				color: #ccc; 
-				@include single-transition(all,0.2s,linear,0);
+				@include grayLinkOnBlack();
 				border-bottom: 1px solid #FFF;
 				font-size: 15px; 
 				line-height: 18px; 
@@ -278,12 +332,6 @@ section.sidebar {
 			}
 		}
 					
-		.label {
-			font-size: 12px; 
-			text-transform: uppercase; 
-			letter-spacing: 2px; 
-			color: #999; 
-		}
 	}	
 }
 
@@ -347,14 +395,10 @@ article {
 		@include legacy-pie-clearfix; 
 		
 		article.post {
-			margin-left: 100px; 
-			float: left; 
+			//margin-left: 100px; 
+			//float: left; 
 		}
 		
-		.pager {
-			border: 1px solid #fff; 
-			border-top: none; 
-		}
 	}
 }
 

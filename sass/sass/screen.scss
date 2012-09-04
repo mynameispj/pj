@@ -5,7 +5,7 @@
 
 //My Stuff
 @import 'type.scss';
-@import 'variables-helpers.scss';
+@import 'mixins.scss';
 
 
 /*- LET'S GET STARTED!
@@ -13,13 +13,23 @@
 html, body { height: 100%;}
 
 body {
-	background-color: #fff;
+	background-color: #000;
 	color: #000;
 	@include font();  
 	font-size: 17px;
 	line-height: 22px;
 	margin: 0;
 	padding: 0;
+
+	&.page-node-23 {
+		background-color: #fff; 
+		
+		article.clearfix{
+			background: #fff; 
+		}
+		
+	}
+
 
 	&.projectOpen {
 		background: #F4F4F4;
@@ -30,8 +40,10 @@ body {
 }
 
 hr {
-	height: 0;
+	height: 1px;
+	background: #ccc; 
 	margin-bottom: 1em;
+	border: none; 
 }
 
 abbr { cursor: help; }
@@ -107,6 +119,27 @@ footer,
 
 @import 'portfolio.scss'; 
 
+ul.pager {
+	
+	li {
+	
+		&.pager-current {
+			color: #fff;
+			border-bottom: 2px solid #fff;  
+		}
+	
+		a {
+			color: #ccc; 
+			@include single-transition(all,0.2s,linear,0); 
+			
+			&:hover {
+				color: #fff; 
+			}
+			
+		}
+	}
+}
+
 
 /*- FOOTER
 ----------------------------------------------------------------------*/
@@ -114,10 +147,11 @@ footer,
 footer { 
 	padding: 30px 0; 
 	font-size: 0.7em; 
-	color: darken($gray, 20%); 
+	color: #999; 
 	overflow: hidden; 
 	width: 100%; 
 	max-width: 1000px;	
+	background: transparent; 
 	
 	.content {
 		float: left;

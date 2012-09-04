@@ -106,52 +106,10 @@ nav {
 		 
 }
 
-.showMenu {
-	color: #999; 
-	display: block;
-	clear: left;
-	text-align: center;
-	cursor: pointer; 
-	height: 44px; 
-	line-height: 44px;
-	display: none;  
-	
-	.arrow-down {
-		position: absolute; 
-		margin: 20px 0 0 5px; 
-		border-top: 5px solid #999;
-	}
-	
-	&.open {
-		.arrow-down {
-			border-bottom: 5px solid #999;
-			border-top: none; 
-		}	
-	}
-	
-	&:hover {
-		.showMenu:hover {
-			color: #fff; 
-			
-			.arrow-down {
-				border-top: 5px solid #FFF;		
-			}
-			
-			&.open {
-				.arrow-down {
-					border-bottom: 5px solid #FFF;
-					border-top: none; 
-				}	
-			}
-		}		
-	}
-}
-
 
 .arrow-down {
-	width: 0; 
-	height: 0; 
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-top: 5px solid #FFF;
+	position: absolute; 
+	margin: 20px 0 0 5px; 
+	border-top: 5px solid #999;
 }
+

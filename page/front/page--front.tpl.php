@@ -1,7 +1,7 @@
 <header id="page" class="clearfix">
 	<?php print render($primary_local_tasks); ?>
-	<h2><a href="/">PJ McCormick</a> Designer, developer, cancer patient/survivor, writer, and, y'know, other stuff.</h2>
-	<a class="showMenu">Menu <span class="arrow-down"></span> </a>
+	<h2><a href="/">PJ McCormick</a> | Designer, developer, cancer patient, and writer, among other things.</h2>
+	
 	<nav>
 	<?php print theme('links__system_main_menu', array(
       'links' => $main_menu,
@@ -44,7 +44,15 @@
 	<?php print render($page['content']); ?>
 	<section class="sidebar">
 		<div class="group">
-			Test
+			<h3>Elsewhere</h3>
+			<ul>
+				<li><a href="http://www.twitter.com/mynameispj" title="Twitter">Twitter</a></li>
+				<li><a href="http://dribbble.com/mynameispj" title="Dribbble">Dribbble</a></li>
+				<li><a href="https://github.com/mynameispj">Github</a></li>
+				<li><a href="http://www.flickr.com/photos/pjmccormick/" title="Flickr">Flickr</a></li>
+				<li><a href="http://workforpie.com/mynameispj/biography/">Work For Pie</a></li>
+				<li><a href="http://www.facebook.com/pjmccormick" title="Facebook">Facebook</a></li>
+			</ul>
 		</div>
 	</section>
 

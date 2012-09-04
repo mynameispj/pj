@@ -1,7 +1,7 @@
 <header id="page" class="clearfix">
 	<?php print render($primary_local_tasks); ?>
-	<h2><a href="/">PJMcCormick.com</a>  Design, development, cancer, and, y'know, other stuff.</h2>
-	<a class="showMenu">Menu <span class="arrow-down"></span> </a>
+	<h2><a href="/">PJ McCormick</a> | Designer, developer, cancer patient, and writer, among other things.</h2>
+	
 	<nav>
 	<?php print theme('links__system_main_menu', array(
       'links' => $main_menu,

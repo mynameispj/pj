@@ -94,22 +94,30 @@ if ($customLayout == 1) print ' '. $content['field_custom_layout']['#items'][0][
 </div>
 <section class="sidebar">
 	<?php if ($page) { ?>
-		<div class="group">
-			<div class="pager">
-				<?php if ($nextPost != NULL) { ?>
-					<div class="next">
-						<div class="label">&larr; Next</div>
-						<?php print $nextPost; ?>
-					</div>
-				<?php } ?>
-				<?php if ($prevPost != NULL) { ?>
-					<div class="prev">
-						<div class="label">Previously &rarr; </div>
-						<?php print $prevPost; ?>
-					</div>
-				<?php } ?>
+		<?php if ($nextPost != NULL) { ?>
+			<div class="group">
+				<h3>Next</h3>
+				<?php print $nextPost; ?>
 			</div>
+		<?php } ?>
+		<?php if ($prevPost != NULL) { ?>
+			<div class="group">
+				<h3>Previously</h3>
+				<?php print $prevPost; ?>
+			</div>
+		<?php } ?>
+	
+		<div class="group">
+			<h3>Elsewhere</h3>
+			<ul>
+				<li><a href="http://www.twitter.com/mynameispj" title="Twitter">Twitter</a></li>
+				<li><a href="http://dribbble.com/mynameispj" title="Dribbble">Dribbble</a></li>
+				<li><a href="https://github.com/mynameispj">Github</a></li>
+				<li><a href="http://www.flickr.com/photos/pjmccormick/" title="Flickr">Flickr</a></li>
+				<li><a href="http://workforpie.com/mynameispj/biography/">Work For Pie</a></li>
+				<li><a href="http://www.facebook.com/pjmccormick" title="Facebook">Facebook</a></li>
+			</ul>
 		</div>
 	<?php } ?>
 </section>
-
+<a class="showSidebar"><div class="arrow-left"></div></a>

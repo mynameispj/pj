@@ -2,7 +2,7 @@
 <header id="page" class="clearfix">
 	<?php print render($primary_local_tasks); ?>
 	<h1><a href="/">I design and build web sites, brands, apps, logos, and other useful things.</a></h1>
-	<a class="showMenu">Menu <span class="arrow-down"></span> </a>
+	
 	<nav>
 		<?php print theme('links__system_main_menu', array(
 	      'links' => $main_menu,
