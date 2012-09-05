@@ -207,11 +207,15 @@ var Site = window.Site || {};
 		}); 
 	
 		$('.post p a img').each(function(){
-			$(this).parent().unwrap(); 			
+			if ($(this).parents(".firstParagraph").length == 0 ) { 
+				$(this).parent().unwrap(); 						
+			}
 		}); 
 
 		$('.post p img').each(function(){
-			$(this).unwrap(); 			
+			if ( $(this).parents(".firstParagraph").length == 0 ) { 
+				$(this).parent().unwrap(); 						
+			}
 		}); 
 		
 		$('.showSidebar').click(function(){
