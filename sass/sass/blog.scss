@@ -294,6 +294,23 @@ a.showSidebar {
 		color: #000; 
 		font-size: 13px; 
 		margin-bottom: 25px;
+		
+		img {
+			display: block; 
+			margin: 0 auto;  
+		}
+		
+		p {
+			@include font(); 
+			font-size: 13px; 
+			color: #000; 
+			font-weight: normal; 
+			
+			a {
+				border-bottom: none; 
+			}
+		}
+		
 		h3 {
 			@include tertiaryHeader(); 
 			margin-bottom: 0px;
