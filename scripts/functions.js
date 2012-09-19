@@ -206,17 +206,6 @@ var Site = window.Site || {};
 			return false; 
 		}); 
 	
-		$('.post p a img').each(function(){
-			if ($(this).parents(".firstParagraph").length == 0 ) { 
-				$(this).parent().unwrap(); 						
-			}
-		}); 
-
-		$('.post p img').each(function(){
-			if ( $(this).parents(".firstParagraph").length == 0 ) { 
-				$(this).parent().unwrap(); 						
-			}
-		}); 
 		
 		$('.showSidebar').click(function(){
 			$(this).hide(); 
