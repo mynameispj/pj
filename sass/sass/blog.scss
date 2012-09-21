@@ -63,6 +63,15 @@
 		padding: 20px 10px;
 	}
 	
+	.ad {
+		position: relative; 
+		margin: 40px auto 0; 
+		
+		&.postfooter {
+			width: 468px;
+		}
+	}
+	
 }
 
 

@@ -89,6 +89,21 @@ if ($customLayout == 1) print ' '. $content['field_custom_layout']['#items'][0][
 			//krumo(render($content)); 
 			print render($content); ?>
 		</div>
+		<?php if ($page) { ?>
+			<div class="ad postfooter">
+				<script type="text/javascript"><!--
+					google_ad_client = "ca-pub-2106906807001894";
+					/* Post Footer Ads */
+					google_ad_slot = "1277597508";
+					google_ad_width = 468;
+					google_ad_height = 60;
+					//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+			</div>
+		<?php } ?>
 	</article>
 
 </div>
