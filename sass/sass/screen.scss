@@ -8,6 +8,8 @@
 @import 'mixins.scss';
 
 
+$gold : #92570C; 
+
 /*- LET'S GET STARTED!
 ----------------------------------------------------------------------*/
 html, body { height: 100%;}
@@ -49,11 +51,11 @@ hr {
 abbr { cursor: help; }
 
 a { 
-	color: #000; 
+	color: $gold; 
 	text-decoration: none;
 
 	&:hover {
-		color: #000; 		
+		color: darken($gold,10%); 		
 	}
 }
 

@@ -1,24 +1,6 @@
 <?php
 // $Id: template.php,v 1.25 2010/11/20 04:03:51 webchick Exp $
 
-
-function pj_get_ie_styles() {
-  global $language;
-
-  $iecss = '<link type="text/css" rel="stylesheet" media="all" href="'. base_path() . path_to_theme() .'/css/_patches/win-ie-all.css" />';
-
-  return $iecss;
-}
-
-function pj_get_ieseven_styles() {
-  global $language;
-
-  $iecss = '<link type="text/css" rel="stylesheet" media="all" href="'. base_path() . path_to_theme() .'/css/_patches/win-ie7.css" />';
-
-  return $iecss;
-}
-
-
 function pj_links($variables) {
   $links = $variables['links'];
   $attributes = $variables['attributes'];
@@ -98,11 +80,6 @@ function pj_links($variables) {
   return $output;
 }
 
-
-
-
-
-
 function pj_preprocess_page(&$variables, $hook) {
 
     // When this goes through the theme.inc some where it changes _ to - so the tpl name is actually page--type-typename.tpl
@@ -112,11 +89,6 @@ function pj_preprocess_page(&$variables, $hook) {
     } 
        
 }
-
-
-
-
-
 
 
 function pj_image($variables) {
@@ -132,6 +104,7 @@ function pj_image($variables) {
 
   return '<img' . drupal_attributes($attributes) . ' />';
 }
+
 
 function pj_field($variables) {
  
@@ -165,6 +138,7 @@ function pj_field($variables) {
  
   return $output;
 }
+
 
 function pj_preprocess_node(&$variables) {
 	//print krumo($variables);
@@ -256,7 +230,6 @@ function pj_preprocess_node(&$variables) {
 			$variables['nextPostHTML'] = ''; 
 		}
 
-
 		if ($prevPost != NULL) {
 			$buildPrevPostHTML = '<div class="group">';
 			$buildPrevPostHTML .= '	<h3>Previously</h3>';
@@ -269,15 +242,8 @@ function pj_preprocess_node(&$variables) {
 			$variables['prevPostHTML'] = ''; 
 		}
 
-
 		//send variables up to node.tpl.php
 		$variables['nextPost'] = $nextPost; 	
 		$variables['prevPost'] = $prevPost; 
-
-		
 	}	
-
-
-
-
 }

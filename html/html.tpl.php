@@ -60,15 +60,7 @@
   <?php endif ;?>
   <?php print $styles; ?>
   <?php print $scripts; ?>
-	<!--[if IE]>
-		<?php print pj_get_ie_styles(); ?>
-	<![endif]-->
-	<!--[if IE 7]>
-		<?php print pj_get_ieseven_styles(); ?>
-	<![endif]-->
-	<!--[if IE 8]>
-		<?php print pj_get_ieseven_styles(); ?>
-	<![endif]-->
+
 	<script type="text/javascript">
 	
 		var _gaq = _gaq || [];

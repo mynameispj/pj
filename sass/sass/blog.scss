@@ -114,6 +114,7 @@ article {
 		}			
 		
 		.fill {
+		
 			img {
 				position: absolute; 
 				z-index: 0; 
@@ -131,8 +132,12 @@ article {
 			
 			p {
 				@include inner-column(2);
+				
+				img {
+					width: auto; 
+					margin: 0 auto; 
+				}
 			}
-
 
 			img {
 				@include box-shadow(rgba(#000,0.2) 0px 1px 5px 0px);
