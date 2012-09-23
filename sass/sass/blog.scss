@@ -69,6 +69,8 @@
 		
 		&.postfooter {
 			width: 468px;
+			padding-top: 10px; 
+			border-top: 1px solid #d0d0d0;
 		}
 	}
 	
@@ -102,9 +104,8 @@ article {
 		padding-bottom: 40px; 
 		margin-bottom: 40px; 
 		overflow: hidden; 
-		width: 85%; 
 		background: #fff; 
-		float: left; 
+		margin-right: 200px;
 		position: relative; 
 		
 		&.post-35 {
@@ -290,7 +291,7 @@ section.sidebar,
 a.showSidebar {
 	float: right; 
 	@include legacy-pie-clearfix;
-	width: 15%; 
+	width: 200px; 
 	position: absolute;
 	right: 0;
 	top: 0; 

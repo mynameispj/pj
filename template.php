@@ -133,37 +133,6 @@ function pj_image($variables) {
   return '<img' . drupal_attributes($attributes) . ' />';
 }
 
-function pn_node($node, $mode = 'n') {
-	if (!function_exists('prev_next_nid')) {
-		return NULL;
-	}
-
-	switch($mode) {
-		case 'p':
-			$n_nid = prev_next_nid($node->nid, 'prev');
-			$link_text = 'previous';
-		break;
-		
-		case 'n':
-			$n_nid = prev_next_nid($node->nid, 'next');
-			$link_text = 'next';
-		break;
-		
-		default:
-		return NULL;
-	}
-
-	if ($n_nid) {
-		$n_node = node_load($n_nid);
-		
-		switch($n_node->type) {	
-			case 'article': 
-				$html = l('"'.$n_node->title .'"', 'node/'.$n_node->nid); 
-			return $html; 
-		}
-	}
-}
-
 function pj_field($variables) {
  
   $output = '';
@@ -195,4 +164,120 @@ function pj_field($variables) {
   $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
  
   return $output;
+}
+
+function pj_preprocess_node(&$variables) {
+	//print krumo($variables);
+	
+	if (empty($variables['field_article_first_paragraph'])) {
+		$variables['firstParagraph'] = '';
+	} else {
+		$variables['firstParagraph'] = $variables['field_article_first_paragraph'][0]['value'];		
+	}
+	
+	if (empty($variables['field_background_image'])) { 
+		$variables['fillImageExists'] = ' ';
+		$variables['bgimage'] = ''; 
+	} else {
+		$variables['fillImageExists'] = ' fillpost';
+		$variables['bgimage'] = '<div class="fill"><img src="' . file_create_url($variables['field_background_image'][0]['uri']) . '"/></div>'; 
+	} 
+
+	if (empty($variables['field_custom_layout'])) { 
+		$variables['customLayout'] = ' ';  
+	} else {
+		$variables['customLayout'] = ' ' . $variables['field_custom_layout'][0]['value']; 	
+	} 
+
+	if (empty($variables['field_hide_title'])) { 
+		$variables['hideTitle'] = 0;  
+	} else {
+		$variables['hideTitle'] = 1;  
+	} 
+
+	if ((empty($variables['field_article_first_paragraph']) && (!empty($variables['content']['body']['#items'][0])))) {
+		$postContent = $variables['content']['body']['#items'][0]['value']; 		
+	} else if ((!empty($variables['field_article_first_paragraph']) && (empty($variables['content']['body']['#items'][0])))) {
+		$postContent = $variables['field_article_first_paragraph'][0]['value']; 		
+	} else {
+		$postContent = $variables['field_article_first_paragraph'][0]['value'] . $variables['content']['body']['#items'][0]['value']; 		
+	}
+	$word = str_word_count(strip_tags($postContent));
+	$m = floor($word / 200);
+	$s = floor($word % 200 / (200 / 60));
+	$variables['readingEstimate'] = $m . ' minute' . ($m == 1 ? '' : 's') . ', ' . $s . ' second' . ($s == 1 ? '' : 's');
+	
+	if ($variables['page']) { 
+
+		function pn_node($node, $mode = 'n') {
+	
+			if (!function_exists('prev_next_nid')) {
+				return NULL;
+			}
+		
+			switch($mode) {
+				case 'p':
+					$n_nid = prev_next_nid($node->nid, 'prev');
+					$link_text = 'previous';
+				break;
+				
+				case 'n':
+					$n_nid = prev_next_nid($node->nid, 'next');
+					$link_text = 'next';
+				break;
+				
+				default:
+				return NULL;
+			}
+		
+			if ($n_nid) {
+				$n_node = node_load($n_nid);
+				
+				switch($n_node->type) {	
+					case 'article': 
+						$html = l('"'.$n_node->title .'"', 'node/'.$n_node->nid); 
+					return $html; 
+				}
+			}
+		}
+
+		$nextPost = pn_node($variables['node'], 'n');
+		$prevPost = pn_node($variables['node'], 'p');
+		
+		if ($nextPost != NULL) {
+			$buildNextPostHTML = '<div class="group">';
+			$buildNextPostHTML .= '	<h3>Next</h3>';
+			$buildNextPostHTML .= 	$nextPost;
+			$buildNextPostHTML .= '</div>';
+			
+			$variables['nextPostHTML'] = $buildNextPostHTML; 
+			
+		} else {
+			$variables['nextPostHTML'] = ''; 
+		}
+
+
+		if ($prevPost != NULL) {
+			$buildPrevPostHTML = '<div class="group">';
+			$buildPrevPostHTML .= '	<h3>Previously</h3>';
+			$buildPrevPostHTML .= 	$prevPost;
+			$buildPrevPostHTML .= '</div>';
+			
+			$variables['prevPostHTML'] = $buildPrevPostHTML; 
+			
+		} else {
+			$variables['prevPostHTML'] = ''; 
+		}
+
+
+		//send variables up to node.tpl.php
+		$variables['nextPost'] = $nextPost; 	
+		$variables['prevPost'] = $prevPost; 
+
+		
+	}	
+
+
+
+
 }

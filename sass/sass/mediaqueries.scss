@@ -119,13 +119,14 @@
 	}
 
 	section.sidebar {
-		width: 10%;
-		display: none; 
+		position: relative;
+		clear: left;
+		width: 100%;	
 	}
 	
 	a.showSidebar {
-		width: 10%;
-		display: block; 
+		//width: 10%;
+		//display: block; 
 	}
 
 }
