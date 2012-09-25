@@ -59,6 +59,9 @@
 				</script>
 			</div>
 		<?php } ?>
+		
+		<?php print render($content['comments']); ?>
+		
 	</article>
 
 </div>

@@ -481,3 +481,77 @@ article {
 	}
 }
 
+#comments {
+	h2 {
+		background: $blue; 
+		color: #fff; 
+		padding: 10px;
+		border-top: 2px solid darken($blue,10%);
+	}
+
+	label {
+		font-size: 13px; 
+		text-transform: uppercase; 
+		color: $blue; 
+	}
+	
+	.filter-help {
+		display: none; 
+	}
+	
+	.filter-guidelines {
+		padding-left: 0; 
+		
+		.tips {
+			font-size: 11px;
+			line-height: 13px;
+			
+			li {
+				margin-bottom: 2px;
+			}
+		}
+	}
+	
+	#edit-comment-body-und-0-format {
+		padding: 10px 0 0;
+	}
+	
+	.form-actions {
+		input.form-submit {
+			background: $blue; 
+			padding: 10px; 
+			color: #fff; 
+			font-size: 13px;
+			font-weight: bold; 
+			@include border-radius(5px); 
+			@include single-transition(all,0.1s,linear,0);
+			border: none; 
+			cursor: pointer; 
+			
+			&:hover {
+				background: lighten($blue,20%);
+			}
+			
+			
+		}
+	}
+}
+
+article .articleWrap article.post .comment {
+	border-bottom: 1px solid #dfdfdf; 
+	padding-bottom: 10px;
+	padding-top: 10px;
+	
+	.submitted {
+		font-size: 12px;
+	}
+	
+	p {
+		margin-left: 0;
+	}
+}
+
+body div.messages {
+	margin-right: 200px;
+	margin-bottom: 20px;
+}
