@@ -1,6 +1,6 @@
 <header id="page" class="clearfix">
 	<?php print render($primary_local_tasks); ?>
-	<h2><a href="/">PJ McCormick</a> | Designer, developer, cancer patient, and writer, among other things.</h2>
+	<h2><a href="/">PJ McCormick</a> | User Experience Designer, Web Developer, Cancer Patient</h2>
 	
 	<nav>
 	<?php print theme('links__system_main_menu', array(

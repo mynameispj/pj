@@ -6,12 +6,13 @@
 $headerPadding: 0 15px 7px; 
 
 header#page {
-	background: #000; 
+	background: $blue;
+	border-bottom: 5px solid darken($blue,10%); 
 	padding-top: 7px;
 	
 	h1, 
 	h2 {
-		color: #CCC; 
+		color: lighten($blue,40%); 
 		padding: $headerPadding; 	
 		float: left; 
 		font-size: 15px;
@@ -66,7 +67,7 @@ nav {
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				font-size: 13px;
-				color: #999; 
+				color: lighten($blue,40%); 
 				
 				&:hover {
 					color: #fff;

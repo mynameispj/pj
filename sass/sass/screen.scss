@@ -9,13 +9,14 @@
 
 
 $gold : #92570C; 
+$blue : #0F4D69; 
 
 /*- LET'S GET STARTED!
 ----------------------------------------------------------------------*/
 html, body { height: 100%;}
 
 body {
-	background-color: #000;
+	background-color: transparent;
 	color: #000;
 	@include font();  
 	font-size: 17px;
@@ -51,11 +52,11 @@ hr {
 abbr { cursor: help; }
 
 a { 
-	color: $gold; 
+	color: $blue; 
 	text-decoration: none;
 
 	&:hover {
-		color: darken($gold,10%); 		
+		color: lighten($blue,20%); 		
 	}
 }
 
@@ -70,19 +71,6 @@ p {
 	font-weight: 200; 
 	line-height: 1.4em;	
 	@include font(chaparral);  
-	a {
-		border-bottom: 1px solid #ccc;  
-		@include single-transition(border-bottom, 0.2s, linear, 0); 
-		position: relative;
-		
-		&:hover {
-			border-bottom: 1px solid #000; 			
-		}
-		
-		&:active {
-			top: 1px;
-		}
-	}	
 	
 	em {
 		font-style: italic; 
@@ -101,7 +89,7 @@ p {
 
 article.clearfix {
   padding-top: 50px; 
-  background: #000; 
+  background: transparent; 
 }
 
 article, 
@@ -126,8 +114,8 @@ ul.pager {
 	li {
 	
 		&.pager-current {
-			color: #fff;
-			border-bottom: 2px solid #fff;  
+			color: #000;
+			border-bottom: 2px solid #000;  
 		}
 	
 		a {
@@ -135,7 +123,7 @@ ul.pager {
 			@include single-transition(all,0.2s,linear,0); 
 			
 			&:hover {
-				color: #fff; 
+				color: #000; 
 			}
 			
 		}
@@ -151,8 +139,8 @@ footer {
 	font-size: 0.7em; 
 	color: #999; 
 	overflow: hidden; 
-	width: 100%; 
-	max-width: 1000px;	
+	width: 960px;
+	margin: 0 auto;  
 	background: transparent; 
 	
 	.content {

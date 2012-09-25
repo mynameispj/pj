@@ -224,6 +224,19 @@ var Site = window.Site || {};
 		});
 		
 		
+		$('article.post').find('img.full').each(function(){
+			var thisParent = $(this).parent()[0].tagName; 
+			
+			if (thisParent == 'A') {
+				$(this).parent().unwrap(); 
+			} 
+			
+			if (thisParent == 'P') {
+				$(this).unwrap(); 
+			}
+		});
+		
+		
 	});
 	//END ONLOAD			
 			

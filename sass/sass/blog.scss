@@ -6,15 +6,15 @@
 }
 
 @mixin grayLinkOnBlack() {
-	color: #b9b9b9; 
+	color: #949494; 
 	@include single-transition(all,0.2s,linear,0);	
 }
 
 @mixin tertiaryHeader() {
-	border-top: 2px solid #333;
+	border-top: 2px solid #ccc;
 	font-size: 10px; 
 	padding-top: 3px;
-	color: #b0b0b0;
+	color: #626262;
 	text-transform: uppercase; 
 	font-weight: bold; 
 }
@@ -47,7 +47,8 @@
 
 
 .node-type-article footer .content { 
-	width: 1000px; 
+	margin-right: 300px; 
+	padding-left: 20px;
 }
 
 .post {
@@ -97,13 +98,12 @@ article {
 	}
 
 	&#blogRoll {
-		max-width: none; 
+		max-width: 960px; 
 	}	
 	
 	.articleWrap {
-		border-bottom: 1px solid #ccc; 
-		padding-bottom: 40px; 
-		margin-bottom: 40px; 
+		padding-bottom: 10px; 
+		margin-bottom: 10px; 
 		overflow: hidden; 
 		background: #fff; 
 		margin-right: 200px;
@@ -129,9 +129,10 @@ article {
 		article.post {
 			max-width: 900px; 
 			z-index: 500; 
-			padding: 30px 20px 20px;
-			
-			p {
+			padding: 0 20px 20px;
+					
+			p, 
+			.gist {
 				@include inner-column(2);
 				
 				img {
@@ -159,12 +160,13 @@ article {
 					text-align: left; 
 					float: none; 
 					display: block; 
-					font-size: 60px; 
+					font-size: 42px; 
 					font-weight: 600;
 					color: #000; 
 					line-height: 1.2em;  
 					margin-bottom: 20px;
-					
+					padding-top: 1px;
+					border-top: 2px solid lighten($blue,10%); 
 					a {
 						float: none; 
 						&:hover {
@@ -216,12 +218,8 @@ article {
 					}
 				
 					
-					a {				
-						@include border-radius(3px);
-						
+					a {										
 						&:hover {
-							color: #000;
-							text-decoration: underline;  							
 						}
 						
 					}
@@ -333,14 +331,13 @@ a.showSidebar {
 			@include tertiaryHeader(); 
 			margin-bottom: 0px;
 			letter-spacing: 1px;
-			color: #878787;
 		}
 		
 		a {
 			@include grayLinkOnBlack();
 			
 			&:hover {
-				color: #fff; 
+				color: lighten($blue,20%); 
 			}
 			
 		}
@@ -379,6 +376,12 @@ article {
 		}
 		
 		.gist-file {
+			
+			.gist-data {
+				overflow: hidden; 
+				word-break: break-word;
+			}
+		
 			.gist-meta {
 				font-size: 11px; 
 			}
