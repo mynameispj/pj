@@ -45,7 +45,7 @@
 		<?php 
 		//Google AdSense ad
 		if ($page) { ?>
-			<div class="ad postfooter">
+			<!--<div class="ad postfooter">
 				<script type="text/javascript"><!--
 					google_ad_client = "ca-pub-2106906807001894";
 					/* Post Footer Ads */
@@ -53,11 +53,11 @@
 					google_ad_width = 468;
 					google_ad_height = 60;
 					//-->
-				</script>
+				<!--</script>
 				<script type="text/javascript"
 				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				</script>
-			</div>
+			</div>-->
 		<?php } ?>
 		
 		<?php print render($content['comments']); ?>
@@ -65,8 +65,8 @@
 	</article>
 
 </div>
-<section class="sidebar">
-	<?php if ($page) { ?>
+<?php if ($page) { ?>
+	<section class="sidebar">
 		<?php print $nextPostHTML; ?>
 		<?php print $prevPostHTML; ?>
-	<?php } ?>
+<?php } ?>

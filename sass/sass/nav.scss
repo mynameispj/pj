@@ -10,6 +10,10 @@ header#page {
 	border-bottom: 5px solid darken($blue,10%); 
 	padding-top: 7px;
 	
+	a {
+		text-decoration: none; 
+	}
+	
 	h1, 
 	h2 {
 		color: lighten($blue,40%); 
