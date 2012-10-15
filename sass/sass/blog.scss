@@ -144,13 +144,20 @@ article {
 				img {
 					width: auto; 
 					margin: 0 auto; 
+					max-width: 100%; 
 				}
 			}
 			
 			ul {
+				list-style: outside; 
+				margin-bottom: 1.2em; 
+			
 				li {
 					@include font(chaparral); 
-					
+					font-size: 18px;
+					margin-bottom: 10px;
+					font-weight: 200;
+					line-height: 1.4em;
 				}
 			}
 
@@ -187,15 +194,6 @@ article {
 							border-bottom: none; 
 						}
 					}
-				}
-			}
-			
-			ul {
-				list-style: outside; 
-				margin-bottom: 1.2em; 
-				
-				li {
-					margin-bottom: 5px; 
 				}
 			}
 			

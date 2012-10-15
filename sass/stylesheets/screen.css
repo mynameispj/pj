@@ -796,11 +796,20 @@ article .articleWrap {
       article .articleWrap article.post .gist img,
       article .articleWrap article.post ul img {
         width: auto;
-        margin: 0 auto; }
+        margin: 0 auto;
+        max-width: 100%; }
     /* line 151, ../sass/blog.scss */
-    article .articleWrap article.post ul li {
-      font-family: "chaparral-pro-1","chaparral-pro-2", Georgia, Times New Roman, Times, serif; }
-    /* line 157, ../sass/blog.scss */
+    article .articleWrap article.post ul {
+      list-style: outside;
+      margin-bottom: 1.2em; }
+      /* line 155, ../sass/blog.scss */
+      article .articleWrap article.post ul li {
+        font-family: "chaparral-pro-1","chaparral-pro-2", Georgia, Times New Roman, Times, serif;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 200;
+        line-height: 1.4em; }
+    /* line 164, ../sass/blog.scss */
     article .articleWrap article.post img {
       -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
       -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
@@ -808,15 +817,15 @@ article .articleWrap {
       width: 100%;
       margin-bottom: 1em;
       display: block; }
-      /* line 163, ../sass/blog.scss */
+      /* line 170, ../sass/blog.scss */
       article .articleWrap article.post img.noShadow {
         -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 1px 5px 0px;
         -moz-box-shadow: rgba(0, 0, 0, 0) 0px 1px 5px 0px;
         box-shadow: rgba(0, 0, 0, 0) 0px 1px 5px 0px; }
-    /* line 169, ../sass/blog.scss */
+    /* line 176, ../sass/blog.scss */
     article .articleWrap article.post header {
       margin: 0; }
-      /* line 172, ../sass/blog.scss */
+      /* line 179, ../sass/blog.scss */
       article .articleWrap article.post header h1,
       article .articleWrap article.post header h2 {
         text-align: left;
@@ -829,23 +838,16 @@ article .articleWrap {
         margin-bottom: 20px;
         padding-top: 1px;
         border-top: 2px solid #156e96; }
-        /* line 183, ../sass/blog.scss */
+        /* line 190, ../sass/blog.scss */
         article .articleWrap article.post header h1 a,
         article .articleWrap article.post header h2 a {
           float: none;
           text-decoration: none; }
-          /* line 186, ../sass/blog.scss */
+          /* line 193, ../sass/blog.scss */
           article .articleWrap article.post header h1 a:hover,
           article .articleWrap article.post header h2 a:hover {
             border-bottom: none; }
-    /* line 193, ../sass/blog.scss */
-    article .articleWrap article.post ul {
-      list-style: outside;
-      margin-bottom: 1.2em; }
-      /* line 197, ../sass/blog.scss */
-      article .articleWrap article.post ul li {
-        margin-bottom: 5px; }
-    /* line 202, ../sass/blog.scss */
+    /* line 200, ../sass/blog.scss */
     article .articleWrap article.post aside {
       width: 15.1010101%;
       text-align: left;
@@ -856,7 +858,7 @@ article .articleWrap {
       text-transform: uppercase;
       font-weight: bold;
       color: #545454; }
-      /* line 215, ../sass/blog.scss */
+      /* line 213, ../sass/blog.scss */
       article .articleWrap article.post aside dl dt {
         border-top: 2px solid #ccc;
         font-size: 10px;
@@ -865,32 +867,32 @@ article .articleWrap {
         text-transform: uppercase;
         font-weight: bold;
         border-top-color: #ccc; }
-      /* line 221, ../sass/blog.scss */
+      /* line 219, ../sass/blog.scss */
       article .articleWrap article.post aside dl dd {
         margin-bottom: 5px; }
-      /* line 230, ../sass/blog.scss */
+      /* line 228, ../sass/blog.scss */
       article .articleWrap article.post aside .tags div {
         display: inline; }
-    /* line 244, ../sass/blog.scss */
+    /* line 242, ../sass/blog.scss */
     article .articleWrap article.post .firstParagraph p {
       font-size: 24px;
       line-height: 32px;
       color: #000; }
-    /* line 250, ../sass/blog.scss */
+    /* line 248, ../sass/blog.scss */
     article .articleWrap article.post .firstParagraph span.code {
       font-size: 18px;
       padding-left: 5px;
       padding-right: 5px; }
-    /* line 256, ../sass/blog.scss */
+    /* line 254, ../sass/blog.scss */
     article .articleWrap article.post .firstParagraph img {
       display: block;
       margin: 0 auto;
       width: 100%; }
-    /* line 267, ../sass/blog.scss */
+    /* line 265, ../sass/blog.scss */
     article .articleWrap article.post blockquote p {
       font-size: 20px;
       font-style: italic; }
-    /* line 274, ../sass/blog.scss */
+    /* line 272, ../sass/blog.scss */
     article .articleWrap article.post p.cite {
       padding-top: 15px;
       text-align: center;
@@ -900,10 +902,10 @@ article .articleWrap {
       text-transform: uppercase;
       font-weight: 600; }
 
-/* line 291, ../sass/blog.scss */
+/* line 289, ../sass/blog.scss */
 a.showSidebar {
   display: none; }
-  /* line 294, ../sass/blog.scss */
+  /* line 292, ../sass/blog.scss */
   a.showSidebar .arrow-left {
     margin: 0 auto;
     width: 0;
@@ -912,7 +914,7 @@ a.showSidebar {
     border-bottom: 10px solid transparent;
     border-right: 10px solid white; }
 
-/* line 302, ../sass/blog.scss */
+/* line 300, ../sass/blog.scss */
 section.sidebar,
 a.showSidebar {
   float: right;
@@ -932,30 +934,30 @@ a.showSidebar {
     clear: both;
     overflow: hidden;
     visibility: hidden; }
-  /* line 313, ../sass/blog.scss */
+  /* line 311, ../sass/blog.scss */
   section.sidebar .group,
   a.showSidebar .group {
     padding-left: 20px;
     color: #000;
     font-size: 13px;
     margin-bottom: 25px; }
-    /* line 319, ../sass/blog.scss */
+    /* line 317, ../sass/blog.scss */
     section.sidebar .group img,
     a.showSidebar .group img {
       display: block;
       margin: 0 auto; }
-    /* line 324, ../sass/blog.scss */
+    /* line 322, ../sass/blog.scss */
     section.sidebar .group p,
     a.showSidebar .group p {
       font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
       font-size: 13px;
       color: #000;
       font-weight: normal; }
-      /* line 330, ../sass/blog.scss */
+      /* line 328, ../sass/blog.scss */
       section.sidebar .group p a,
       a.showSidebar .group p a {
         border-bottom: none; }
-    /* line 335, ../sass/blog.scss */
+    /* line 333, ../sass/blog.scss */
     section.sidebar .group h3,
     a.showSidebar .group h3 {
       border-top: 2px solid #ccc;
@@ -966,7 +968,7 @@ a.showSidebar {
       font-weight: bold;
       margin-bottom: 0px;
       letter-spacing: 1px; }
-    /* line 341, ../sass/blog.scss */
+    /* line 339, ../sass/blog.scss */
     section.sidebar .group a,
     a.showSidebar .group a {
       color: #949494;
@@ -976,21 +978,21 @@ a.showSidebar {
       -o-transition: all 0.2s linear 0;
       transition: all 0.2s linear 0;
       text-decoration: none; }
-      /* line 345, ../sass/blog.scss */
+      /* line 343, ../sass/blog.scss */
       section.sidebar .group a:hover,
       a.showSidebar .group a:hover {
         color: #1c8ec2; }
-  /* line 353, ../sass/blog.scss */
+  /* line 351, ../sass/blog.scss */
   section.sidebar .pager,
   a.showSidebar .pager {
     top: 0; }
-    /* line 357, ../sass/blog.scss */
+    /* line 355, ../sass/blog.scss */
     section.sidebar .pager .next,
     section.sidebar .pager .prev,
     a.showSidebar .pager .next,
     a.showSidebar .pager .prev {
       position: relative; }
-      /* line 360, ../sass/blog.scss */
+      /* line 358, ../sass/blog.scss */
       section.sidebar .pager .next a,
       section.sidebar .pager .prev a,
       a.showSidebar .pager .next a,
@@ -1004,7 +1006,7 @@ a.showSidebar {
         border-bottom: 1px solid #FFF;
         font-size: 15px;
         line-height: 18px; }
-        /* line 366, ../sass/blog.scss */
+        /* line 364, ../sass/blog.scss */
         section.sidebar .pager .next a:hover,
         section.sidebar .pager .prev a:hover,
         a.showSidebar .pager .next a:hover,
@@ -1012,21 +1014,21 @@ a.showSidebar {
           color: #fff;
           border-bottom: 1px solid #000; }
 
-/* line 377, ../sass/blog.scss */
+/* line 375, ../sass/blog.scss */
 article .gist {
   font-size: 14px; }
-  /* line 380, ../sass/blog.scss */
+  /* line 378, ../sass/blog.scss */
   article .gist pre {
     white-space: pre; }
-  /* line 386, ../sass/blog.scss */
+  /* line 384, ../sass/blog.scss */
   article .gist .gist-file .gist-data {
     overflow: hidden;
     word-break: break-word; }
-  /* line 391, ../sass/blog.scss */
+  /* line 389, ../sass/blog.scss */
   article .gist .gist-file .gist-meta {
     font-size: 11px; }
 
-/* line 398, ../sass/blog.scss */
+/* line 396, ../sass/blog.scss */
 span.code {
   font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
   font-size: 15px;
@@ -1037,7 +1039,7 @@ span.code {
 /*
 Posts with big background images, ie "Fillposts"
 4th of July, Disney World pic */
-/* line 413, ../sass/blog.scss */
+/* line 411, ../sass/blog.scss */
 article.post.post-35,
 .fillpost article {
   background: rgba(255, 255, 255, 0.7);
@@ -1045,17 +1047,17 @@ article.post.post-35,
   padding: 20px;
   margin-top: 200px; }
 
-/* line 422, ../sass/blog.scss */
+/* line 420, ../sass/blog.scss */
 article .articleWrap.fillpost p {
   color: #000; }
-/* line 426, ../sass/blog.scss */
+/* line 424, ../sass/blog.scss */
 article .articleWrap.fillpost .pager {
   clear: both;
   background: rgba(255, 255, 255, 0.7);
   padding: 20px; }
 
 /*Posts that float the article left and the pagers right */
-/* line 438, ../sass/blog.scss */
+/* line 436, ../sass/blog.scss */
 article .articleWrap.left {
   *zoom: 1; }
   /* line 22, ../../../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -1067,62 +1069,62 @@ article .articleWrap.left {
     overflow: hidden;
     visibility: hidden; }
 
-/* line 453, ../sass/blog.scss */
+/* line 451, ../sass/blog.scss */
 article .articleWrap.post-44 {
   background: url("i/tan-noise-fill.jpg"); }
-  /* line 455, ../sass/blog.scss */
+  /* line 453, ../sass/blog.scss */
   article .articleWrap.post-44 article.post {
     background: rgba(255, 255, 255, 0.85); }
-/* line 461, ../sass/blog.scss */
+/* line 459, ../sass/blog.scss */
 article .articleWrap.post-57 {
   background: #000;
   margin-top: -50px; }
-  /* line 467, ../sass/blog.scss */
+  /* line 465, ../sass/blog.scss */
   article .articleWrap.post-57 .pager .next,
   article .articleWrap.post-57 .pager .prev {
     background: transparent; }
-  /* line 475, ../sass/blog.scss */
+  /* line 473, ../sass/blog.scss */
   article .articleWrap.post-57 article.post .firstParagraph p {
     color: #f0f0f0; }
-  /* line 481, ../sass/blog.scss */
+  /* line 479, ../sass/blog.scss */
   article .articleWrap.post-57 p {
     color: #ccc; }
-  /* line 484, ../sass/blog.scss */
+  /* line 482, ../sass/blog.scss */
   article .articleWrap.post-57 a {
     color: #fff; }
 
-/* line 490, ../sass/blog.scss */
+/* line 488, ../sass/blog.scss */
 #comments {
   margin-top: 100px; }
-  /* line 493, ../sass/blog.scss */
+  /* line 491, ../sass/blog.scss */
   #comments h2 {
     background: #0f4d69;
     color: #fff;
     padding: 8px;
     font-size: 15px;
     border-top: 2px solid #092c3c; }
-  /* line 501, ../sass/blog.scss */
+  /* line 499, ../sass/blog.scss */
   #comments label {
     font-size: 13px;
     text-transform: uppercase;
     color: #0f4d69; }
-  /* line 507, ../sass/blog.scss */
+  /* line 505, ../sass/blog.scss */
   #comments .filter-help {
     display: none; }
-  /* line 511, ../sass/blog.scss */
+  /* line 509, ../sass/blog.scss */
   #comments .filter-guidelines {
     padding-left: 0; }
-    /* line 514, ../sass/blog.scss */
+    /* line 512, ../sass/blog.scss */
     #comments .filter-guidelines .tips {
       font-size: 11px;
       line-height: 13px; }
-      /* line 518, ../sass/blog.scss */
+      /* line 516, ../sass/blog.scss */
       #comments .filter-guidelines .tips li {
         margin-bottom: 2px; }
-  /* line 524, ../sass/blog.scss */
+  /* line 522, ../sass/blog.scss */
   #comments #edit-comment-body-und-0-format {
     padding: 10px 0 0; }
-  /* line 529, ../sass/blog.scss */
+  /* line 527, ../sass/blog.scss */
   #comments .form-actions input.form-submit {
     background: #0f4d69;
     padding: 10px;
@@ -1141,28 +1143,28 @@ article .articleWrap.post-57 {
     transition: all 0.1s linear 0;
     border: none;
     cursor: pointer; }
-    /* line 540, ../sass/blog.scss */
+    /* line 538, ../sass/blog.scss */
     #comments .form-actions input.form-submit:hover {
       background: #1c8ec2; }
 
-/* line 549, ../sass/blog.scss */
+/* line 547, ../sass/blog.scss */
 article .articleWrap article.post .comment {
   border-bottom: 1px solid #dfdfdf;
   padding-bottom: 10px;
   padding-top: 10px; }
-  /* line 554, ../sass/blog.scss */
+  /* line 552, ../sass/blog.scss */
   article .articleWrap article.post .comment .submitted {
     font-size: 12px; }
-  /* line 558, ../sass/blog.scss */
+  /* line 556, ../sass/blog.scss */
   article .articleWrap article.post .comment p {
     margin-left: 0; }
 
-/* line 563, ../sass/blog.scss */
+/* line 561, ../sass/blog.scss */
 body div.messages {
   margin-right: 200px;
   margin-bottom: 20px; }
 
-/* line 569, ../sass/blog.scss */
+/* line 567, ../sass/blog.scss */
 .page-comment .comment-form {
   width: 700px; }
 
