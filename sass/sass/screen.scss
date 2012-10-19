@@ -67,11 +67,11 @@ em {
 p { 
 	font-size: 18px; 
 	margin-bottom: 1.2em; 
-	color: $gray; 
-	font-weight: 200; 
-	line-height: 1.4em;	
+	color: darken($gray,10%); 
+	line-height: 1.5em;	
 	@include font(chaparral);  
-	
+	font-weight: normal; 
+		
 	em {
 		font-style: italic; 
 	}
