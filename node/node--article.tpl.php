@@ -13,7 +13,6 @@
 
 <div class="articleWrap post-<?php print $nid; print $fillImageExists; print $customLayout; ?>">   
 	<?php print $bgimage; ?>
-	
 	<article class="post post-<?php print $nid;?>"> 
 		<div class="content">
 			<header>

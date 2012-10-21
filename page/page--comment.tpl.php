@@ -17,11 +17,6 @@
     )); ?>
 	
 	</nav>
-	<?php if ($node->nid != 57):?>
-		<!--<div class="banner longRoadBack">
-			<h3><a href="http://www.amazon.com/gp/product/B008OUVF7K/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008OUVF7K&linkCode=as2&tag=mnip-20" onClick="_gaq.push(['_trackEvent', 'LongRoadBack_Promos', 'Banner']);">New fiction: Long Road Back. A brief, haunting tale of loss. $1, buy on Amazon.com</a></h3>
-		</div>-->
-	<?php endif; ?>
 </header>
 
 <article class="clearfix" id="blogRoll">
@@ -56,6 +51,11 @@
 				<li><a href="http://www.facebook.com/pjmccormick" title="Facebook">Facebook</a></li>
 			</ul>
 		</div>
+		<div class="group">
+			<h3>Currently Reading:</h3>
+			<?php print views_embed_view('books','block'); ?>
+		</div>
+		
 		<div class="group">
 			<h3>Long Road Back</h3>
 			<a href="http://www.amazon.com/gp/product/B008OUVF7K/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008OUVF7K&linkCode=as2&tag=mnip-20" onClick="_gaq.push(['_trackEvent', 'LongRoadBackPromos', 'SidebarImage']);"><img alt="Long Road Back: A Brief Tale of Loss" src="/<?php print path_to_theme(); ?>/images/lrb.png"  /></a>

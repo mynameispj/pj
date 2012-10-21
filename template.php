@@ -141,8 +141,8 @@ function pj_field($variables) {
 
 
 function pj_preprocess_node(&$variables) {
-	//print krumo($variables);
-	
+	//print krumo($variables); 
+
 	if (empty($variables['field_article_first_paragraph'])) {
 		$variables['firstParagraph'] = '';
 	} else {
@@ -180,9 +180,9 @@ function pj_preprocess_node(&$variables) {
 	$m = floor($word / 200);
 	$s = floor($word % 200 / (200 / 60));
 	$variables['readingEstimate'] = $m . ' minute' . ($m == 1 ? '' : 's') . ', ' . $s . ' second' . ($s == 1 ? '' : 's');
-	
-	if ($variables['page']) { 
 
+
+	if ($variables['page']) { 
 		function pn_node($node, $mode = 'n') {
 	
 			if (!function_exists('prev_next_nid')) {

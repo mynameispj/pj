@@ -56,6 +56,11 @@
 			</ul>
 		</div>
 		<div class="group">
+			<h3>Currently Reading:</h3>
+			<?php print views_embed_view('books','block'); ?>
+		</div>
+		
+		<div class="group">
 			<h3>Long Road Back</h3>
 			<a href="http://www.amazon.com/gp/product/B008OUVF7K/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008OUVF7K&linkCode=as2&tag=mnip-20" onClick="_gaq.push(['_trackEvent', 'LongRoadBackPromos', 'SidebarImage']);"><img alt="Long Road Back: A Brief Tale of Loss" src="/<?php print path_to_theme(); ?>/images/lrb.png"  /></a>
 			<p><a href="http://www.amazon.com/gp/product/B008OUVF7K/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B008OUVF7K&linkCode=as2&tag=mnip-20" onClick="_gaq.push(['_trackEvent', 'LongRoadBackPromos', 'SidebarLink']);">A brief tale of loss. $0.99 on Amazon.</a></p>
