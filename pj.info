@@ -17,6 +17,7 @@ regions[worklist] = Work List
 regions[page_bottom] = Page bottom
 regions[sidebar_first] = First sidebar
 regions[more_work] = More Work
+regions[sidebar] = Sidebar
 regions_hidden[] = sidebar_first
 
 scripts[] = scripts/address.js

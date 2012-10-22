@@ -600,24 +600,25 @@ footer {
   background: transparent; }
   /* line 146, ../sass/screen.scss */
   footer .content {
-    float: left; }
-  /* line 150, ../sass/screen.scss */
+    float: left;
+    width: 600px; }
+  /* line 151, ../sass/screen.scss */
   footer a {
     color: black;
     border-bottom: 1px solid black; }
-    /* line 154, ../sass/screen.scss */
+    /* line 155, ../sass/screen.scss */
     footer a:hover {
       color: black;
       border-bottom: 1px solid black; }
 
-/* line 161, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 .projectOpen footer {
   color: #000; }
-  /* line 163, ../sass/screen.scss */
+  /* line 164, ../sass/screen.scss */
   .projectOpen footer a {
     color: #000; }
 
-/* line 169, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 .front footer .content,
 .page-node-23 footer .content {
   margin: 0px auto;
@@ -626,13 +627,13 @@ footer {
 
 /*- About PJ Page
 ----------------------------------------------------------------------*/
-/* line 179, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 img.aboutPJ {
   position: absolute;
   z-index: 0;
   top: -50px; }
 
-/* line 185, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .aboutcontent {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -641,10 +642,10 @@ img.aboutPJ {
   top: 520px;
   padding: 12px;
   color: white; }
-  /* line 194, ../sass/screen.scss */
+  /* line 195, ../sass/screen.scss */
   .aboutcontent p {
     color: #fff; }
-    /* line 197, ../sass/screen.scss */
+    /* line 198, ../sass/screen.scss */
     .aboutcontent p a {
       color: #999;
       border-bottom: 1px solid #999;
@@ -653,32 +654,32 @@ img.aboutPJ {
       -moz-transition: color 0.2s linear 0;
       -o-transition: color 0.2s linear 0;
       transition: color 0.2s linear 0; }
-      /* line 202, ../sass/screen.scss */
+      /* line 203, ../sass/screen.scss */
       .aboutcontent p a:hover {
         color: #fff;
         border-bottom: 1px solid #fff; }
 
-/* line 212, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .page-node-6 h1 {
   display: none; }
-/* line 215, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .page-node-6 #body {
   min-height: 1000px;
   width: 1000px;
   position: relative;
   margin: 0 auto; }
 
-/* line 225, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 #about p {
   position: relative;
   z-index: 10; }
-/* line 232, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 #about h2,
 #about h3,
 #about h4 {
   position: relative;
   z-index: 10; }
-/* line 237, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 #about h2 {
   font-size: 42px;
   line-height: 1em;
@@ -687,7 +688,7 @@ img.aboutPJ {
   left: 20px;
   color: #000;
   color: rgba(0, 0, 0, 0.75); }
-/* line 247, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 #about h3 {
   font-size: 160px;
   font-weight: 600;
@@ -698,7 +699,7 @@ img.aboutPJ {
   left: 29px;
   line-height: 150px;
   padding-top: 0; }
-/* line 259, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 #about h4 {
   font-size: 24px;
   width: 430px;
@@ -710,7 +711,7 @@ img.aboutPJ {
 
 /*- CMS OVerrides
 ----------------------------------------------------------------------*/
-/* line 274, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 ul.tabs {
   position: relative;
   z-index: 100; }
@@ -1168,6 +1169,48 @@ body div.messages {
 .page-comment .comment-form {
   width: 700px; }
 
+/*- Reading Section
+----------------------------------------------------------------------*/
+/* line 5, ../sass/_books.scss */
+article .articleWrap article.post .views-view-grid td {
+  vertical-align: top;
+  padding: 0 10px;
+  width: 25%; }
+/* line 11, ../sass/_books.scss */
+article .articleWrap article.post .views-view-grid img {
+  width: auto;
+  margin: 0 auto 5px; }
+/* line 16, ../sass/_books.scss */
+article .articleWrap article.post .views-view-grid p {
+  margin-left: 0;
+  font-size: 15px;
+  line-height: 1.2em; }
+/* line 22, ../sass/_books.scss */
+article .articleWrap article.post .views-view-grid a {
+  text-decoration: none; }
+  /* line 24, ../sass/_books.scss */
+  article .articleWrap article.post .views-view-grid a:hover {
+    text-decoration: underline; }
+
+/* line 34, ../sass/_books.scss */
+.page-reading h3 {
+  text-align: center;
+  float: none;
+  display: block;
+  font-size: 42px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+  padding-top: 1px;
+  border-top: 2px solid #156e96; }
+/* line 48, ../sass/_books.scss */
+.page-reading .views-exposed-form {
+  border-top: 2px solid #156e96; }
+/* line 54, ../sass/_books.scss */
+.page-reading .views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 26px; }
+
 /*- Testicular Cancer
 ----------------------------------------------------------------------*/
 /* line 2, ../sass/tc.scss */
@@ -1284,91 +1327,6 @@ li.post article.post-24 {
       font-size: 12px;
       text-transform: uppercase;
       color: #545454; }
-
-/*- Store
-----------------------------------------------------------------------*/
-/* line 4, ../sass/store.scss */
-.page-cart .commerce-line-item-views-form table {
-  width: 70%;
-  float: left; }
-  /* line 9, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form table td,
-  .page-cart .commerce-line-item-views-form table th {
-    padding: 10px; }
-  /* line 13, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form table th {
-    padding-bottom: 0;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
-/* line 22, ../sass/store.scss */
-.page-cart .commerce-line-item-views-form .line-item-summary,
-.page-cart .commerce-line-item-views-form .form-actions {
-  float: right;
-  clear: right; }
-/* line 27, ../sass/store.scss */
-.page-cart .commerce-line-item-views-form .line-item-summary {
-  padding: 10px 0 0 10px;
-  margin-top: 30px;
-  width: 25%; }
-  /* line 31, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form .line-item-summary .line-item-total-label {
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
-  /* line 36, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form .line-item-summary .line-item-total-raw {
-    font-size: 24px; }
-  /* line 40, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form .line-item-summary .credtCards {
-    background: transparent url(i/cc_icons.gif) no-repeat right 10px;
-    padding-top: 40px;
-    position: absolute;
-    top: 150px;
-    border-top: 1px solid #e6e6e6; }
-    /* line 47, ../sass/store.scss */
-    .page-cart .commerce-line-item-views-form .line-item-summary .credtCards p {
-      font-size: 11px;
-      line-height: 14px;
-      font-family: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", Helvetica, Arial, Verdana, sans-serf;
-      font-weight: normal; }
-/* line 57, ../sass/store.scss */
-.page-cart .commerce-line-item-views-form .form-actions {
-  margin-top: 0; }
-  /* line 61, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form .form-actions #edit-submit,
-  .page-cart .commerce-line-item-views-form .form-actions #edit-checkout {
-    position: relative; }
-  /* line 65, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form .form-actions #edit-submit {
-    border: none;
-    background: #fff;
-    margin-right: 20px;
-    font-size: 13px;
-    text-decoration: underline;
-    color: #878787; }
-    /* line 73, ../sass/store.scss */
-    .page-cart .commerce-line-item-views-form .form-actions #edit-submit:hover {
-      color: #000; }
-  /* line 78, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form .form-actions #edit-checkout {
-    background: #BE7;
-    border: 1px solid #71b517;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #395b0b;
-    padding: 10px;
-    position: relative; }
-    /* line 88, ../sass/store.scss */
-    .page-cart .commerce-line-item-views-form .form-actions #edit-checkout:hover {
-      background: #a4e84a;
-      border: 1px solid #558811;
-      color: #1c2d06; }
-  /* line 97, ../sass/store.scss */
-  .page-cart .commerce-line-item-views-form .form-actions #edit-submit:active,
-  .page-cart .commerce-line-item-views-form .form-actions #edit-checkout:active {
-    top: 1px; }
 
 /*- Media Queries
 ----------------------------------------------------------------------*/

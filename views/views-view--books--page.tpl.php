@@ -4,14 +4,15 @@
 			<header>
 			      <?php print $header; ?>
 			</header>
+			<?php if ($exposed): ?>
+				<div class="view-filters">
+					<?php print $exposed; ?>
+				</div>
+			<?php endif; ?>
 			<?php print $rows; ?>
 		</article>
 	</div>
 </div>
 
 </div><?php /* class view */ ?>
-	<section class="sidebar">
-		<?php print render($page['sidebar']); ?>
-	</section>
 
-</article>

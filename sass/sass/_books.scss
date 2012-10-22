@@ -1,0 +1,59 @@
+article .articleWrap article.post {
+	
+	.views-view-grid {
+	
+		td {
+			vertical-align: top; 
+			padding: 0 10px;
+			width: 25%; 
+		}
+	
+		img {
+			width: auto; 
+			margin: 0 auto 5px; 
+		}	
+		
+		p {
+			margin-left: 0; 
+			font-size: 15px; 
+			line-height: 1.2em; 
+		}
+		
+		a {
+			text-decoration:none; 
+			&:hover {
+				text-decoration: underline; 
+			}
+		}
+	}
+
+
+}
+
+.page-reading {
+	h3 {
+		text-align: center; 
+		float: none; 
+		display: block; 
+		font-size: 42px; 
+		font-weight: 600;
+		color: #000; 
+		line-height: 1.2em;  
+		margin-bottom: 20px;
+		padding-top: 1px;
+		border-top: 2px solid lighten($blue,10%); 
+
+	}
+
+	.views-exposed-form {
+			border-top: 2px solid lighten($blue,10%); 
+
+	
+	}
+
+	.views-exposed-form .views-exposed-widget .form-submit {
+		margin-top: 26px;
+		
+	}
+
+}

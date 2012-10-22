@@ -145,6 +145,7 @@ footer {
 	
 	.content {
 		float: left;
+		width: 600px;
 	}
 	
 	a {
@@ -282,16 +283,17 @@ ul.tabs { position: relative; z-index: 100; }
 @import 'blog.scss'; 
 
 
+/*- Reading Section
+----------------------------------------------------------------------*/
+
+@import '_books.scss'; 
+
+
+
 /*- Testicular Cancer
 ----------------------------------------------------------------------*/
 
 @import 'tc.scss'; 
-
-
-/*- Store
-----------------------------------------------------------------------*/
-
-@import 'store.scss'; 
 
 
 /*- Media Queries

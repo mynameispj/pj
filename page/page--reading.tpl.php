@@ -19,7 +19,8 @@
 	</nav>
 </header>
 
-<article class="clearfix" id="blogRoll">
+
+<article class="clearfix">
 	<?php if ($tabs): ?>
 		<div class="tabs">
 			<?php print render($tabs); ?>
@@ -38,10 +39,9 @@
 		<ul class="action-links"><?php print render($action_links); ?></ul>
 	<?php endif; ?>
 	<?php print render($page['content']); ?>
+
 	<section class="sidebar">
 		<?php print render($page['sidebar']); ?>
-	</section> <?php //closes <section> opened in node--article.tpl.php ?>
-	<a class="showSidebar"><div class="arrow-left"></div></a>
-
-</article>	
-	
+	</section>
+	</article>
+</article>
