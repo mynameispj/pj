@@ -139,7 +139,8 @@ article {
 					
 			p, 
 			.gist, 
-			ul {
+			ul, 
+			.videoWrapper {
 				@include inner-column(2);
 				
 				img {
@@ -148,6 +149,25 @@ article {
 					max-width: 100%; 
 				}
 			}
+			
+			.videoWrapper {
+			  position: relative;
+			  padding-bottom: 56.25%;
+			  padding-top: 25px;
+			  height: 0;
+			  width: 595px; 
+			  
+	  			iframe {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+
+			  
+			}
+			
 			
 			ul {
 				list-style: outside; 

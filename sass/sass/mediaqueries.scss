@@ -136,10 +136,16 @@
 	article {
 		.articleWrap {
 			article.post {
-				p {
+				p, 
+				.videoWrapper {
 					margin-left: 0; 
 					
 				}
+				
+				.videoWrapper {
+					width: 100%; 
+				}
+				
 				
 				p, 
 				ul li {
