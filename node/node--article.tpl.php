@@ -29,8 +29,10 @@
 				<dl>
 					<dt>Posted </dt>
 						<dd><?php print format_date($created, 'custom', 'F j Y'); ?></dd>
-					<dt>Tagged</dt>
-						<dd><span class="tags"><?php print render($content['field_tags']); ?></span></dd>
+				  <?php if (isset($content['field_tags']['#items'])): ?> 
+  					<dt>Tagged</dt>
+  						<dd><span class="tags"><?php print render($content['field_tags']); ?></span></dd>
+					<?php endif; ?>
 					<dt>Reading Time</dt>
 						<dd><span class="readingTime"><?php echo $readingEstimate; ?></span></dd>
 				</dl>				

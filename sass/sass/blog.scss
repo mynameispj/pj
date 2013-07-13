@@ -136,6 +136,41 @@ article {
 				font-weight: bold; 
 			}
 			
+			sup {
+			  font-size: 12px; 
+			  position: relative; 
+			  bottom: 1ex; 
+			  
+			  a {
+			    background: lighten(#ccc,10%); 
+			    margin-left: 2px; 
+			    padding: 2px 2px 0 2px;
+			    text-decoration: none; 
+			    
+			    &:hover {
+			      background: $blue; 
+			      color: #fff; 
+			    }
+			  }
+			}
+					
+			.footnotes {
+			  @include inner-column(2);
+			  
+			  p {
+			    margin-left: 0; 
+			    font-size: 14px; 
+			    margin-bottom: 0; 
+			  }
+			  
+			  ol {
+			    padding-left: 20px; 
+			    font-size: 14px; 
+			    li {
+			      list-style: decimal outside; 
+			    }
+			  }
+			}		
 					
 			p, 
 			.gist, 
@@ -148,6 +183,10 @@ article {
 					margin: 0 auto; 
 					max-width: 100%; 
 				}
+				
+				
+				
+				
 			}
 			
 			.videoWrapper {
@@ -405,6 +444,7 @@ article {
 			.gist-data {
 				overflow: hidden; 
 				word-break: break-word;
+				overflow-x: scroll; 
 			}
 		
 			.gist-meta {
