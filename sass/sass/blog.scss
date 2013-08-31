@@ -573,11 +573,19 @@ article {
 		.tips {
 			font-size: 11px;
 			line-height: 13px;
+			margin-left: 0; 
 			
 			li {
 				margin-bottom: 2px;
+				font-size: 12px; 
+				color: $gray; 
 			}
 		}
+	}
+	
+	.mollom-privacy {
+	  font-size: 13px; 
+	  color: $gray; 
 	}
 	
 	#edit-comment-body-und-0-format {

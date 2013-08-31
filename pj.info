@@ -5,7 +5,7 @@ package = Core
 version = VERSION
 core = 7.x
 
-stylesheets[screen][] = sass/stylesheets/screen.css
+stylesheets[screen][] = _styles/stylesheets/styles.css
 
 settings[shortcut_module_link] = 1
 
@@ -17,7 +17,10 @@ regions[worklist] = Work List
 regions[page_bottom] = Page bottom
 regions[sidebar_first] = First sidebar
 regions[more_work] = More Work
-regions[sidebar] = Sidebar
+regions[blog_tags] = Blog Tags
+regions[reading_list] = Reading List
+regions[elsewhere] = Elsewhere
+regions[long_road_back] = Long Road Back
 regions_hidden[] = sidebar_first
 
 scripts[] = scripts/address.js

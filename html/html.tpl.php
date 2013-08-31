@@ -98,10 +98,5 @@
 	<?php print $page_top; ?>
 	<?php print $page; ?>
 	<?php print $page_bottom; ?>
-	<footer>
-		<div class="content">
-			This site and the stuff on it was made by PJ McCormick. The words are &copy; PJ McCormick, 2010&mdash;<?php print date("Y"); ?>, the design work belongs to the various clients and project owners. 
-		</div>
-	</footer>
 </body>
 </html>
