@@ -23,11 +23,9 @@ regions[elsewhere] = Elsewhere
 regions[long_road_back] = Long Road Back
 regions_hidden[] = sidebar_first
 
-scripts[] = scripts/address.js
-scripts[] = scripts/jquerybbq.js
-scripts[] = scripts/scrollto.js
-scripts[] = scripts/functions.js
 scripts[] = scripts/modernizr-1.6.min.js
+scripts[] = _styles/javascripts/bootstrap-transition.js
+scripts[] = _styles/javascripts/bootstrap-collapse.js
 
 ; Information added by drupal.org packaging script on 2011-01-05
 version = "7.0"

@@ -59,24 +59,38 @@
  * @ingroup themeable
  */
 ?>
-<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <?php if ($new): ?>
-    <span class="new"><?php print $new ?></span>
-  <?php endif; ?>
-
-  <div class="submitted">
-    <?php print $author; ?> said on <?php print format_date($comment->created, 'custom', 'F j, Y');?>&hellip; (<?php print $permalink; ?>) 
+<div class="row-fluid"> 
+  <div class="span12 <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+    <div class="row-fluid">
+      <div class="span2">  
+      <?php if ($new): ?>
+        <span class="new"><?php print $new ?></span>
+      <?php endif; ?>
+    
+      <div class="submitted">
+        <h4><?php print $author; ?></h4> 
+        <?php print format_date($comment->created, 'custom', 'F j, Y');?> 
+      </div>
+      </div>
+      
+      <div class="content span10"<?php print $content_attributes; ?>>
+        <div class="speech-bubble"> 
+          <div class="arrow"></div>
+          <div class="row-fluid"> 
+            <div class="span12"> 
+              <?php
+                // We hide the comments and links now so that we can render them later.
+                hide($content['links']);
+                print render($content);
+                print $permalink;
+              ?>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <?php 
+      if ($is_admin) print render($content['links']) ?>
+    </div> 
   </div>
-
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['links']);
-      print render($content);
-    ?>
-  </div>
-  
-  <?php 
-  if ($is_admin) print render($content['links']) ?>
 </div>

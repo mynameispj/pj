@@ -2,24 +2,36 @@
 	<?php print render($primary_local_tasks); ?>
   <div class="container">
     <div class="row"> 
-      <div class="span8"> 
+      <div class="span12"> 
       	<h2>
       	  <a href="/" class="brand">PJ McCormick</a>
       	  UX Design Lead at Amazon, Designer/Developer Hybrid, Speaker, Cancer Survivor
         </h2>
-      </div>
-      <div class="span4"> 
-        <nav> 
-          <ul> 
-            <li><a href="">Blog</a></i></li>
-            <li><a href="/work">Work</a></li>
-            <li><a href="/reading">Reading</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-           
-          
-          </ul>
-        </nav>
+      
+        <div class="navbar">
+        	<div class="navbar-inner">
+        	
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse">
+      
+              <nav> 
+                <ul> 
+                  <li><a href="">Blog</a></i></li>
+                  <li><a href="/work">Work</a></li>
+                  <li><a href="/reading">Reading</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/contact">Contact</a></li>
+                 
+                
+                </ul>
+              </nav>
+            </div> 
+          </div> 
+        </div> 
       </div>
     </div>
     <div class="row header-reveal"> 

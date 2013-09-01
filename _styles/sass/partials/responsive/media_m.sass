@@ -1,0 +1,83 @@
+@media (max-width: 767px)
+
+  body
+    padding-right: 0 
+    padding-left: 0 
+
+  header#page
+    .container
+      width: 100% 
+      
+      .row, 
+      .span12
+        margin-left: 0 
+      
+      .span12 
+        width: 100% 
+        
+        
+      h2 
+        width: 75% 
+        padding-left: 20px 
+        
+      .navbar
+        width: 100% 
+        margin-top: -30px 
+        
+        .btn-navbar
+          margin-top: -10px 
+          
+        
+        nav
+          float: none 
+          
+          ul 
+            margin: 0 
+            
+            li 
+              display: block 
+              float: none 
+              
+              a 
+                display: block 
+                text-align: right 
+                border-bottom: 1px solid darken($blue_dark,10%) 
+                float: none 
+                +border-radius(0)   
+                padding-right: 20px 
+        
+                &:hover 
+                  background: darken($blue_dark,10%) 
+    
+
+  article.post
+    +border-radius(0) 
+    border-left: 0 
+    border-right: 0 
+    
+    .post-nav
+      .next
+        text-align: left 
+        margin-bottom: 10px 
+    
+    #comments
+      h4 
+        float: left 
+        margin-right: 5px 
+        
+      .submitted
+        text-align: left  
+   
+      .comment
+        .speech-bubble
+              
+          .arrow 
+            +css-arrow($gray_light, 8px, up)
+            left: 10px 
+            top: -17px 
+            
+      form.comment-form
+        .form-actions
+          input 
+            width: 100%       
+         
