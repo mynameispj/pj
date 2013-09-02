@@ -1,10 +1,15 @@
+// Compass Stuff
 @import "compass/css3"
 
-// I gather this file is a starting point for the project.
-$iconWhiteSpritePath: '/sites/all/themes/pj/_styles/images/glyphicons-halflings-white.png'
+// Bootstrap SASS Gem & Bootstrap Overrides
+$iconWhiteSpritePath: "/sites/all/themes/pj/_styles/images/glyphicons-halflings-white.png"
 @import "bootstrap"
+
 // Include responsive Bootstrap styles
-@import "bootstrap-responsive"
+@import "bootstrap/_responsive-utilities.scss"
+@import "bootstrap/_responsive-768px-979px.scss"
+@import "bootstrap/_responsive-767px-max.scss"
+@import "bootstrap/_responsive-navbar.scss" 
 
 // Globals 
 @import "partials/globals/_colors"
