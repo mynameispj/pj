@@ -1,0 +1,49 @@
+header#page  
+  .navbar 
+    background: transparent
+    margin-bottom: 0 
+        
+    .navbar-inner
+      background: transparent 
+      border: none 
+      +box-shadow(none) 
+      padding-left: 0 
+      padding-right: 0 
+      min-height: 0px 
+     
+      .nav-collapse.in.collapse 
+        background: $blue_extra_dark
+      
+      .btn-navbar 
+        background: $blue_extra_dark 
+        +border-radius(0) 
+        +box_shadow(none) 
+        float: none 
+        border: none 
+        height: 35px 
+        width: 38px 
+        margin-top: -35px 
+        
+        .icon-bar 
+          background: $blue_light
+  
+  nav 
+    text-align: center 
+    
+    ul
+      text-align: center 
+      margin-bottom: 0 
+      
+      li 
+        display: inline
+        list-style: none   
+        
+        a 
+          padding: 5px 10px
+          display: inline-block
+          border-bottom: none 
+          
+          &:hover 
+            background: $blue_dark 
+            color: #fff 
+            text-decoration: none 

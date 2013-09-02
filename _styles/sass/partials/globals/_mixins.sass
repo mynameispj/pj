@@ -1,0 +1,73 @@
+@function em($target, $context: $base-font-size) 
+  @if $target == 0
+    @return 0 
+  @return $target / $context + 0em
+
+ 
+$base-font-size: 16px
+
+
+@mixin css-arrow($color:#000, $size:'5px', $direction:'up') 
+  width: 0
+  height: 0 
+  
+  @if $direction == 'up' 
+    border-right: $size solid transparent
+    border-left: $size solid transparent
+    border-bottom: $size solid $color
+
+  @if $direction == 'down' 
+    border-right: $size solid transparent
+    border-left: $size solid transparent
+    border-top: $size solid $color
+
+  @if $direction == 'right'
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    border-left: $size solid $color
+
+  @if $direction == 'left'
+    border-top: $size solid transparent
+    border-bottom: $size solid transparent
+    border-right: $size solid $color
+
+
+
+=clearfix
+  &:after 
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+  zoom: 1
+  
+=content_wrapper
+  margin-bottom: 50px 
+  border: 1px solid #ccc 
+  +border-radius(5px) 
+  overflow: hidden 
+  +box-shadow(0 1px 6px 0 rgba($gray_light,0.9)) 
+  
+  header 
+    overflow: hidden 
+    
+    h1 
+      margin: 0
+      font-size: em(30px) 
+      line-height: 36px 
+      
+      a 
+        background: $gray_light 
+        border-bottom: none 
+        padding: 12px 20px 14px 
+        display: block  
+        
+        &:hover 
+          background: $blue_dark 
+          color: $blue_light 
+  
+  .post-content 
+    padding: 20px 
+  

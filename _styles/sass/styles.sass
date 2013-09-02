@@ -6,14 +6,31 @@ $iconWhiteSpritePath: '/sites/all/themes/pj/_styles/images/glyphicons-halflings-
 // Include responsive Bootstrap styles
 @import "bootstrap-responsive"
 
-@import "partials/_colors"
-@import "partials/_mixins"
-@import "partials/_links"
+// Globals 
+@import "partials/globals/_colors"
+@import "partials/globals/_mixins"
+@import "partials/globals/_links"
 
-@import "partials/_header"
-@import "partials/_footer"
-@import "partials/_blog"
-@import "partials/_blog_tags"
+// Header
+@import "partials/globals/header/_header"
+@import "partials/globals/header/nav/_nav.sass"
+
+// Footer
+@import "partials/globals/footer/_footer"
+
+
+// Blog Styles
+@import "partials/blog/_blog"
+@import "partials/blog/body/_body.sass"
+@import "partials/blog/_post_nav.sass"
+
+@import "partials/blog/_blog_tags"
+@import "partials/blog/comments/_comment_wrapper"
+@import "partials/blog/comments/_comment"
+@import "partials/blog/comments/_comment_form"
+
+
+// Work Styles
 @import "partials/_work"
 
 // Custom Responsive Styles

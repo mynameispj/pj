@@ -28,7 +28,7 @@
 			</header>
 			<div class="post-content">
         <div class="row-fluid"> 
-    			<aside class="span3">
+    			<aside class="span2">
     				<dl>
     					<dt>Posted </dt>
     						<dd><?php print format_date($created, 'custom', 'F j Y'); ?></dd>
@@ -40,8 +40,7 @@
     						<dd><span class="readingTime"><?php echo $readingEstimate; ?></span></dd>
     				</dl>				
     			</aside>
-          <div class="span9"> 
-      			<div class="firstParagraph"><?php print $firstParagraph; ?></div>    	
+          <div class="span10"> 
       			<?php print render($content); ?>
           </div>
     		</div>

@@ -23,7 +23,11 @@ regions[elsewhere] = Elsewhere
 regions[long_road_back] = Long Road Back
 regions_hidden[] = sidebar_first
 
-scripts[] = scripts/modernizr-1.6.min.js
+scripts[] = _scripts/vendor/modernizr-2.6.2.min.js
+scripts[] = _scripts/plugins.js
+scripts[] = _scripts/main.js
+scripts[] = _styles/javascripts/bootstrap-transition.js
+
 scripts[] = _styles/javascripts/bootstrap-transition.js
 scripts[] = _styles/javascripts/bootstrap-collapse.js
 

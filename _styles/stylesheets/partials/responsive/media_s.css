@@ -1,0 +1,22 @@
+@media (max-width: 480px) {
+  /* line 5, ../../../sass/partials/responsive/media_s.sass */
+  header#page nav {
+    float: none; }
+    /* line 8, ../../../sass/partials/responsive/media_s.sass */
+    header#page nav ul {
+      margin: 0; }
+      /* line 11, ../../../sass/partials/responsive/media_s.sass */
+      header#page nav ul li {
+        display: block;
+        float: none;
+        width: 100%; }
+        /* line 16, ../../../sass/partials/responsive/media_s.sass */
+        header#page nav ul li a {
+          display: block;
+          text-align: left;
+          border-bottom: 1px solid black;
+          float: none;
+          padding: 10px; }
+          /* line 23, ../../../sass/partials/responsive/media_s.sass */
+          header#page nav ul li a:hover {
+            background: black; } }

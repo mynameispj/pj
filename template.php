@@ -143,10 +143,13 @@ function pj_field($variables) {
 function pj_preprocess_node(&$variables) {
 	//print krumo($variables); 
 
-	if (empty($variables['field_article_first_paragraph'])) {
-		$variables['firstParagraph'] = '';
-	} else {
-		$variables['firstParagraph'] = $variables['field_article_first_paragraph'][0]['value'];		
+  if (isset($variables['field_article_first_paragraph'])) {
+  	if (empty($variables['field_article_first_paragraph'])) {
+  		$variables['firstParagraph'] = '';
+  	} else {
+  		$variables['firstParagraph'] = $variables['field_article_first_paragraph'][0]['value'];		
+  	}
+	
 	}
 	
 	if (empty($variables['field_background_image'])) { 
@@ -169,12 +172,18 @@ function pj_preprocess_node(&$variables) {
 		$variables['hideTitle'] = 1;  
 	} 
 
-	if ((empty($variables['field_article_first_paragraph']) && (!empty($variables['content']['body']['#items'][0])))) {
-		$postContent = $variables['content']['body']['#items'][0]['value']; 		
-	} else if ((!empty($variables['field_article_first_paragraph']) && (empty($variables['content']['body']['#items'][0])))) {
-		$postContent = $variables['field_article_first_paragraph'][0]['value']; 		
+  if ((isset($variables['field_article_first_paragraph'])) && ($variables['content']['body']['#items'][0])) {
+  	if ((empty($variables['field_article_first_paragraph']) && (!empty($variables['content']['body']['#items'][0])))) {
+  		$postContent = $variables['content']['body']['#items'][0]['value']; 		
+  	} else if ((!empty($variables['field_article_first_paragraph']) && (empty($variables['content']['body']['#items'][0])))) {
+  		$postContent = $variables['field_article_first_paragraph'][0]['value']; 		
+  	} else {
+  		$postContent = $variables['field_article_first_paragraph'][0]['value'] . $variables['content']['body']['#items'][0]['value']; 		
+  	}
+	} else if (isset($variables['content']['body']['#items'][0])) {
+	  $postContent = $variables['content']['body']['#items'][0]['value']; 
 	} else {
-		$postContent = $variables['field_article_first_paragraph'][0]['value'] . $variables['content']['body']['#items'][0]['value']; 		
+	  $postContent = ""; 
 	}
 	$word = str_word_count(strip_tags($postContent));
 	$m = floor($word / 200);

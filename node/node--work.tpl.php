@@ -20,7 +20,7 @@
   //krumo($content); 
 ?>
 <?php if ($page): ?> 
-  <article class="post work work-<?php print $nid;?>"> 
+  <article class="work work-<?php print $nid;?>"> 
   	<header>
   		<div class="row-fluid"> 
   		  <div class="span12"> 
@@ -40,9 +40,11 @@
   			</aside>
 
         <div class="span4">
-          <div class="well well-small"> 
-            <?php print render($content['field_deliverables']); ?>
-          </div> 
+          <?php if (isset($content['field_deliverables']['#items'])): ?> 
+            <div class="well well-small"> 
+              <?php print render($content['field_deliverables']); ?>
+            </div> 
+          <?php endif; ?> 
           <?php print render($content['body']); ?> 
         </div>
   		</div>
