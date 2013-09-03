@@ -14,12 +14,13 @@
   hide($content['field_work_link']);
   hide($content['field_lead_image_flickr']);
   hide($content['field_other_images_flickr']);
+  hide($content['field_preview_image_flickr']);
   hide($content['field_deliverables']);
   hide($content['body']);
   //print render($content);
   //krumo($content); 
 ?>
-<?php if ($page): ?> 
+<?php if ($page) { ?> 
   <article class="work work-<?php print $nid;?>"> 
   	<header>
   		<div class="row-fluid"> 
@@ -51,4 +52,11 @@
   	</div>
   
   </article>
-<?php endif; ?> 
+<?php } else { ?>
+   
+  <a class="work_thumb" href="<?php print $node_url; ?>" style="background: transparent url(<?php print render($content['field_preview_image_flickr']['#items'][0]['value']); ?>) no-repeat">
+    <div class="vignette">
+      <span class="title"><?php print $node->title ?></span>
+    </div>
+  </a>
+<?php } ?> 

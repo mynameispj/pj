@@ -1,26 +1,15 @@
 <?php
-	// We hide the comments and links now so that we can render them later.
 	hide($content['comments']);
 	hide($content['links']);
 	hide($content['field_tags']);
-	hide($content['field_image']);
-	hide($content['field_article_first_paragraph']);
-	hide($content['field_background_image']); 
-	hide($content['field_custom_layout']); 
-	hide($content['field_hide_title']); 
-	hide($content['field_linked_article']); 	
 ?>
   	<article class="post post-<?php print $nid;?>"> 
 			<header>
   			<div class="row-fluid"> 
   			  <div class="span12"> 
-    				<?php  if ($hideTitle == 0) { ?>
-    					<?php print render($title_prefix); ?>
-    						<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
-    					<?php print render($title_suffix); ?>
-    				<?php } else if ($hideTitle == 1) { ?>
-    							
-    				<?php }?>
+  					<?php print render($title_prefix); ?>
+  						<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+  					<?php print render($title_suffix); ?>
     		
   			  </div>
   			  

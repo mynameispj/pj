@@ -21,6 +21,7 @@ regions[blog_tags] = Blog Tags
 regions[reading_list] = Reading List
 regions[elsewhere] = Elsewhere
 regions[long_road_back] = Long Road Back
+regions[contact_form] = Contact Form
 regions_hidden[] = sidebar_first
 
 scripts[] = _scripts/vendor/modernizr-2.6.2.min.js

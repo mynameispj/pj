@@ -141,55 +141,13 @@ function pj_field($variables) {
 
 
 function pj_preprocess_node(&$variables) {
-	//print krumo($variables); 
-
-  if (isset($variables['field_article_first_paragraph'])) {
-  	if (empty($variables['field_article_first_paragraph'])) {
-  		$variables['firstParagraph'] = '';
-  	} else {
-  		$variables['firstParagraph'] = $variables['field_article_first_paragraph'][0]['value'];		
-  	}
-	
-	}
-	
-	if (empty($variables['field_background_image'])) { 
-		$variables['fillImageExists'] = ' ';
-		$variables['bgimage'] = ''; 
-	} else {
-		$variables['fillImageExists'] = ' fillpost';
-		$variables['bgimage'] = '<div class="fill"><img src="' . file_create_url($variables['field_background_image'][0]['uri']) . '"/></div>'; 
-	} 
-
-	if (empty($variables['field_custom_layout'])) { 
-		$variables['customLayout'] = ' ';  
-	} else {
-		$variables['customLayout'] = ' ' . $variables['field_custom_layout'][0]['value']; 	
-	} 
-
-	if (empty($variables['field_hide_title'])) { 
-		$variables['hideTitle'] = 0;  
-	} else {
-		$variables['hideTitle'] = 1;  
-	} 
-
-  if ((isset($variables['field_article_first_paragraph'])) && ($variables['content']['body']['#items'][0])) {
-  	if ((empty($variables['field_article_first_paragraph']) && (!empty($variables['content']['body']['#items'][0])))) {
-  		$postContent = $variables['content']['body']['#items'][0]['value']; 		
-  	} else if ((!empty($variables['field_article_first_paragraph']) && (empty($variables['content']['body']['#items'][0])))) {
-  		$postContent = $variables['field_article_first_paragraph'][0]['value']; 		
-  	} else {
-  		$postContent = $variables['field_article_first_paragraph'][0]['value'] . $variables['content']['body']['#items'][0]['value']; 		
-  	}
-	} else if (isset($variables['content']['body']['#items'][0])) {
-	  $postContent = $variables['content']['body']['#items'][0]['value']; 
-	} else {
-	  $postContent = ""; 
-	}
-	$word = str_word_count(strip_tags($postContent));
-	$m = floor($word / 200);
-	$s = floor($word % 200 / (200 / 60));
-	$variables['readingEstimate'] = $m . ' minute' . ($m == 1 ? '' : 's') . ', ' . $s . ' second' . ($s == 1 ? '' : 's');
-
+  if (isset($variables['content']['body']['#items'])) {
+  	$postContent = $variables['content']['body']['#items'][0]['value']; 
+  	$word = str_word_count(strip_tags($postContent));
+  	$m = floor($word / 200);
+  	$s = floor($word % 200 / (200 / 60));
+  	$variables['readingEstimate'] = $m . ' minute' . ($m == 1 ? '' : 's') . ', ' . $s . ' second' . ($s == 1 ? '' : 's');
+  }
 
 	if ($variables['page']) { 
 		function pn_node($node, $mode = 'n') {

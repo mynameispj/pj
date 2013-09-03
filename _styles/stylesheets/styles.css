@@ -6824,6 +6824,18 @@ article.post .post-nav {
     margin-bottom: 0;
     margin-top: 0; }
 
+/* line 2, ../sass/partials/blog/_meta.sass */
+article.post dl {
+  margin-top: 0;
+  font-size: 12px; }
+  /* line 6, ../sass/partials/blog/_meta.sass */
+  article.post dl dt {
+    line-height: 14px; }
+  /* line 9, ../sass/partials/blog/_meta.sass */
+  article.post dl dd {
+    margin-left: 0;
+    margin-bottom: 10px; }
+
 /* line 2, ../sass/partials/blog/comments/_comment_wrapper.sass */
 article.post #comments {
   padding: 0 20px;
@@ -6895,7 +6907,7 @@ article.post #comments form.comment-form {
       article.post #comments form.comment-form .form-actions input:hover {
         background: #5cbce8; }
 
-/* line 1, ../sass/partials/_work.sass */
+/* line 1, ../sass/partials/work/_work.sass */
 article.work {
   margin-bottom: 50px;
   border: 1px solid #cccccc;
@@ -6927,13 +6939,57 @@ article.work {
   /* line 71, ../sass/partials/globals/_mixins.sass */
   article.work .post-content {
     padding: 20px; }
-  /* line 4, ../sass/partials/_work.sass */
+  /* line 4, ../sass/partials/work/_work.sass */
   article.work img {
     border: 1px solid #e6e6e6;
     margin-bottom: 10px; }
-    /* line 8, ../sass/partials/_work.sass */
+    /* line 8, ../sass/partials/work/_work.sass */
     article.work img.no_border {
       border: none; }
+
+/* line 1, ../sass/partials/work/_work_list.sass */
+.work_thumb {
+  height: 125px;
+  display: block;
+  border: none;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(230, 230, 230, 0.9);
+  -moz-box-shadow: 0 1px 6px 0 rgba(230, 230, 230, 0.9);
+  box-shadow: 0 1px 6px 0 rgba(230, 230, 230, 0.9);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  color: white; }
+  /* line 12, ../sass/partials/work/_work_list.sass */
+  .work_thumb .vignette {
+    -webkit-box-shadow: inset 0 0px 30px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 0 0px 30px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0px 30px 0 rgba(0, 0, 0, 0.25);
+    height: 125px; }
+  /* line 16, ../sass/partials/work/_work_list.sass */
+  .work_thumb .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 5px 5px;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.8)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    background-image: -moz-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); }
+  /* line 24, ../sass/partials/work/_work_list.sass */
+  .work_thumb:hover {
+    color: white; }
+    /* line 27, ../sass/partials/work/_work_list.sass */
+    .work_thumb:hover .title {
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, #000000));
+      background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), #000000);
+      background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), #000000);
+      background-image: -o-linear-gradient(rgba(0, 0, 0, 0), #000000);
+      background-image: linear-gradient(rgba(0, 0, 0, 0), #000000); }
 
 @media (min-width: 768px) and (max-width: 979px) {
   /* line 4, ../sass/partials/responsive/media_l.sass */
