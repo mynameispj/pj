@@ -98,18 +98,17 @@
     </div>
     <div class="row-fluid">
       <div class="span12"> 
-        <h3>About the things that help me do stuff</h3>
+        <h3>Some of the things that help me do stuff</h3>
         <p>Without these things, I'd probably never accomplish anything:</p>      
         <div class="row-fluid"> 
           <div class="span3"> 
             <ul> 
-              <li>My awesome team (who are all much better than me)</li>
-              <li>Evernote, which is quickly becoming my killer app</li>
+              <li>My amazing and inspiring wife</li>
+              <li>My incredible team</li>
+              <li>Evernote</li>
               <li>Drafts</li>
-              <li>Coda</li>
-              <li>Transmit</li>
-              <li>iTerm2</li>
-              <li>Adobe Fireworks (RIP)</li>
+              <li>Coda 2</li>
+              <li>iTerm</li>
             </ul>
           </div>
           
@@ -130,6 +129,7 @@
               <li>Ruby on Rails</li>
               <li>Git</li>
               <li>Drupal</li>
+              <li>WordPress</li>
             </ul>
           </div>
           
@@ -137,16 +137,25 @@
             <ul>
               <li>Github</li>
               <li>Bitbucket</li>
+              <li>SourceTree</li>
+              <li>Stack Overflow</li>              
               <li>Flickr</li>
-              <li>Git</li>
-              <li>Drupal</li>
+              <li>Adobe Fireworks (RIP)</li>   
+              <li>Transmit</li>
+                         
             </ul>
           </div>
-      
         </div>
       </div>
     </div>
-
+    <div class="row-fluid">
+      <div class="span12"> 
+        <h3>About this site</h3>
+        <p>I built this site in Coda 2, using SASS, Compass, and Twitter Bootstrap by way of dude's awesome Bootstrap SASS Gem.</p>
+        <p>Yeah, I know, Bootstrap's terrible because of crufty markup and blah blah blah. I used it because helped me quickly get to a powerful, extensible, and highly-flexible design. I may not reach for it in every project, but on this one it was immensely valuable because it helped me extinguish a lot of internal friction I'd built up around working on, updating, and refining this site.</p>
+        <p>This site runs on Drupal 7&mdash;you can actually check out the theme's source code on my Github account if you're into that kind of thing.</p>
+      </div>
+    </div>
   </div>
 
 </div>
