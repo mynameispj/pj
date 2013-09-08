@@ -23,10 +23,11 @@
 	</div>
 	<div class="row-fluid">
 	  <div class="span6">
-  		<?php print render($page['contact_form']); ?>
-	  </div>
-	  <div class="span6">
 	    <?php print render($page['content']); ?>      
+	  </div>
+
+	  <div class="span6">
+  		<?php print render($page['contact_form']); ?>
 	  </div>
 	</div>
 </section>

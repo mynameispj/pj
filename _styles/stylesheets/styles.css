@@ -7011,6 +7011,10 @@ header.books {
     bottom: 5px;
     margin-left: 5px; }
 
+/* line 2, ../sass/partials/contact/_contact_page.sass */
+#webform-client-form-146 input.form-text {
+  width: 90%; }
+
 @media (min-width: 768px) and (max-width: 979px) {
   /* line 4, ../sass/partials/responsive/media_l.sass */
   header#page nav {
