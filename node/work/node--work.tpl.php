@@ -21,31 +21,33 @@
   //krumo($content); 
 ?>
 <?php if ($page) { ?> 
-  <article class="work work-<?php print $nid;?>"> 
+  <article class="content_wrapper work-<?php print $nid;?>"> 
   	<header>
   		<div class="row-fluid"> 
   		  <div class="span12"> 
     			<?php print render($title_prefix); ?>
-    				<h1<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h1>
+    				<h1<?php print $title_attributes; ?>><a><?php print $title; ?></a></h1>
     			<?php print render($title_suffix); ?>
   		
   		  </div>
   		  
   		</div>
   	</header>
-  	<div class="post-content">
+  	<div class="content">
       <div class="row-fluid"> 
-  			<aside class="span8">
-  			  <?php print render($content['field_lead_image_flickr']['#items'][0]['value']); ?>
-  			  <?php print render($content['field_other_images_flickr']['#items'][0]['value']); ?>
-  			</aside>
-
-        <div class="span4">
+        
+  			<aside class="span2">
           <?php if (isset($content['field_deliverables']['#items'])): ?> 
-            <div class="well well-small"> 
-              <?php print render($content['field_deliverables']); ?>
-            </div> 
+            <dl> 
+              <dt>Deliverables</dt>
+                <dd><?php print render($content['field_deliverables']); ?></dd>
+            </dl> 
+            
+            <p></i><a href="/work">&larr; Back to Work</a></p>
           <?php endif; ?> 
+  			</aside>
+        <div class="span10">
+   			  <?php print render($content['field_lead_image_flickr']); ?>
           <?php print render($content['body']); ?> 
         </div>
   		</div>

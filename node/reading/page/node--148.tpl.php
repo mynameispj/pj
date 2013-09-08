@@ -79,11 +79,17 @@
  * @see template_process()
  */
 ?>
-  <div id="body">
-  <?php print render($title_prefix); ?>
-    <h1><?php print check_plain($node->title) ?></h1>
-  <?php print render($title_suffix); ?>
-
+<article class="content_wrapper">
+  <header>
+		<div class="row-fluid">
+			<div class="span12">
+        <?php print render($title_prefix); ?>
+          <h1><a><?php print check_plain($node->title) ?></a></h1>
+        <?php print render($title_suffix); ?>
+			</div>
+		</div>
+  </header>
+  <div class="content">
 		<div class="row-fluid">
 			<div class="span12">
 		    <?php
@@ -95,22 +101,25 @@
 			</div>
 		</div>
 		<div class="row-fluid">
+			<div class="span3 book-genre">
+			  <h4>Browse by Genre</h4>
+				<?php print views_embed_view('book_tags','block_1'); ?>	
+			</div>
+		
 			<div class="span9">
 				<div class="row-fluid">
 					<div class="span12">
-						<h3>Currently Reading</h3>
+						<h3 class="first">What I'm currently reading</h3>
 						<?php print views_embed_view('books','block_2'); ?>					
 					</div>
 				</div>
 				<div class="row-fluid">
 					<div class="span12">
-						<h3>Read</h3>
+						<h3>Books I've read</h3>
 						<?php print views_embed_view('books','block_1'); ?>
 					</div>
 				</div>
 			</div>
-			<div class="span3">
-				<?php print views_embed_view('book_tags','block_1'); ?>	
-			</div>
 		</div>
-  </div> 
+  </div>
+</article> 

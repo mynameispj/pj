@@ -3,7 +3,7 @@
 	hide($content['links']);
 	hide($content['field_tags']);
 ?>
-  	<article class="post post-<?php print $nid;?>"> 
+  	<article class="content_wrapper post-<?php print $nid;?>"> 
 			<header>
   			<div class="row-fluid"> 
   			  <div class="span12"> 
@@ -15,7 +15,7 @@
   			  
   			</div>
 			</header>
-			<div class="post-content">
+			<div class="content">
         <div class="row-fluid"> 
     			<aside class="span2">
     				<dl>
