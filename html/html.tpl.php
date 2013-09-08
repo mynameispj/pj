@@ -93,8 +93,37 @@
 
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 	<div id="skip-link">
-		<a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+		<a href="#main" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
 	</div>
+	
+	<header id="page" class="clearfix">
+		<h2>
+		  <a href="/" class="brand">PJ McCormick</a>
+		  UX Design Lead<span class="hidden-phone"> at Amazon</span>,<span class="hidden-phone"> Designer/Developer Hybrid,</span> Speaker, Cancer Survivor
+	  </h2>
+	  <div class="navbar">
+	  	<div class="navbar-inner">
+	  	
+	      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <div class="nav-collapse collapse">
+	
+	        <nav> 
+	          <ul> 
+	            <li><a href="/">Blog</a></i></li>
+	            <li><a href="/work">Work</a></li>
+	            <li><a href="/reading">Reading</a></li>
+	            <li><a href="/about">About</a></li>
+	            <li><a href="/contact">Contact</a></li>
+	          </ul>
+	        </nav>
+	      </div> 
+	    </div> 
+	</header>
+	
 	<?php print $page_top; ?>
 	<?php print $page; ?>
 	<?php print $page_bottom; ?>

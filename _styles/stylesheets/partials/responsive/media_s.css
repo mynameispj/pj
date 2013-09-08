@@ -19,4 +19,10 @@
           padding: 10px; }
           /* line 23, ../../../sass/partials/responsive/media_s.sass */
           header#page nav ul li a:hover {
-            background: black; } }
+            background: black; }
+
+  /* line 29, ../../../sass/partials/responsive/media_s.sass */
+  .page-node-23 .work-list,
+  .page-node-23 .work-info {
+    width: 50%;
+    float: left; } }
