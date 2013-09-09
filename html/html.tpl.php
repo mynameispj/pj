@@ -82,11 +82,10 @@
 	<meta name="msvalidate.01" content="245E420BBF46223DB09CDC8499509EEA" />
 	
 	<!--Typekit-->
-	<script type="text/javascript" src="//use.typekit.net/fwa2ojb.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>	
+  <script type="text/javascript" src="//use.typekit.net/fwa2ojb.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-	<meta name="readability-verification" content="RXcZffYXSqCSyFZTgvtpv3ugzCN9npsQndVBMLjm"/>
-	
+	<meta name="readability-verification" content="RXcZffYXSqCSyFZTgvtpv3ugzCN9npsQndVBMLjm"/>	
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 	
 </head>
@@ -113,11 +112,11 @@
 	
 	        <nav> 
 	          <ul> 
-	            <li><a href="/">Blog</a></i></li>
-	            <li><a href="/work">Work</a></li>
-	            <li><a href="/reading">Reading</a></li>
-	            <li><a href="/about">About</a></li>
-	            <li><a href="/contact">Contact</a></li>
+	            <li><a href="/" class="blog">Blog</a></i></li>
+	            <li><a href="/work" class="work">Work</a></li>
+	            <li><a href="/reading" class="reading">Reading</a></li>
+	            <li><a href="/about" class="about">About</a></li>
+	            <li><a href="/contact" class="contact">Contact</a></li>
 	          </ul>
 	        </nav>
 	      </div> 

@@ -16,20 +16,26 @@
 	<?php if ($action_links): ?>
 		<ul class="action-links"><?php print render($action_links); ?></ul>
 	<?php endif; ?>
-	<div class="row-fluid"> 
-	  <div class="span12"> 
-	    <h1>Hey, how's it going?</h1>
+	<article class="content_wrapper">
+	  <header>
+    	<div class="row-fluid"> 
+    	  <div class="span12"> 
+    	    <h1><a>Hey, how's it going?</a></h1>
+    	  </div>
+    	</div>
+	  </header>
+	  <div class="content">
+    	<div class="row-fluid">
+    	  <div class="span6">
+    	    <?php print render($page['content']); ?>      
+    	  </div>
+    
+    	  <div class="span6">
+      		<?php print render($page['contact_form']); ?>
+    	  </div>
+    	</div>
 	  </div>
-	</div>
-	<div class="row-fluid">
-	  <div class="span6">
-	    <?php print render($page['content']); ?>      
-	  </div>
-
-	  <div class="span6">
-  		<?php print render($page['contact_form']); ?>
-	  </div>
-	</div>
+	</article>
 </section>
 
 <footer>

@@ -13,24 +13,33 @@ $iconWhiteSpritePath: "/sites/all/themes/pj/_styles/images/glyphicons-halflings-
 
 // Globals 
 @import "partials/globals/_colors"
-@import "partials/globals/_mixins"
+@import "partials/globals/mixins/_mixins"
 @import "partials/globals/_links"
 @import "partials/globals/content/_content"
-@import "partials/globals/typography/_typography"
+@import "partials/globals/labels_and_badges/_labels_and_badges"
+
+// Forms
 @import "partials/globals/forms/_forms"
+
+// Typography 
+@import "partials/globals/mixins/typography/_typography_mixins"
+@import "partials/globals/typography/_typography"
+@import "partials/globals/typography/_headlines"
+@import "partials/globals/typography/_paragraphs"
 
 
 // Header
 @import "partials/globals/header/_header"
-@import "partials/globals/header/nav/_nav.sass"
+@import "partials/globals/header/nav/_nav"
+@import "partials/globals/header/nav/_active_links"
 
 // Footer
 @import "partials/globals/footer/_footer"
 
 // Blog Styles
 @import "partials/blog/_blog"
-@import "partials/blog/body/_body.sass"
-@import "partials/blog/post_nav/_post_nav.sass"
+@import "partials/blog/body/_body"
+@import "partials/blog/post_nav/_post_nav"
 @import "partials/blog/_meta.sass"
 
 @import "partials/blog/_blog_tags"
@@ -43,11 +52,11 @@ $iconWhiteSpritePath: "/sites/all/themes/pj/_styles/images/glyphicons-halflings-
 @import "partials/work/_work_list"
 
 // Reading Styles
-@import "partials/reading/main_list/_reading.sass"
-@import "partials/reading/genres/_reading_genres.sass"
+@import "partials/reading/main_list/_reading"
+@import "partials/reading/genres/_reading_genres"
 
 // Contact Page
-@import "partials/contact/_contact_page.sass"
+@import "partials/contact/_contact_page"
 
 // Custom Responsive Styles
 @import "partials/responsive/media_xl"
