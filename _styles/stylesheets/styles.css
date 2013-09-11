@@ -6678,8 +6678,8 @@ article.content_wrapper {
     /* line 56, ../sass/partials/globals/mixins/_mixins.sass */
     article.content_wrapper header h1 {
       margin: 0;
-      font-size: 2.25em;
-      line-height: 40px; }
+      font-size: 2.625em;
+      line-height: 1.15; }
       /* line 61, ../sass/partials/globals/mixins/_mixins.sass */
       article.content_wrapper header h1 a {
         background: #e6e6e6;
@@ -6747,10 +6747,11 @@ dt,
 nav,
 .label,
 input.form-submit,
-label {
+label,
+blockquote {
   font-family: "calluna-sans-1", "calluna-sans-2", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 14, ../sass/partials/globals/typography/_headlines.sass */
+/* line 15, ../sass/partials/globals/typography/_headlines.sass */
 input.form-submit,
 label {
   font-weight: bold; }
@@ -6760,6 +6761,11 @@ p {
   margin: 0 0 25px;
   font-size: 1.125em;
   line-height: 24px; }
+
+/* line 2, ../sass/partials/globals/typography/_blockquotes.sass */
+blockquote p {
+  font-size: 1.375em;
+  line-height: 1.5; }
 
 /* line 1, ../sass/partials/globals/header/_header.sass */
 header#page {
@@ -6896,7 +6902,7 @@ footer {
 .node-type-article .content_wrapper .content p.first,
 .front .content_wrapper .content p.first {
   font-size: 1.5em;
-  line-height: 30px;
+  line-height: 1.6;
   margin-bottom: 1.25em; }
 /* line 13, ../sass/partials/blog/body/_body.sass */
 .node-type-article .content_wrapper .content .gist,
